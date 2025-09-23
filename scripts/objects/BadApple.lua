@@ -4,7 +4,7 @@ function BadApple:init()
     super.init(self)
     self.layer = BATTLE_LAYERS["below_battlers"]
 
-    self.load_thread = love.thread.newThread(Mod.info.path.."/libraries/BadAppleDR-main/animthread.lua")
+    self.load_thread = love.thread.newThread(Mod.info.path.."/animthread.lua")
     self.out_channel = love.thread.getChannel("BA_out")
 
     self.total_time = 0

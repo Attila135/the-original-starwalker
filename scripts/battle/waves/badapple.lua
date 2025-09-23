@@ -42,6 +42,7 @@ function attack:onStart()
             kris.active = false
             susie.active = false
             ralsei.active = false
+            enemy.active = false
             beam.active = false
             soul.can_move = false
             sfx:pause()
@@ -80,6 +81,7 @@ function attack:onStart()
             kris.active = true
             susie.active = true
             ralsei.active = true
+            enemy.active = true
             beam.active = true
             soul.can_move = true
             sfx:play()
