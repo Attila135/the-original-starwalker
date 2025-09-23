@@ -1,0 +1,320 @@
+return {
+  version = "1.11",
+  luaversion = "5.1",
+  tiledversion = "1.11.0",
+  class = "",
+  orientation = "orthogonal",
+  renderorder = "right-down",
+  width = 16,
+  height = 12,
+  tilewidth = 40,
+  tileheight = 40,
+  nextlayerid = 6,
+  nextobjectid = 18,
+  properties = {
+    ["music"] = "steve"
+  },
+  tilesets = {
+    {
+      name = "floor",
+      firstgid = 1,
+      filename = "../tilesets/floor.tsx"
+    },
+    {
+      name = "funhouse_objects",
+      firstgid = 11,
+      filename = "../tilesets/funhouse_objects.tsx",
+      exportfilename = "../tilesets/funhouse_objects.lua"
+    }
+  },
+  layers = {
+    {
+      type = "tilelayer",
+      x = 0,
+      y = 0,
+      width = 16,
+      height = 12,
+      id = 1,
+      name = "Tile Layer 1",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      encoding = "lua",
+      data = {
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 1, 8, 8, 8, 8, 8, 8, 8, 8, 2, 0, 0, 0,
+        0, 0, 0, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 0, 0, 0,
+        0, 0, 0, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 0, 0, 0,
+        0, 0, 0, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 0, 0, 0,
+        0, 0, 0, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 0, 0, 0,
+        0, 0, 0, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 0, 0, 0,
+        0, 0, 0, 6, 8, 8, 8, 8, 8, 8, 8, 8, 7, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 5, 8, 8, 4, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 8, 8, 0, 0, 0, 0, 0, 0, 0
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 2,
+      name = "markers",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 9,
+          name = "spawn",
+          type = "",
+          shape = "point",
+          x = 320,
+          y = 400,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 3,
+      name = "collision",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 1,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 360,
+          y = 320,
+          width = 160,
+          height = 160,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 2,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 520,
+          y = 0,
+          width = 120,
+          height = 280,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 4,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 0,
+          width = 520,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 5,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 40,
+          width = 120,
+          height = 240,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 6,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 120,
+          y = 320,
+          width = 160,
+          height = 160,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 7,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 80,
+          y = 280,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 8,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 520,
+          y = 280,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 12,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 284.694,
+          y = 230.583,
+          width = 57.0534,
+          height = 46.5183,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 14,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 385.06,
+          y = 166.622,
+          width = 42.7524,
+          height = 34.279,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 4,
+      name = "objects",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 10,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 200,
+          y = 299.903,
+          width = 224,
+          height = 310,
+          rotation = 0,
+          gid = 22,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 11,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 377.588,
+          y = 205.08,
+          width = 58,
+          height = 140,
+          rotation = 0,
+          gid = 23,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 13,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 212.992,
+          y = 80,
+          width = 226.807,
+          height = 200,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["text1"] = "* (Well,[wait:5] there is a Steve here.)",
+            ["text2"] = "*[facec:steve][voice:steve] WILTER JOCKEY."
+          }
+        },
+        {
+          id = 17,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 240,
+          y = 480,
+          width = 160,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["exit_sound"] = "doorclose",
+            ["map"] = "rng_door",
+            ["marker"] = "door",
+            ["sound"] = "dooropen"
+          }
+        }
+      }
+    },
+    {
+      type = "imagelayer",
+      image = "../../../assets/sprites/filters/black.png",
+      id = 5,
+      name = "Image Layer 1",
+      class = "",
+      visible = true,
+      opacity = 0.5,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      repeatx = false,
+      repeaty = false,
+      properties = {}
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+    "id": "soul_rotation",
+    "version": "v1.0",
+    "engineVer": "v0.10.0",
+    "authors": [
+        "DayBreak"
+    ],
+	"optionalDependencies": [
+		"better_battles"
+	],
+}

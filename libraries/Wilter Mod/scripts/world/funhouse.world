@@ -1,0 +1,76 @@
+{
+    "maps": [
+        {
+            "fileName": "maps/wilters_room.tmx",
+            "height": 2120,
+            "width": 840,
+            "x": 3760,
+            "y": -2040
+        },
+        {
+            "fileName": "maps/hallway1.tmx",
+            "height": 640,
+            "width": 800,
+            "x": 4440,
+            "y": 40
+        },
+        {
+            "fileName": "maps/hallway2.tmx",
+            "height": 720,
+            "width": 760,
+            "x": 2920,
+            "y": -80
+        },
+        {
+            "fileName": "maps/main_room.tmx",
+            "height": 640,
+            "width": 760,
+            "x": 3680,
+            "y": 80
+        },
+        {
+            "fileName": "maps/entrance.tmx",
+            "height": 480,
+            "width": 680,
+            "x": 3720,
+            "y": 720
+        },
+        {
+            "fileName": "maps/dressing_room.tmx",
+            "height": 800,
+            "width": 800,
+            "x": 3160,
+            "y": -1480
+        },
+        {
+            "fileName": "maps/set_1.tmx",
+            "height": 600,
+            "width": 760,
+            "x": 2880,
+            "y": -680
+        },
+        {
+            "fileName": "maps/set2.tmx",
+            "height": 840,
+            "width": 720,
+            "x": 5240,
+            "y": -120
+        },
+        {
+            "fileName": "maps/room1.tmx",
+            "height": 600,
+            "width": 640,
+            "x": 5260,
+            "y": -724
+        },
+        {
+            "fileName": "maps/garden.tmx",
+            "height": 480,
+            "width": 640,
+            "x": 5960,
+            "y": 160
+        }
+    ],
+    "onlyShowAdjacentMaps": false,
+    "type": "world"
+}

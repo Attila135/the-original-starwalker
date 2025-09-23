@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="18">
+ <editorsettings>
+  <export target="steve.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="music" value="steve"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/floor.tsx"/>
+ <tileset firstgid="11" source="../tilesets/funhouse_objects.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="16" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,1,8,8,8,8,8,8,8,8,2,0,0,0,
+0,0,0,8,8,8,8,8,8,8,8,8,8,0,0,0,
+0,0,0,8,8,8,8,8,8,8,8,8,8,0,0,0,
+0,0,0,8,8,8,8,8,8,8,8,8,8,0,0,0,
+0,0,0,8,8,8,8,8,8,8,8,8,8,0,0,0,
+0,0,0,8,8,8,8,8,8,8,8,8,8,0,0,0,
+0,0,0,6,8,8,8,8,8,8,8,8,7,0,0,0,
+0,0,0,0,0,0,5,8,8,4,0,0,0,0,0,0,
+0,0,0,0,0,0,0,8,8,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,8,8,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,8,8,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="2" name="markers">
+  <object id="9" name="spawn" x="320" y="400">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="3" name="collision">
+  <object id="1" x="360" y="320" width="160" height="160"/>
+  <object id="2" x="520" y="0" width="120" height="280"/>
+  <object id="4" x="0" y="0" width="520" height="40"/>
+  <object id="5" x="0" y="40" width="120" height="240"/>
+  <object id="6" x="120" y="320" width="160" height="160"/>
+  <object id="7" x="80" y="280" width="40" height="40"/>
+  <object id="8" x="520" y="280" width="40" height="40"/>
+  <object id="12" x="284.694" y="230.583" width="57.0534" height="46.5183"/>
+  <object id="14" x="385.06" y="166.622" width="42.7524" height="34.279"/>
+ </objectgroup>
+ <objectgroup id="4" name="objects">
+  <object id="10" gid="22" x="200" y="299.903" width="224" height="310"/>
+  <object id="11" gid="23" x="377.588" y="205.08" width="58" height="140"/>
+  <object id="13" name="interactable" x="212.992" y="80" width="226.807" height="200">
+   <properties>
+    <property name="text1" value="* (Well,[wait:5] there is a Steve here.)"/>
+    <property name="text2" value="*[facec:steve][voice:steve] WILTER JOCKEY."/>
+   </properties>
+  </object>
+  <object id="17" name="transition" x="240" y="480" width="160" height="40">
+   <properties>
+    <property name="exit_sound" value="doorclose"/>
+    <property name="map" value="rng_door"/>
+    <property name="marker" value="door"/>
+    <property name="sound" value="dooropen"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <imagelayer id="5" name="Image Layer 1" opacity="0.5">
+  <image source="../../../assets/sprites/filters/black.png" width="1000" height="1000"/>
+ </imagelayer>
+</map>

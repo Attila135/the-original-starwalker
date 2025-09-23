@@ -1,0 +1,124 @@
+﻿1
+00:00:01,920 --> 00:00:03,000
+<W>: Mr. Director?
+
+2
+00:00:03,472 --> 00:00:06,000
+<W>: Where are we going?
+
+3
+00:00:06,550 --> 00:00:08,096
+<D>: Oh, don’t worry Wilty.
+
+4
+00:00:08,336 --> 00:00:09,824
+<D>: It’s a… surprise.
+
+5
+00:00:10,016 --> 00:00:13,392
+<W>: Oh boy, oh boy! A surprise?
+
+6
+00:00:13,536 --> 00:00:16,360
+<W>: Just for me??
+
+7
+00:00:16,496 --> 00:00:17,460
+<W>: Oh I can't wait!
+
+8
+00:00:17,590 --> 00:00:19,226
+<D>: Don’t worry, Wilty.
+
+9
+00:00:19,376 --> 00:00:21,230
+<D>: We'll be there soon.
+
+10
+00:00:21,360 --> 00:00:22,030
+[color:#777777](Elevator stops)
+
+11
+00:00:22,160 --> 00:00:23,950
+[color:#777777](Elevator door opens)
+
+12
+00:00:24,080 --> 00:00:26,410
+[color:#777777](Walking sounds)
+
+13
+00:00:26,544 --> 00:00:30,410
+<W>: Mr. Director, why are we back on set?
+
+14
+00:00:30,544 --> 00:00:37,710
+<W>: I thought production was c-c-canceled t-today?
+
+15
+00:00:38,426 --> 00:00:42,080
+<D>: Do you remember that little "stunt" you pulled yesterday?
+
+16
+00:00:42,224 --> 00:00:45,510
+<D>: The one where you started crying, live on set.
+
+17
+00:00:45,648 --> 00:00:49,370
+<W>: Y- Yes s-sir...
+
+18
+00:00:49,504 --> 00:00:54,600
+<D>: Do you remember how we had to DRAG you OFF SET just so the kid would STOP CRYING!?
+
+19
+00:00:54,752 --> 00:01:02,600
+<D>: Do you remember how you KICKED and SCREAMED while Kris watched their CHILDHOOD HERO act like SUCH, A, WIMP!?
+
+20
+00:01:02,736 --> 00:01:05,430
+<D>: Tch… I expected better from you.
+
+21
+00:01:05,584 --> 00:01:10,550
+<W>: I- I’m s-s-sorry, Mr-
+
+22
+00:01:10,688 --> 00:01:12,400
+<D>: A SORRY, Isn’t going to CUT IT.
+
+23
+00:01:12,790 --> 00:01:17,813
+<D>: Now, you’re going to walk on set, and you’re gonna record another episode, GOT IT?
+
+24
+00:01:19,586 --> 00:01:21,440
+<W>: Yes sir…
+
+25
+00:01:21,584 --> 00:01:22,120
+<D>: Good.
+
+26
+00:01:22,256 --> 00:01:23,000
+[color:#777777](Walking sounds)
+
+27
+00:01:23,136 --> 00:01:26,080
+<D>: I’m sorry I have to do this, old friend…
+
+28
+00:01:26,224 --> 00:01:29,710
+<D>: But you did this to yourself...
+
+29
+00:01:29,840 --> 00:01:31,120
+<D>: Goodbye.
+
+30
+00:01:31,280 --> 00:01:34,520
+<W>: Director, Wait!!!
+
+31
+00:01:34,656 --> 00:01:38,290
+[color:#777777](Elevator door closes)
+

@@ -1,0 +1,526 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "scripts/world/tilesets/wilter_tileset_real.tsx",
+    "expandedProjectPaths": [
+        "scripts/world/tilesets",
+        "scripts/world",
+        "scripts/world/maps"
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "scripts/world/maps/bedroom.tmx": {
+            "expandedObjectLayers": [
+                2
+            ],
+            "scale": 2,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 313.5,
+                "y": 248.5
+            }
+        },
+        "scripts/world/maps/candy_room.tmx": {
+            "scale": 0.6573999999999999,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 500.45634317006403,
+                "y": 500.45634317006403
+            }
+        },
+        "scripts/world/maps/chase_room_1.tmx": {
+            "expandedObjectLayers": [
+                2,
+                7
+            ],
+            "scale": 1.5,
+            "selectedLayer": 6,
+            "viewCenter": {
+                "x": 849.3333333333333,
+                "y": 2047.9999999999998
+            }
+        },
+        "scripts/world/maps/chase_room_1A.tmx": {
+            "expandedObjectLayers": [
+                4,
+                7,
+                5
+            ],
+            "scale": 3,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 669.3333333333333,
+                "y": 73.33333333333333
+            }
+        },
+        "scripts/world/maps/chase_room_2.tmx": {
+            "expandedObjectLayers": [
+                7
+            ],
+            "scale": 2,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 404.5,
+                "y": 160.5
+            }
+        },
+        "scripts/world/maps/chase_room_3.tmx": {
+            "expandedObjectLayers": [
+                8,
+                7
+            ],
+            "scale": 2,
+            "selectedLayer": 10,
+            "viewCenter": {
+                "x": 3,
+                "y": 284
+            }
+        },
+        "scripts/world/maps/chase_room_3A.tmx": {
+            "expandedObjectLayers": [
+                4
+            ],
+            "scale": 0.75,
+            "selectedLayer": -1,
+            "viewCenter": {
+                "x": 577.3333333333334,
+                "y": 229.33333333333331
+            }
+        },
+        "scripts/world/maps/chase_set2.tmx": {
+            "scale": 0.7826190476190475,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 360.328567082446,
+                "y": 420.38332826285364
+            }
+        },
+        "scripts/world/maps/chest_1.tmx": {
+            "scale": 1.3695833333333332,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 319.8052935807728,
+                "y": 240.21904472163072
+            }
+        },
+        "scripts/world/maps/chest_2.tmx": {
+            "scale": 1.3695833333333332,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 319.8052935807728,
+                "y": 240.21904472163072
+            }
+        },
+        "scripts/world/maps/credit_room.tmx": {
+            "scale": 0.13695833333333332,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 306.66261028293275,
+                "y": 2402.1904472163064
+            }
+        },
+        "scripts/world/maps/death.tmx": {
+            "expandedObjectLayers": [
+                2
+            ],
+            "scale": 0.82175,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 599.9391542439914,
+                "y": 400.3650745360511
+            }
+        },
+        "scripts/world/maps/dressing_room.tmx": {
+            "scale": 1,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 427,
+                "y": 504
+            }
+        },
+        "scripts/world/maps/elevator.tmx": {
+            "scale": 1.3695833333333332,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 319.8052935807728,
+                "y": 240.21904472163072
+            }
+        },
+        "scripts/world/maps/enter2.tmx": {
+            "scale": 0.6573999999999999,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 319.44021904472174,
+                "y": 500.45634317006403
+            }
+        },
+        "scripts/world/maps/entrance.tmx": {
+            "scale": 1.3695833333333332,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 319.8052935807728,
+                "y": 240.21904472163072
+            }
+        },
+        "scripts/world/maps/final_room.tmx": {
+            "expandedObjectLayers": [
+                2,
+                4,
+                5
+            ],
+            "scale": 3,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 320.3333333333333,
+                "y": 338.66666666666663
+            }
+        },
+        "scripts/world/maps/garden.tmx": {
+            "scale": 0.6573999999999999,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 500.45634317006403,
+                "y": 500.45634317006403
+            }
+        },
+        "scripts/world/maps/geno_room.tmx": {
+            "scale": 0.6573999999999999,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 500.45634317006403,
+                "y": 500.45634317006403
+            }
+        },
+        "scripts/world/maps/hallway1.tmx": {
+            "scale": 0.6567432567432567,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 479.63948889564955,
+                "y": 500.9567995132339
+            }
+        },
+        "scripts/world/maps/hallway2.tmx": {
+            "scale": 0.6573999999999999,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 500.45634317006403,
+                "y": 500.45634317006403
+            }
+        },
+        "scripts/world/maps/hallway3.tmx": {
+            "scale": 1.3695833333333332,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 319.8052935807728,
+                "y": 240.21904472163072
+            }
+        },
+        "scripts/world/maps/main_room.tmx": {
+            "expandedObjectLayers": [
+                4
+            ],
+            "scale": 0.6567432567432567,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 499.4341344691207,
+                "y": 500.9567995132339
+            }
+        },
+        "scripts/world/maps/pacifist_room.tmx": {
+            "scale": 0.6573999999999999,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 500.45634317006403,
+                "y": 500.45634317006403
+            }
+        },
+        "scripts/world/maps/party.tmx": {
+            "scale": 0.6573999999999999,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 500.45634317006403,
+                "y": 500.45634317006403
+            }
+        },
+        "scripts/world/maps/puppet_room.tmx": {
+            "expandedObjectLayers": [
+                2,
+                7
+            ],
+            "scale": 1.3695833333333332,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 319.8052935807728,
+                "y": 240.21904472163072
+            }
+        },
+        "scripts/world/maps/puzzle.tmx": {
+            "scale": 0.6573999999999999,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 500.45634317006403,
+                "y": 500.45634317006403
+            }
+        },
+        "scripts/world/maps/rng_door.tmx": {
+            "expandedObjectLayers": [
+                3
+            ],
+            "scale": 1.5,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 240,
+                "y": 115.99999999999999
+            }
+        },
+        "scripts/world/maps/room1.tmx": {
+            "expandedObjectLayers": [
+                4
+            ],
+            "scale": 4,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 523.5,
+                "y": 486.75
+            }
+        },
+        "scripts/world/maps/room2.tmx": {
+            "scale": 1.2445,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 400.1607071112897,
+                "y": 240.25713137806352
+            }
+        },
+        "scripts/world/maps/set_1.tmx": {
+            "expandedObjectLayers": [
+                2,
+                4
+            ],
+            "scale": 2,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 312.5,
+                "y": 140.5
+            }
+        },
+        "scripts/world/maps/steve.tmx": {
+            "scale": 0.6573999999999999,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 500.45634317006403,
+                "y": 500.45634317006403
+            }
+        },
+        "scripts/world/maps/tree_room.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 4,
+            "viewCenter": {
+                "x": 261.33333333333326,
+                "y": 556.6666666666666
+            }
+        },
+        "scripts/world/maps/vines_room_1.tmx": {
+            "scale": 0.5,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 508,
+                "y": 810
+            }
+        },
+        "scripts/world/maps/wheel.tmx": {
+            "scale": 1.3695833333333332,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 319.8052935807728,
+                "y": 240.21904472163072
+            }
+        },
+        "scripts/world/maps/wilters_room.tmx": {
+            "scale": 0.3100943396226415,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 461.1499847885609,
+                "y": 1060.9674475205354
+            }
+        },
+        "scripts/world/tilesets/battleborder.tsx": {
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/bedroom.tsx": {
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/bigchair_left.tsx": {
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/bigchair_right.tsx": {
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/castle.tsx": {
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/credits.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/credits_images.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/door.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/dressing_room.tsx": {
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/elevator.tsx": {
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/entrance.tsx": {
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/final_room.tsx": {
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/floor.tsx": {
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/flower_decal.tsx": {
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/funhouse.tsx": {
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/funhouse_objects.tsx": {
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/garden.tsx": {
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/light_left.tsx": {
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/light_right.tsx": {
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/mirror.tsx": {
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/mirror2.tsx": {
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/party.tsx": {
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/puppetroom.tsx": {
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/set1.tsx": {
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/stage.tsx": {
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/stagelight.tsx": {
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/tape.tsx": {
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/teeth.tsx": {
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/toy_blocks.tsx": {
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/toy_car.tsx": {
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/tree_room.tsx": {
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/tv.tsx": {
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/wilter_tileset_destroy.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "scripts/world/tilesets/wilter_tileset_real.tsx": {
+            "scaleInDock": 0.5,
+            "scaleInEditor": 1
+        },
+        "scripts/world/tilesets/wilters_room.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.exportedFilePath": "X:/Kristal Fangames/Wilter-Fangame_Package/Wilter-Fangame/mods/Wilter Mod/scripts/world/maps",
+    "loadedWorlds": [
+        "X:/Kristal Fangames/Wilter-Fangame_Package/Wilter-Fangame/mods/Wilter Mod/scripts/world/maps/chasescene.world"
+    ],
+    "map.lastUsedExportFilter": "Lua files (*.lua)",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 40,
+    "map.tileWidth": 40,
+    "openFiles": [
+        "scripts/world/maps/geno_room.tmx",
+        "scripts/world/maps/room1.tmx",
+        "scripts/world/maps/chase_room_2.tmx",
+        "scripts/world/maps/chase_room_1.tmx",
+        "scripts/world/maps/chase_room_3A.tmx",
+        "scripts/world/maps/chest_2.tmx",
+        "scripts/world/maps/credit_room.tmx",
+        "scripts/world/maps/elevator.tmx",
+        "scripts/world/maps/hallway1.tmx",
+        "scripts/world/maps/hallway3.tmx",
+        "scripts/world/maps/rng_door.tmx",
+        "scripts/world/maps/chase_room_1A.tmx",
+        "scripts/world/maps/candy_room.tmx",
+        "scripts/world/maps/room2.tmx",
+        "scripts/world/maps/chase_set2.tmx",
+        "scripts/world/maps/steve.tmx",
+        "scripts/world/maps/wheel.tmx",
+        "scripts/world/maps/pacifist_room.tmx",
+        "scripts/world/maps/garden.tmx",
+        "scripts/world/maps/dressing_room.tmx",
+        "scripts/world/maps/enter2.tmx",
+        "scripts/world/maps/main_room.tmx",
+        "scripts/world/maps/puppet_room.tmx",
+        "scripts/world/maps/party.tmx",
+        "scripts/world/maps/chest_1.tmx",
+        "scripts/world/maps/entrance.tmx",
+        "scripts/world/maps/final_room.tmx",
+        "scripts/world/maps/chase_room_3.tmx",
+        "scripts/world/maps/puzzle.tmx",
+        "scripts/world/maps/tree_room.tmx",
+        "scripts/world/maps/vines_room_1.tmx",
+        "scripts/world/maps/bedroom.tmx",
+        "scripts/world/maps/set_1.tmx",
+        "scripts/world/maps/wilters_room.tmx",
+        "scripts/world/tilesets/wilter_tileset_destroy.tsx",
+        "scripts/world/tilesets/wilters_room.tsx",
+        "scripts/world/tilesets/wilter_tileset_real.tsx",
+        "scripts/world/maps/hallway2.tmx",
+        "scripts/world/maps/death.tmx"
+    ],
+    "project": "wilter_boss_fight.tiled-project",
+    "property.type": "bool",
+    "recentFiles": [
+        "scripts/world/maps/geno_room.tmx",
+        "scripts/world/maps/room1.tmx",
+        "scripts/world/maps/chase_room_2.tmx",
+        "scripts/world/maps/chase_room_1.tmx",
+        "scripts/world/maps/chase_room_3A.tmx",
+        "scripts/world/maps/chest_2.tmx",
+        "scripts/world/maps/credit_room.tmx",
+        "scripts/world/maps/elevator.tmx",
+        "scripts/world/maps/hallway1.tmx",
+        "scripts/world/maps/hallway3.tmx",
+        "scripts/world/maps/rng_door.tmx",
+        "scripts/world/maps/chase_room_1A.tmx"
+    ]
+}

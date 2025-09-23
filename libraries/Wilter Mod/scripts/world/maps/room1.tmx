@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="16" height="15" tilewidth="40" tileheight="40" infinite="0" nextlayerid="12" nextobjectid="70">
+ <editorsettings>
+  <export target="room1.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="border" value="simple"/>
+  <property name="name" value="Funhouse - Set 3"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/wilter_tileset_real.tsx"/>
+ <tileset firstgid="961" source="../tilesets/teeth.tsx"/>
+ <tileset firstgid="1201" source="../tilesets/funhouse_objects.tsx"/>
+ <imagelayer id="11" name="background">
+  <image source="../../../assets/sprites/tilesets/wilter_tileset_real_image.png" width="640" height="604"/>
+ </imagelayer>
+ <objectgroup id="2" name="collision">
+  <object id="1" x="585.75" y="601.375">
+   <polyline points="0,0 -120,-121.125 77.5,-121.375"/>
+  </object>
+  <object id="2" x="55.913" y="600.261">
+   <polyline points="0,0 117.962,-120.011 -104.413,-119.761"/>
+  </object>
+  <object id="3" x="16.25" y="479.75">
+   <polyline points="0,0 -1,-131.5 82.75,-200.5 261,-199.5"/>
+  </object>
+  <object id="4" x="362.25" y="281">
+   <polyline points="0,0 181.25,-0.5 261.5,68.5 262.25,203.25"/>
+  </object>
+  <object id="5" x="224" y="182.182" width="53.4545" height="98.1818"/>
+  <object id="6" x="361.636" y="181.273" width="60.3636" height="100"/>
+  <object id="7" x="232.972" y="186.607" width="182" height="70.9697"/>
+  <object id="8" x="-32" y="599.667" width="619.667" height="144.333"/>
+ </objectgroup>
+ <objectgroup id="3" name="markers">
+  <object id="12" name="spawn" x="580" y="400">
+   <point/>
+  </object>
+  <object id="21" name="entry" x="320.361" y="306.969">
+   <point/>
+  </object>
+  <object id="25" name="wilter_1" x="320" y="343.762">
+   <point/>
+  </object>
+  <object id="28" name="kris_1" x="320.909" y="446.364">
+   <point/>
+  </object>
+  <object id="29" name="sus_1" x="175.697" y="442.878">
+   <point/>
+  </object>
+  <object id="30" name="ral_1" x="469.818" y="450.727">
+   <point/>
+  </object>
+  <object id="31" name="wilter_2" x="322" y="-205.333">
+   <point/>
+  </object>
+  <object id="32" name="wilter_4" x="464.667" y="339.333">
+   <point/>
+  </object>
+  <object id="33" name="wilter_3" x="445.333" y="-212">
+   <point/>
+  </object>
+  <object id="36" name="cam_pan_1" x="320" y="0">
+   <point/>
+  </object>
+  <object id="51" name="sus_2" x="370" y="480">
+   <point/>
+  </object>
+  <object id="52" name="entry" x="320" y="480">
+   <point/>
+  </object>
+  <object id="54" name="sus_3" x="370" y="500">
+   <point/>
+  </object>
+  <object id="55" name="ral_2" x="200" y="520">
+   <point/>
+  </object>
+  <object id="56" name="ral_3" x="320" y="520">
+   <point/>
+  </object>
+  <object id="57" name="sus_4" x="320" y="500">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ff007f" id="4" name="objects_player">
+  <object id="14" name="script" x="143.154" y="521.89" width="348.6" height="44.7224">
+   <properties>
+    <property name="cutscene" value="generic.cantleave"/>
+    <property name="once" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="17" name="interactable" x="136.482" y="200" width="76.7359" height="47.0369">
+   <properties>
+    <property name="text1" value="* (There's nothing out there.)"/>
+   </properties>
+  </object>
+  <object id="18" name="interactable" x="423.692" y="200" width="81.8864" height="48.067">
+   <properties>
+    <property name="text1" value="* (There's nothing out there..?)"/>
+    <property name="text2" value="* (Are those eyes?)"/>
+   </properties>
+  </object>
+  <object id="19" name="savepoint" x="560" y="440" width="40" height="40">
+   <properties>
+    <property name="text1" value="* This doesn't feel right... Something's off."/>
+    <property name="text2" value="* But nevertheless, You press on."/>
+    <property name="text3" value="* You are filled with the power of suspiciously placed save points."/>
+   </properties>
+  </object>
+  <object id="20" name="transition" x="280" y="224.549" width="80" height="40">
+   <properties>
+    <property name="facing" value="right"/>
+    <property name="map" value="room2"/>
+    <property name="marker" value="entry"/>
+   </properties>
+  </object>
+  <object id="27" name="npc" x="320" y="-240">
+   <properties>
+    <property name="actor" value="omeg_wilter"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="34" name="script" x="258.667" y="264.667" width="120" height="63.3333">
+   <properties>
+    <property name="cutscene" value="wilt_omeg_intro.cutscene1"/>
+    <property name="once" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="49" name="npc" x="-160" y="360">
+   <properties>
+    <property name="actor" value="ralsei"/>
+    <property name="cond" value="not Game:hasPartyMember(&quot;ralsei&quot;)"/>
+    <property name="facing" value="up"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="50" name="npc" x="960" y="360">
+   <properties>
+    <property name="actor" value="susie"/>
+    <property name="cond" value="not Game:hasPartyMember(&quot;susie&quot;)"/>
+    <property name="facing" value="up"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="53" name="script" x="310" y="460" width="25.5" height="30">
+   <properties>
+    <property name="cutscene" value="chase.post_chase"/>
+    <property name="once" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="60" x="520" y="440" width="40" height="40">
+   <properties>
+    <property name="flagcheck" value="!tension_chest"/>
+   </properties>
+  </object>
+  <object id="61" name="chest" x="520" y="440" width="40" height="40">
+   <properties>
+    <property name="flagcheck" value="tension_chest"/>
+    <property name="item" value="tensionpause"/>
+   </properties>
+  </object>
+  <object id="62" gid="1210" x="520" y="480" width="40" height="40">
+   <properties>
+    <property name="flagcheck" value="!tension_chest"/>
+   </properties>
+  </object>
+  <object id="63" name="interactable" x="520" y="440" width="40" height="40">
+   <properties>
+    <property name="flagcheck" value="!tension_chest"/>
+    <property name="text1" value="* The treasure of calmness."/>
+    <property name="text2" value="* Free yourself of your stress and worries and move like the wind."/>
+    <property name="text3" value="* Five switches, find and press them all."/>
+    <property name="text4" value="* Only then you may be able to take a break and steady your breath."/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="7" name="objects above">
+  <object id="35" name="dark_overlay" x="327.333" y="383.333">
+   <point/>
+  </object>
+ </objectgroup>
+</map>

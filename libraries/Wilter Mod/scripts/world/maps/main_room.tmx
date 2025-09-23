@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="19" height="16" tilewidth="40" tileheight="40" infinite="0" nextlayerid="7" nextobjectid="90">
+ <editorsettings>
+  <chunksize width="17" height="16"/>
+  <export target="main_room.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="border" value="simple"/>
+  <property name="music" value="garden"/>
+  <property name="name" value="Funhouse - Entrance"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/funhouse.tsx"/>
+ <tileset firstgid="118" source="../tilesets/flower_decal.tsx"/>
+ <tileset firstgid="143" source="../tilesets/door.tsx"/>
+ <tileset firstgid="144" source="../tilesets/light_right.tsx"/>
+ <tileset firstgid="145" source="../tilesets/light_left.tsx"/>
+ <tileset firstgid="146" source="../tilesets/funhouse_objects.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="19" height="16">
+  <data encoding="csv">
+0,0,0,8,0,33,33,33,33,33,33,33,33,33,0,8,0,0,0,
+8,0,0,0,35,59,59,59,59,59,59,59,29,59,31,0,0,20,0,
+0,0,20,34,48,59,42,59,59,59,59,59,59,59,44,32,0,0,0,
+33,33,33,47,48,27,28,59,59,59,59,59,1,2,44,19,33,33,33,
+59,59,59,47,48,40,41,59,59,59,59,59,14,15,44,45,59,59,59,
+59,59,59,21,61,72,72,72,72,72,72,72,72,72,57,45,3,59,59,
+59,59,16,60,74,85,85,85,85,85,85,85,85,85,70,58,59,59,59,
+72,72,72,73,85,85,85,85,85,85,85,85,85,85,85,71,72,72,72,
+85,85,85,85,84,85,85,85,85,85,85,85,85,85,85,85,85,85,85,
+85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,
+85,85,85,85,85,85,85,85,85,85,85,85,85,86,85,85,85,85,85,
+98,98,98,99,85,85,85,85,85,85,85,85,85,85,85,97,98,98,98,
+0,0,0,112,99,85,87,85,85,85,85,85,85,85,97,110,0,20,0,
+0,0,0,0,112,98,98,98,100,85,109,98,98,98,110,0,0,0,0,
+0,0,0,0,0,0,0,8,113,85,111,0,0,0,0,8,0,0,0,
+0,0,0,20,0,0,0,0,113,85,111,0,20,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="2" name="Tile Layer 2" width="19" height="16">
+  <data encoding="csv">
+0,0,0,0,36,0,0,0,0,0,0,0,0,0,9,0,0,0,0,
+0,0,0,36,117,0,0,0,119,120,121,0,0,0,76,10,0,0,0,
+33,33,33,116,0,0,0,123,124,125,126,127,0,0,0,78,33,33,33,
+59,59,59,0,0,0,0,128,129,130,131,132,0,0,0,0,59,59,59,
+0,0,0,0,0,0,0,133,134,135,136,137,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,138,139,140,141,142,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="3" name="collision">
+  <object id="7" x="440" y="520" width="200" height="120"/>
+  <object id="9" x="640" y="440" width="120" height="200"/>
+  <object id="12" x="120" y="520" width="200" height="120"/>
+  <object id="14" x="0" y="440" width="120" height="200"/>
+  <object id="37" x="200" y="0" width="360" height="240"/>
+  <object id="38" x="0" y="120" width="120" height="200"/>
+  <object id="41" x="640" y="120" width="120" height="200"/>
+  <object id="42" x="120" y="40" width="80" height="200"/>
+  <object id="45" x="560" y="40" width="80" height="200"/>
+  <object id="46" x="120" y="320">
+   <polygon points="0,0 80,-80 0,0"/>
+  </object>
+  <object id="47" x="640" y="320">
+   <polygon points="0,0 -80,-80 0,-80"/>
+  </object>
+  <object id="48" x="640" y="520">
+   <polygon points="0,0 0,-80 -80,0"/>
+  </object>
+  <object id="49" x="200" y="520">
+   <polygon points="0,0 -80,-80 -80,0"/>
+  </object>
+  <object id="60" x="252.738" y="454.06" width="15.024" height="12.687"/>
+  <object id="61" x="173.11" y="414.663" width="15.024" height="12.687"/>
+  <object id="62" x="492.288" y="454.394" width="15.024" height="12.687"/>
+  <object id="63" x="572.416" y="415.665" width="15.024" height="12.687"/>
+  <object id="88" x="320" y="640" width="120"/>
+ </objectgroup>
+ <objectgroup id="5" name="markers">
+  <object id="50" name="entry" x="379.582" y="627.545">
+   <point/>
+  </object>
+  <object id="51" name="exit1" x="19.2309" y="380.256">
+   <point/>
+  </object>
+  <object id="52" name="exit2" x="740.339" y="381.265">
+   <point/>
+  </object>
+  <object id="54" name="spawn" x="540.837" y="305.036">
+   <point/>
+  </object>
+  <object id="69" name="kris" x="380.347" y="505.333">
+   <point/>
+  </object>
+  <object id="70" name="susie" x="321.086" y="494.559">
+   <point/>
+  </object>
+  <object id="71" name="ralsei" x="438.53" y="487.016">
+   <point/>
+  </object>
+  <object id="73" name="kris_2" x="379.261" y="365.317">
+   <point/>
+  </object>
+  <object id="74" name="susie_2" x="320" y="354.543">
+   <point/>
+  </object>
+  <object id="75" name="ralsei_2" x="437.444" y="347">
+   <point/>
+  </object>
+  <object id="79" name="gathering_left" x="320.639" y="419.169">
+   <point/>
+  </object>
+  <object id="85" name="gathering_right" x="440" y="419.169">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="4" name="objects">
+  <object id="3" name="light_right" gid="144" x="560" y="440" width="40" height="80"/>
+  <object id="4" name="light_right" gid="144" x="480" y="480" width="40" height="80"/>
+  <object id="5" name="light_left" gid="145" x="240" y="480" width="40" height="80"/>
+  <object id="6" name="light_left" gid="145" x="160" y="440" width="40" height="80"/>
+  <object id="2" name="door" gid="143" x="760" y="240" width="40" height="80"/>
+  <object id="55" name="savepoint" x="560" y="280" width="40" height="40">
+   <properties>
+    <property name="text1" value="* This place, while terrifying."/>
+    <property name="text2" value="* It feels so... familiar."/>
+    <property name="text3" value="* You're filled with the power of twisted nostalgia."/>
+   </properties>
+  </object>
+  <object id="64" name="interactable" x="360" y="200" width="40" height="55.2938">
+   <properties>
+    <property name="text" value="* This wall is suspiciously doorless."/>
+   </properties>
+  </object>
+  <object id="66" name="transition" x="760" y="320" width="40" height="120">
+   <properties>
+    <property name="map" value="hallway1"/>
+    <property name="marker" value="entrance"/>
+   </properties>
+  </object>
+  <object id="68" name="transition" x="-40" y="320" width="40" height="120">
+   <properties>
+    <property name="map" value="hallway2"/>
+    <property name="marker" value="entrance"/>
+   </properties>
+  </object>
+  <object id="77" name="interactable" x="359.487" y="391.553" width="41.6224" height="63.1233">
+   <properties>
+    <property name="cutscene" value="generic.doorappear"/>
+    <property name="once" type="bool" value="false"/>
+    <property name="solid" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="86" name="script" x="-100.399" y="-23.3004" width="1078.04" height="787.501">
+   <properties>
+    <property name="cutscene" value="generic.projector_check"/>
+    <property name="once" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="89" name="interactable" x="320" y="640" width="120">
+   <properties>
+    <property name="text1" value="* Locked."/>
+   </properties>
+  </object>
+ </objectgroup>
+ <imagelayer id="6" name="Image Layer 1" opacity="0.5" offsetx="0" offsety="1">
+  <image source="../../../assets/sprites/filters/black.png" width="1000" height="1000"/>
+ </imagelayer>
+</map>

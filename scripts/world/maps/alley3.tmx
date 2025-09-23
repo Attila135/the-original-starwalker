@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="27" height="14" tilewidth="40" tileheight="40" infinite="0" nextlayerid="13" nextobjectid="105">
+ <editorsettings>
+  <export target="alley3.lua" format="lua"/>
+ </editorsettings>
+ <tileset firstgid="1" source="../tilesets/alley_animated.tsx"/>
+ <tileset firstgid="34" source="../tilesets/alley.tsx"/>
+ <tileset firstgid="349" source="../tilesets/city_alley.tsx"/>
+ <tileset firstgid="459" source="../tilesets/street_edges.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="27" height="14">
+  <data encoding="csv">
+293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,
+293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,
+293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,
+293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,
+293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,
+293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,
+293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,
+293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,
+293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,
+293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,
+293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,
+293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,
+293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,
+293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293,293
+</data>
+ </layer>
+ <objectgroup color="#0000ff" id="4" name="collision">
+  <object id="102" x="0" y="240">
+   <polygon points="0,0 280,-40 1080,-40 1080,120 280,120 0,80 0,320 1080,320 1160,320 1160,-240 120,-240 0,-240"/>
+  </object>
+ </objectgroup>
+ <objectgroup color="#00ffff" id="6" name="blockcollision"/>
+ <objectgroup id="10" name="objects_buttons"/>
+ <objectgroup color="#ff0000" id="12" name="paths"/>
+ <objectgroup color="#7f00ff" id="3" name="markers">
+  <object id="2" name="spawn" x="40" y="280">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ff00ff" id="2" name="objects">
+  <object id="4" name="transition" x="-40" y="240" width="40" height="80">
+   <properties>
+    <property name="map" value="alley"/>
+    <property name="marker" value="spawn"/>
+   </properties>
+   <polygon points="-10,-40 40,0 40,80 -10,40"/>
+  </object>
+  <object id="103" name="npc" x="1019.26" y="259.506" width="54.6667" height="45.3679">
+   <properties>
+    <property name="actor" value="starwalker"/>
+    <property name="cutscene" value="starwalker_NEO"/>
+   </properties>
+  </object>
+  <object id="104" name="blocktree" x="740" y="160" width="40" height="40">
+   <properties>
+    <property name="flagcheck" value="!man_room"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#00c000" id="5" name="controllers"/>
+</map>

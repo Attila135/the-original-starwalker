@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.11" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="27">
+ <editorsettings>
+  <export target="candy_room.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="music" value="garden"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/floor.tsx"/>
+ <tileset firstgid="11" source="../tilesets/funhouse_objects.tsx"/>
+ <tileset firstgid="49" source="../tilesets/funhouse.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="16" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,1,8,8,8,8,8,8,8,8,8,8,2,0,0,
+0,0,8,8,8,8,8,8,8,8,8,8,8,8,0,0,
+0,0,8,8,8,8,8,8,8,8,8,8,8,8,0,0,
+0,0,8,8,8,8,8,8,8,8,8,8,8,8,0,0,
+0,0,8,8,8,8,8,8,8,8,8,8,8,8,0,0,
+0,0,8,8,8,8,8,8,8,8,8,8,8,8,0,0,
+0,0,6,8,8,8,8,8,8,8,8,8,8,7,0,0,
+0,0,0,0,0,0,5,8,8,4,0,0,0,0,0,0,
+0,0,0,0,0,0,0,8,8,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,8,8,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="3" name="Tile Layer 2" width="16" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,60,60,61,0,0,0,0,0,0,
+0,0,0,0,0,0,72,73,73,74,0,0,0,0,0,0,
+0,0,0,0,0,0,72,73,73,74,0,0,0,0,0,0,
+0,0,0,0,0,0,85,86,86,87,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="5" name="collision">
+  <object id="13" x="80" y="320" width="80" height="40"/>
+  <object id="14" x="480" y="320" width="80" height="40"/>
+  <object id="15" x="480" y="120" width="80" height="40"/>
+  <object id="16" x="80" y="120" width="80" height="40"/>
+  <object id="17" x="80" y="40" width="480" height="40"/>
+  <object id="18" x="560" y="80" width="40" height="280"/>
+  <object id="19" x="80" y="360" width="200" height="40"/>
+  <object id="20" x="40" y="80" width="40" height="280"/>
+  <object id="21" x="360" y="360" width="200" height="40"/>
+  <object id="22" x="360" y="400" width="40" height="80"/>
+  <object id="23" x="240" y="400" width="40" height="80"/>
+  <object id="24" x="299.719" y="126.444" width="37.4649" height="17.9519"/>
+ </objectgroup>
+ <objectgroup id="6" name="markers">
+  <object id="6" name="spawn" x="320" y="464.001">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup id="2" name="objects">
+  <object id="1" gid="21" x="299.272" y="145.463" width="40" height="54">
+   <properties>
+    <property name="solid" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="2" gid="18" x="480" y="160" width="80" height="120"/>
+  <object id="3" gid="18" x="80" y="160" width="80" height="120"/>
+  <object id="4" gid="18" x="80" y="360" width="80" height="120"/>
+  <object id="5" gid="18" x="480" y="360" width="80" height="120"/>
+  <object id="25" name="interactable" x="280" y="80" width="80" height="80">
+   <properties>
+    <property name="cutscene" value="generic.candy"/>
+    <property name="once" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="26" name="transition" x="240" y="480" width="160" height="40">
+   <properties>
+    <property name="exit_sound" value="doorclose"/>
+    <property name="map" value="rng_door"/>
+    <property name="marker" value="door"/>
+    <property name="sound" value="dooropen"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <imagelayer id="8" name="Image Layer 1" opacity="0.5">
+  <image source="../../../assets/sprites/filters/black.png" width="1000" height="1000"/>
+ </imagelayer>
+</map>

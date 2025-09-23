@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="21" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="16" nextobjectid="144">
+ <editorsettings>
+  <export target="alley.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="border" value="castle"/>
+  <property name="light" type="bool" value="false"/>
+  <property name="music" value="cybercity"/>
+  <property name="name" value="Test City - Sugarplum Alley"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/city_alley.tsx"/>
+ <tileset firstgid="111" source="../tilesets/alley.tsx"/>
+ <tileset firstgid="426" source="../tilesets/street_edges.tsx"/>
+ <tileset firstgid="634" source="../tilesets/test_battleborder.tsx"/>
+ <tileset firstgid="649" source="../tilesets/alley_animated.tsx"/>
+ <tileset firstgid="682" source="../tilesets/alley_buildings_glitch.tsx"/>
+ <layer id="1" name="tiles" width="21" height="12">
+  <data encoding="csv">
+452,453,454,446,447,448,452,453,454,442,443,446,447,448,442,443,452,453,454,442,443,
+465,466,467,459,460,461,465,466,467,455,456,459,460,461,455,456,465,466,467,455,456,
+478,479,480,472,473,474,478,479,480,93,92,472,473,474,468,469,478,479,480,468,469,
+491,492,493,485,486,487,491,492,493,82,81,485,486,487,481,482,491,492,493,481,482,
+484,483,484,483,484,483,484,483,484,483,484,483,484,483,484,483,484,483,484,483,484,
+495,496,497,498,499,496,497,498,499,496,497,498,499,496,497,498,499,496,497,498,499,
+508,509,510,511,512,509,510,511,512,509,575,576,512,509,510,511,512,509,510,511,512,
+521,522,523,524,525,522,523,524,525,522,588,589,525,522,523,524,525,522,523,524,525,
+534,535,536,537,538,535,536,537,538,535,536,537,538,535,536,537,538,535,536,537,538,
+263,264,265,263,264,265,263,264,265,263,264,265,263,264,265,263,264,265,263,264,263,
+278,279,280,278,279,280,278,279,280,278,279,280,278,279,280,278,279,280,278,279,280,
+566,566,566,566,566,566,566,566,566,566,566,566,566,566,566,566,566,566,566,566,566
+</data>
+ </layer>
+ <layer id="5" name="battleborder" width="21" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup color="#0000ff" id="4" name="collision" opacity="0.5">
+  <properties>
+   <property name="map" value="alley3"/>
+   <property name="marker" value="spawn"/>
+  </properties>
+  <object id="96" x="14" y="149" width="820" height="13"/>
+  <object id="97" x="13" y="153"/>
+  <object id="98" x="-4" y="141.333" width="2.66667" height="348"/>
+  <object id="99" x="-22.6667" y="464" width="1202.67" height="8"/>
+  <object id="100" x="721.333" y="153.333" width="134.667" height="6.66667"/>
+  <object id="101" x="888" y="82.6667"/>
+  <object id="102" x="-82.6667" y="152" width="72" height="396"/>
+  <object id="103" x="-29.3333" y="-12" width="929.333" height="177.333"/>
+  <object id="104" x="-38.6667" y="444" width="1026.67" height="173.333"/>
+  <object id="105" x="-80" y="-16" width="73.3333" height="444"/>
+  <object id="112" x="900" y="-5.33333" width="69.3333" height="565.333"/>
+  <object id="113" x="884" y="-18.6667" width="60" height="614.667"/>
+  <object id="114" x="-57.3333" y="-1.33333" width="1032" height="21.3333"/>
+  <object id="115" x="-26.6667" y="-26.6667" width="18.6667" height="636"/>
+  <object id="116" x="-60" y="461.333" width="1048" height="53.3333"/>
+  <object id="117" x="236" y="532" width="1.33333"/>
+  <object id="118" x="221.333" y="513.333" width="34.6667" height="36"/>
+  <object id="119" x="338.667" y="526.667"/>
+  <object id="120" x="318.667" y="505.333" width="62.6667" height="54.6667"/>
+  <object id="121" x="189.333" y="556" width="17.3333" height="28"/>
+  <object id="122" x="210.667" y="581.333" width="122.667" height="32"/>
+  <object id="123" x="334.667" y="564" width="5.33333" height="30.6667"/>
+  <object id="124" x="337.333" y="568" width="17.3333" height="18.6667"/>
+  <object id="126" x="770.667" y="548">
+   <polygon points="0,0 28,-37.3333 52,-2.66667 -9.33333,-32 58.6667,-24"/>
+  </object>
+  <object id="127" x="720" y="516">
+   <polygon points="0,0 -68,25.3333 -17.3333,28 -49.3333,-14.6667 -46.6667,34.6667"/>
+  </object>
+  <object id="128" x="632" y="566.667">
+   <polygon points="0,0 16,20 21.3333,22.6667 41.3333,38.6667 58.6667,49.3333 94.6667,54.6667 121.333,50.6667 153.333,46.6667 180,40 188,36 206.667,12 214.667,-1.33333 209.333,-9.33333 193.333,1.33333 182.667,5.33333 170.667,16 154.667,25.3333 134.667,21.3333 106.667,16 92,14.6667 60,16 38.6667,10.6667 18.6667,5.33333"/>
+  </object>
+  <object id="129" x="280" y="640">
+   <polygon points="0,0 0,80 80,80 0,80"/>
+  </object>
+  <object id="130" x="400" y="640">
+   <polygon points="0,0 40,40 40,80 0,80 -40,40 -40,0"/>
+  </object>
+  <object id="131" x="480" y="640">
+   <polygon points="0,0 40,80 80,0 40,80"/>
+  </object>
+  <object id="132" x="640" y="640">
+   <polygon points="0,0 -40,0 -40,40 0,40 -40,40 -40,80 0,80 -40,80 -40,0"/>
+  </object>
+  <object id="133" x="280" y="760">
+   <polygon points="0,0 40,80 80,0 120,80 160,0 120,80 80,0 40,80"/>
+  </object>
+  <object id="134" x="520" y="760">
+   <polygon points="0,0 0,80 0,0"/>
+  </object>
+  <object id="135" x="600" y="840">
+   <polygon points="0,0 0,-80 40,0 40,-80 40,0 0,-80"/>
+  </object>
+  <object id="141" x="520" y="520">
+   <polygon points="0,0 -40,-40 -80,0 -80,40 0,80 80,40 80,0 40,-40"/>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ff0000" id="6" name="paths" opacity="0.5"/>
+ <objectgroup color="#7f00ff" id="3" name="markers">
+  <object id="106" name="spawn" x="58.6667" y="289.333">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ff00ff" id="2" name="objects">
+  <object id="110" name="npc" x="750.667" y="160" width="54.6667" height="305.333">
+   <properties>
+    <property name="actor" value="starwalker"/>
+    <property name="cutscene" value="starwalker"/>
+   </properties>
+  </object>
+  <object id="111" name="transition" x="838.667" y="152" width="52" height="338.667">
+   <properties>
+    <property name="map" value="alley3"/>
+    <property name="marker" value="spawn"/>
+   </properties>
+  </object>
+  <object id="143" name="forcefield" x="816" y="160" width="40" height="284">
+   <properties>
+    <property name="flag" value="alley_enable_forcefield"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
