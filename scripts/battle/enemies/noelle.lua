@@ -43,7 +43,7 @@ end
 function MyEnemy:getNextWaves()
 
   if (self.progress == 0) then
-        return {"masktutwave"}
+        return {"lonewolf_parade/masktutwave"}
     end
 
     return super.getNextWaves(self)

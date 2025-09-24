@@ -2,7 +2,7 @@ local ActionBoxDisplay, super = Class("ActionBoxDisplay", true)
 
 function ActionBoxDisplay:draw()
     -- unfortunately i dont think theres a particularly good way for me to do this other than copy-pasting :(
-    if Kristal.getLibConfig("karma", "display_kr") then
+    if Kristal.getLibConfig("karma", "kr_display") ~= "none" then
         if Game.battle.current_selecting == self.actbox.index then
             Draw.setColor(self.actbox.battler.chara:getColor())
         else
@@ -22,6 +22,9 @@ function ActionBoxDisplay:draw()
         love.graphics.rectangle("fill", 2, Game:getConfig("oldUIPositions") and 3 or 2, 209, Game:getConfig("oldUIPositions") and 34 or 35)
     
         local bar_width = 76
+        if self.actbox.kr_sprite.visible then
+            bar_width = 57
+        end
         Draw.setColor(PALETTE["action_health_bg"])
         love.graphics.rectangle("fill", 128, 22 - self.actbox.data_offset, bar_width, 9)
     

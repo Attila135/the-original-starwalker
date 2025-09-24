@@ -3,7 +3,8 @@
     "version": "1.0.0",
     "engineVersion": "0.8.1-dev",
     "config": {
-        "damage_style": "all",
-        "display_kr": true
+        "kr_target": "all", // "all", "random", party member ID
+        "kr_spread": "divide", // "divide", "full"
+        "kr_display": "text" // "text", "bar", "none"
     }
 }

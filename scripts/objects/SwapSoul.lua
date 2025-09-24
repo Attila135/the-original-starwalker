@@ -68,12 +68,18 @@ function SwapSoul:update()
                     self.touched_bullet = true
                 end
                 if grazed then
-                    local chara = Game.party[1] and Game.party[2] and Game.party[3]
-                    local recover = 15
+                    local chara = Game.party[1]
+                    local chara2 = Game.party[2]
+                    local chara3 = Game.party[3]
+                    local recover = 30
                     if chara.karma > 0 then
                         chara.karma = Utils.approach(chara.karma, 0, recover*DT)
+                        chara2.karma = Utils.approach(chara2.karma, 0, recover*DT)
+                        chara3.karma = Utils.approach(chara3.karma, 0, recover*DT)
                     else
                         chara.health = Utils.approach(chara.health, chara:getStat("health"), recover/2*DT)
+                        chara2.health = Utils.approach(chara2.health, chara2:getStat("health"), recover/2*DT)
+                        chara3.health = Utils.approach(chara3.health, chara3:getStat("health"), recover/2*DT)
                     end
                     if not was_grazing then
                         Assets.playSound("graze")
