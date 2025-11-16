@@ -12,7 +12,7 @@
 local Gorb, super = Class(Actor)
 
 function Gorb:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 32
     self.height = 64

@@ -1,7 +1,7 @@
 local Shockwave, super = Class(Bullet)
 
 function Shockwave:init(x, y, length, height, speed)
-    super:init(self, x, y)
+    super.init(self, x, y)
     self:setOrigin(0, 0)
     self:setScale(1, 1)
 
@@ -29,7 +29,7 @@ function Shockwave:init(x, y, length, height, speed)
 end
 
 function Shockwave:update()
-    super:update(self)
+    super.update(self)
 
     self.wave_x = self.wave_x + self.speed * DTMULT
 
@@ -90,7 +90,7 @@ function Shockwave:draw()
         end
     end
 
-    super:draw(self)
+    super.draw(self)
 end
 
 return Shockwave

@@ -4,7 +4,7 @@ local Unveiledfallthing, super = Class(Object)
 
 
 function Unveiledfallthing:init(x, y, heightspawn)
-    super:init(self, x, y - heightspawn)
+    super.init(self, x, y - heightspawn)
 
     self.goalX = x;
     self.goalY = y;
@@ -40,7 +40,7 @@ function Unveiledfallthing:init(x, y, heightspawn)
 end
 
 function Unveiledfallthing:update()
-    super:update(self)
+    super.update(self)
    -- use DTMULT
    self.siner = self.siner + 1 * DTMULT / 20;
    self.sprite.alpha = self.alpha;

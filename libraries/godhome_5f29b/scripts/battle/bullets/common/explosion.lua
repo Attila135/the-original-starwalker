@@ -1,7 +1,7 @@
 local Explosion, super = Class(Bullet)
 
 function Explosion:init(x, y, radius)
-    super:init(self, x, y)
+    super.init(self, x, y)
     self:setScale(1, 1)
     self.collider = CircleCollider(self, 0,0, radius)
     self.double_damage = true
@@ -47,7 +47,7 @@ function Explosion:init(x, y, radius)
 end
 
 function Explosion:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     self.wave.timer:after(0.4, function()
         self:remove()
     end)

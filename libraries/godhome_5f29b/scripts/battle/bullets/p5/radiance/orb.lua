@@ -1,7 +1,7 @@
 local Orb, super = Class(Bullet)
 
 function Orb:init(x, y, dir, time)
-    super:init(self, x, y, "battle/p5/radiance/orb")
+    super.init(self, x, y, "battle/p5/radiance/orb")
     self.collider = CircleCollider(self, self.width/2, self.height/2, 6)
     self.graphics.spin = 0.3
     self.physics = {
@@ -35,7 +35,7 @@ function Orb:init(x, y, dir, time)
 end
 
 function Orb:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     self.wave.timer:after(self.time, function()
         self.collidable = false
         self.ps:remove()
@@ -46,7 +46,7 @@ function Orb:onAdd(parent)
 end
 
 function Orb:update()
-    super:update(self)
+    super.update(self)
     local soul = Game.battle.soul
     local angle = Utils.angle(self, soul)
     self.physics.speed_x = Utils.approach(self.physics.speed_x, 10*math.cos(angle), 0.28*DTMULT)

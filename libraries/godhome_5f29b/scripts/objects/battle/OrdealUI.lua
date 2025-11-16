@@ -1,7 +1,7 @@
 local UI, super = Class(Object)
 
 function UI:init()
-    super:init(self, 40, 40)
+    super.init(self, 40, 40)
     self.layer = BATTLE_LAYERS["ui"]
 
     self.head = Sprite("battle/ordeal/ui_zote", 0, 0)
@@ -15,7 +15,7 @@ end
 function UI:draw()
     love.graphics.setColor(0, 0, 0, 0.5)
     love.graphics.rectangle("fill", -20, -20, 80, 40)
-    super:draw(self)
+    super.draw(self)
 end
 
 function UI:setCount(count)

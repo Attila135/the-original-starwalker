@@ -1,7 +1,7 @@
 local Candles, super = Class("UIAttachment")
 
 function Candles:init(darkness)
-    super:init(self, 40)
+    super.init(self, 40)
     local positions = {
         love.math.random(60),
         160 + love.math.random(-30,30),

@@ -1,7 +1,7 @@
 local Laser, super = Class("p5/kristalguardian/bomb_base")
 
 function Laser:init(x)
-    super:init(self, x, "laser")
+    super.init(self, x, "laser")
 end
 
 function Laser:explode()
@@ -11,7 +11,7 @@ function Laser:explode()
     self.physics.speed_y = 0
     self.wave.timer:after(0.75, function()
         -- laser:release(self.x, self.y)
-        -- super:explode(self)
+        -- super.explode(self)
         self.sprite:remove()
         Assets.playSound("bosses/jevil_bomb", 0.8)
         self.wave.timer:after(0.8, function()

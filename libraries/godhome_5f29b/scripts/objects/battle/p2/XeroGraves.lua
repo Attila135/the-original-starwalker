@@ -1,7 +1,7 @@
 local Graves, super = Class("UIAttachment")
 
 function Graves:init()
-    super:init(self, 64)
+    super.init(self, 64)
     local positions = {
         love.math.random(60),
         160 + love.math.random(-30,30),

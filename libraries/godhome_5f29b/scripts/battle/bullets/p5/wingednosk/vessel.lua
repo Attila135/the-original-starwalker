@@ -8,7 +8,7 @@ Vessel.positions = {
 
 function Vessel:init(x, y)
     self.type = Utils.pick{"a","b","c"}
-    super:init(self, x, y, "battle/p2/nosk/vessel_"..self.type)
+    super.init(self, x, y, "battle/p2/nosk/vessel_"..self.type)
     self:setHitbox(6,9,4,8)
 
     self.sprite:setRotationOrigin(0.5, 0.5)
@@ -26,7 +26,7 @@ function Vessel:init(x, y)
 end
 
 function Vessel:update()
-    super:update(self)
+    super.update(self)
     if self.shaking then
         self.sprite.rotation = Utils.random(-0.1,0.1)
     else
@@ -41,7 +41,7 @@ function Vessel:draw()
         love.graphics.line(line)
     end
     love.graphics.setLineWidth(1)
-    super:draw(self)
+    super.draw(self)
 end
 
 function Vessel:fire()

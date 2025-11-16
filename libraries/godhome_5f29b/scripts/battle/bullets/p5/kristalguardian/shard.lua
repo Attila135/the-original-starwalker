@@ -1,7 +1,7 @@
 local Shard, super = Class(Bullet)
 
 function Shard:init(x, y, dir)
-    super:init(self, x, y, "battle/p5/kristalguardian/shard")
+    super.init(self, x, y, "battle/p5/kristalguardian/shard")
     self.rotation = dir
     self.physics = {
         speed = 10,
@@ -10,7 +10,7 @@ function Shard:init(x, y, dir)
 end
 
 function Shard:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     self.wave.timer:script(function(wait)
         while not Game.battle:checkSolidCollision(self) do
             wait()

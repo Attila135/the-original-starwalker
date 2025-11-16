@@ -1,7 +1,7 @@
 local Fireball, super = Class(Bullet)
 
 function Fireball:init(x, y, sx)
-    super:init(self, x, y, "battle/p3/grimm/fireball")
+    super.init(self, x, y, "battle/p3/grimm/fireball")
     self.sprite:play(0.1, true)
     self:setRotationOriginExact(10, 6)
     self:setScale(4,4)
@@ -36,7 +36,7 @@ function Fireball:init(x, y, sx)
 end
 
 function Fireball:update()
-    super:update(self)
+    super.update(self)
     self.rotation = math.atan2(self.physics.speed_y, self.physics.speed_x)
 end
 

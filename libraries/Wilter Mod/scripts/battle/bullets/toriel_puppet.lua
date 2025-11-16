@@ -2,7 +2,7 @@ local Puppet, super = Class(Bullet)
 
 function Puppet:init(x, y, dir, speed)
     -- Last argument = sprite path
-    super:init(self, x, y, "bullets/toriel")
+    super.init(self, x, y, "bullets/toriel")
     self:setScale(2)
 
     self.old_x = self.x
@@ -20,7 +20,7 @@ function Puppet:update()
     self.x = self.old_x + math.cos(self.siner/2+12)*7
     self.y = self.old_y + math.cos(self.siner+15)*35
     self.siner = self.siner + DT
-    super:update(self)
+    super.update(self)
 end
 
 function Puppet:draw()

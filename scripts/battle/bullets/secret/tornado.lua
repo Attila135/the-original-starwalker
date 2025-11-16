@@ -2,7 +2,7 @@ local Tornado, super = Class(Bullet)
 
 function Tornado:init(x, y, dir, speed)
     -- Last argument = sprite path
-    super:init(self, x, y, "bullets/tornado")
+    super.init(self, x, y, "bullets/tornado")
     self:setScale(1)
     self.sprite:setScaleOrigin(0.5, 0.5)
 
@@ -38,7 +38,7 @@ end
 function Tornado:update()
     -- For more complicated bullet behaviours, code here gets called every update
 
-    super:update(self)
+    super.update(self)
 end
 
 return Tornado

@@ -1,7 +1,7 @@
 local Ghost, super = Class(Bullet)
 
 function Ghost:init(x, y, dir)
-    super:init(self, x, y, "battle/p4/noeyes/ghost")
+    super.init(self, x, y, "battle/p4/noeyes/ghost")
     self.sprite:play(0.2, true)
     self.collider = CircleCollider(self, 32, 10, 5)
     self.scale_x = 2*dir
@@ -12,7 +12,7 @@ function Ghost:init(x, y, dir)
 end
 
 function Ghost:update()
-    super:update(self)
+    super.update(self)
     self.sine = self.sine + DT
     self.y = self.oy + 36*math.sin(self.sine*4)
 end

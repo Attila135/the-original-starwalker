@@ -15,7 +15,7 @@ function MyWave:onGameOver()
 end
 
 function MyWave:init()
-	super:init(self)
+	super.init(self)
 	
 	side = 1
 	accel = 0

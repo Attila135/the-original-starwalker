@@ -12,7 +12,7 @@
 local GreyPrince, super = Class(Actor)
 
 function GreyPrince:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 42
     self.height = 50

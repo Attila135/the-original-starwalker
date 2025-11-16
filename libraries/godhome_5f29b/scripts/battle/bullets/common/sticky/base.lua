@@ -1,7 +1,7 @@
 local BGBlob, super = Class(Bullet)
 
 function BGBlob:init(x, y)
-    super:init(self, x, y)
+    super.init(self, x, y)
     self:setScale(1, 1)
 
     self.collider = CircleCollider(self, 0,0, 8)
@@ -11,14 +11,14 @@ function BGBlob:init(x, y)
 end
 
 function BGBlob:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     self.wave.timer:every(0.5, function()
         self.pulse = 4
     end)
 end
 
 function BGBlob:update()
-    super:update(self)
+    super.update(self)
     if Game.battle.state ~= "DEFENDING" then
         self:remove()
         return
@@ -30,7 +30,7 @@ end
 function BGBlob:draw()
     love.graphics.setColor(self.color)
     love.graphics.circle("fill", 0,0, self.circle_rad)
-    super:draw(self)
+    super.draw(self)
 end
 
 -----
@@ -38,7 +38,7 @@ end
 local WallBlob, super = Class(Bullet)
 
 function WallBlob:init(x, y)
-    super:init(self, x, y, "battle/misc/shapes/circle")
+    super.init(self, x, y, "battle/misc/shapes/circle")
     self:setScale(1, 1)
     self:setHitbox(2,7,12,2)
     self.sprite:setScale(2,1)
@@ -47,14 +47,14 @@ function WallBlob:init(x, y)
 end
 
 function WallBlob:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     self.wave.timer:every(Utils.random(0.5, 0.7), function()
         self.pulse = 1.3
     end)
 end
 
 function WallBlob:update()
-    super:update(self)
+    super.update(self)
     if Game.battle.state ~= "DEFENDING" then
         self:remove()
         return
@@ -120,7 +120,7 @@ end
 
 function Blob:onRemove(parent)
     if self.ps then self.ps:remove() end
-    super:remove(self, parent)
+    super.remove(self, parent)
 end
 
 return Blob

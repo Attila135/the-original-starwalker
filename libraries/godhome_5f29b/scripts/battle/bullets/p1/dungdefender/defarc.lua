@@ -1,7 +1,7 @@
 local Defender, super = Class("nailbase")
 
 function Defender:init(x, y)
-    super:init(self, x, y, "battle/p1/dungdefender/defenderball")
+    super.init(self, x, y, "battle/p1/dungdefender/defenderball")
     self.rotation = Utils.random(2*math.pi)
     self.graphics.spin = 0.3
     self.collider = CircleCollider(self, self.width/2, self.height/2, 10)
@@ -14,7 +14,7 @@ function Defender:init(x, y)
 end
 
 function Defender:update()
-    super:update(self)
+    super.update(self)
     local arena = Game.battle.arena
     if self.y > arena.bottom+20 then
         self:remove()

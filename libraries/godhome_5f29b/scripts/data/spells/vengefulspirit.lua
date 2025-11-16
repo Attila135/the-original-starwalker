@@ -1,7 +1,7 @@
 local VengefulSpirit, super = Class(Spell)
 
 function VengefulSpirit:init()
-    super:init(self)
+    super.init(self)
 
     self.name = "Vengeful Spirit"
     self.effect = "Burning\nsoul"

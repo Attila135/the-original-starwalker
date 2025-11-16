@@ -4,7 +4,7 @@ local FenceDrop, super = Class(Object)
 
 
 function FenceDrop:init(x, y, heightspawn, landtime, fType)
-    super:init(self, x, y - heightspawn)
+    super.init(self, x, y - heightspawn)
 
     self.goalX = x;
     self.goalY = y;
@@ -40,7 +40,7 @@ function FenceDrop:init(x, y, heightspawn, landtime, fType)
 end
 
 function FenceDrop:update()
-    super:update(self)
+    super.update(self)
    -- use DTMULT
    self.siner = self.siner + 1 * DTMULT / 20;
    if (self.parent ~= nil and self.parent.removeChildFences ~= nil and self.parent.removeChildFences == true)
@@ -68,7 +68,7 @@ function FenceDrop:draw()
     --Draw.setColor(0.63, 0.38, 0.76)
     --love.graphics.setLineWidth(1);
     --love.graphics.line(self.parent.sprite.width / 2, self.parent.sprite.height / 2, self.otherX, self.otherY);
-    super:draw(self)
+    super.draw(self)
    
     
     -- self.x = self.x + 5

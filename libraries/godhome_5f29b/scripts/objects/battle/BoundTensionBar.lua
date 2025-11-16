@@ -20,7 +20,7 @@ function TensionBar:init(x, y, dont_animate)
         x = x2 - 25
     end
 
-    super:init(self, x or -25, y or 40)
+    super.init(self, x or -25, y or 40)
 
     self.layer = BATTLE_LAYERS["ui"] - 1
 
@@ -72,7 +72,7 @@ function TensionBar:show()
 end
 
 function TensionBar:getDebugInfo()
-    local info = super:getDebugInfo(self)
+    local info = super.getDebugInfo(self)
     table.insert(info, "Tension: "  .. Utils.round(self:getPercentageFor(Game:getTension()) * 100) .. "%")
     table.insert(info, "Apparent: " .. Utils.round(self.apparent / 2.5))
     table.insert(info, "Current: "  .. Utils.round(self.current / 2.5))
@@ -157,7 +157,7 @@ function TensionBar:update()
         self.tsiner = self.tsiner + DTMULT
     end
 
-    super:update(self)
+    super.update(self)
 end
 
 function TensionBar:draw()
@@ -263,7 +263,7 @@ function TensionBar:draw()
         love.graphics.print("X", -20, 110)
     end
 
-    super:draw(self)
+    super.draw(self)
 end
 
 return TensionBar

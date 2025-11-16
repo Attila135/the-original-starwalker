@@ -12,7 +12,7 @@
 local Xero, super = Class(Actor)
 
 function Xero:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 50
     self.height = 48

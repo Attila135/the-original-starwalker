@@ -12,7 +12,7 @@
 local Markoth, super = Class(Actor)
 
 function Markoth:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 24
     self.height = 60

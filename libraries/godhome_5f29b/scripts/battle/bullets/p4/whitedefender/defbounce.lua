@@ -1,7 +1,7 @@
 local Dung, super = Class("nailbase")
 
 function Dung:init(x, y, dir)
-    super:init(self, x, y, "battle/p1/dungdefender/defenderball")
+    super.init(self, x, y, "battle/p1/dungdefender/defenderball")
     self.collider = CircleCollider(self, self.width/2, self.height/2, 10)
     self.enemy = Game.battle:getEnemyBattler("p1/dungdefender")
 
@@ -19,7 +19,7 @@ function Dung:init(x, y, dir)
 end
 
 function Dung:update()
-    super:update(self)
+    super.update(self)
     local arena = Game.battle.arena
     if self.state == "spawning" then
         if not Game.battle:checkSolidCollision(self) then
@@ -101,7 +101,7 @@ function Dung:update()
 end
 
 function Dung:hit(source, damage)
-    super:hit(self, source, damage)
+    super.hit(self, source, damage)
     if self.state ~= "bouncing" then return end
     local dx, dy = self.x-source.x, self.y-source.y
     if math.abs(dx) > math.abs(dy) then

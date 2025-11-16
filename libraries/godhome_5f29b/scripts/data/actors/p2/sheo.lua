@@ -22,7 +22,7 @@
 local Sheo, super = Class(Actor)
 
 function Sheo:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 80
     self.height = 70

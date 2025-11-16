@@ -1,7 +1,7 @@
 local Ball, super = Class("nailbase")
 
 function Ball:init(x, y)
-    super:init(self, x, y, "battle/p2/marmu/ballin")
+    super.init(self, x, y, "battle/p2/marmu/ballin")
     self.collider = CircleCollider(self, self.width/2 + 1, self.height/2, 12)
     self.enemy = Game.battle:getEnemyBattler("p2/marmu")
 
@@ -11,7 +11,7 @@ function Ball:init(x, y)
 end
 
 function Ball:update()
-    super:update(self)
+    super.update(self)
     local soul = Game.battle.soul
     if self.charging then
         self.physics.speed = Utils.approach(self.physics.speed, 7.5, 0.5*DTMULT)
@@ -47,7 +47,7 @@ function Ball:update()
 end
 
 function Ball:hit(source, damage)
-    super:hit(self, source, damage)
+    super.hit(self, source, damage)
     if self.charging then
         self.physics.speed = 9
         self.physics.direction = Utils.angle(source, self)
@@ -67,7 +67,7 @@ function Ball:charge()
 end
 
 function Ball:onDefeat()
-    super:onDefeat(self)
+    super.onDefeat(self)
     self.wave.finished = true
 end
 

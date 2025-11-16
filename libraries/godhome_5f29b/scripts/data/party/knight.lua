@@ -1,7 +1,7 @@
 local Knight, super = Class(PartyMember)
 
 function Knight:init()
-    super:init(self)
+    super.init(self)
     
     self.name = "The Knight"
     self:setActor("knight")
@@ -60,7 +60,7 @@ function Knight:canEquip(item, slot_type, slot_index)
     if slot_type == "armor" and slot_index == 1 then
         return false
     end
-    return super:canEquip(self, item, slot_type, slot_index)
+    return super.canEquip(self, item, slot_type, slot_index)
 end
 
 function Knight:getTitle()

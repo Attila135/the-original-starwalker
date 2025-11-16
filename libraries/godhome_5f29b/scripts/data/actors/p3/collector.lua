@@ -12,7 +12,7 @@
 local Collector, super = Class(Actor)
 
 function Collector:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 44
     self.height = 54

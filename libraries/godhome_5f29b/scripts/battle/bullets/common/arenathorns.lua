@@ -1,7 +1,7 @@
 local ArenaThorns, super = Class(Bullet)
 
 function ArenaThorns:init(arena)
-    super:init(self, 0,0)
+    super.init(self, 0,0)
     self:setOrigin(0, 0)
     self:setScale(1, 1)
 

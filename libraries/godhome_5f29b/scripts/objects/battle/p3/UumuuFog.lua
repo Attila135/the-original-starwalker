@@ -1,7 +1,7 @@
 local Cloud, C_super = Class(Sprite)
 
 function Cloud:init(x, y, time, instant)
-    C_super:init(self, "battle/misc/shapes/circle", x, y)
+    C_super.init(self, "battle/misc/shapes/circle", x, y)
     self:setOrigin(0.5, 0.5)
     self.color = {0.5,1,1}
     local next_alpha = 0.03
@@ -49,7 +49,7 @@ end
 local Fog, super = Class(Object)
 
 function Fog:init()
-    super:init(self)
+    super.init(self)
     self.layer = BATTLE_LAYERS["below_ui"]
     local time = 6
     local amount = 50

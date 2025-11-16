@@ -1,7 +1,7 @@
 local Gem, super = Class(Object)
 
 function Gem:init()
-    super:init(self, 320, 220)
+    super.init(self, 320, 220)
     self.layer = 2000
     self.alpha = 1
 

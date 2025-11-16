@@ -1,7 +1,7 @@
 local BoundTensionBar, super = Class(Object)
 
 function BoundTensionBar:init(x, y)
-    super:init(self, x, y)
+    super.init(self, x, y)
 
     self.layer = BATTLE_LAYERS["ui"] - 1
 
@@ -148,7 +148,7 @@ function BoundTensionBar:update()
         self.tsiner = self.tsiner + DTMULT
     end
 
-    super:update(self)
+    super.update(self)
 end
 
 function BoundTensionBar:draw()
@@ -257,7 +257,7 @@ function BoundTensionBar:draw()
         love.graphics.print("X", -20, 110)
     end
 
-    super:draw(self)
+    super.draw(self)
 end
 
 return BoundTensionBar

@@ -1,7 +1,7 @@
 local Heart, super = Class("nailbase")
 
 function Heart:init(x, y, dir)
-    super:init(self, x, y, "battle/ordeal/bigzote_heart")
+    super.init(self, x, y, "battle/ordeal/bigzote_heart")
     self.sprite:play(0.1, true)
     self:setScale(0.5)
 

@@ -1,7 +1,7 @@
 local Threads, super = Class(Object)
 
 function Threads:init()
-    super:init(self, 0,0,640,480)
+    super.init(self, 0,0,640,480)
     self.layer = BATTLE_LAYERS["bottom"]+10
     self.color = {0.1, 0.1, 0.1}
     
@@ -15,7 +15,7 @@ function Threads:init()
 end
 
 function Threads:draw()
-    super:draw(self)
+    super.draw(self)
     love.graphics.setColor(self.color)
     for _,line in ipairs(self.lines) do
         love.graphics.line(line:render())

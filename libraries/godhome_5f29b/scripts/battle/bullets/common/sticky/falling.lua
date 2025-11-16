@@ -1,7 +1,7 @@
 local Fall, super = Class("common/sticky/base")
 
 function Fall:init(x, y, start, grav, time)
-    super:init(self, x, y)
+    super.init(self, x, y)
     self.remove_offscreen = false
     self.physics = {
         speed = start,
@@ -13,7 +13,7 @@ function Fall:init(x, y, start, grav, time)
 end
 
 function Fall:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     if self.time then
         self.wave.timer:after(self.time, function()
             self:stickToBG()

@@ -1,13 +1,13 @@
 local Dash, super = Class(Bullet)
 
 function Dash:init(x, y)
-    super:init(self, x, y, "battle/p5/nkg/dash")
+    super.init(self, x, y, "battle/p5/nkg/dash")
     self:setHitbox(6, 3, 27, 7)
     self.rotation = math.pi/2
 end
 
 function Dash:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     local arena, soul = Game.battle.arena, Game.battle.soul
     self.wave.timer:script(function(wait)
         wait(0.3)

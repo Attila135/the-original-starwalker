@@ -1,7 +1,7 @@
 local Dung, super = Class("p1/dungdefender/bounce")
 
 function Dung:init(x, y, dir)
-    super:init(self, x, y, dir, "battle/p1/dungdefender/dungball")
+    super.init(self, x, y, dir, "battle/p1/dungdefender/dungball")
     self.collider = CircleCollider(self, self.width/2, self.height/2, 6)
     self.health = 30
 end
@@ -40,7 +40,7 @@ function Dung:onDefeat()
         shrink = 0.07,
         amount = {3,6},
     }))
-    super:onDefeat(self)
+    super.onDefeat(self)
 end
 
 return Dung

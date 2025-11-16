@@ -2,7 +2,7 @@ local Rolling, super = Class("ordeal/zotebase")
 
 function Rolling:init(x)
     local arena = Game.battle.arena
-    super:init(self, x, arena.bottom - 12, "battle/ordeal/zoteling_roll")
+    super.init(self, x, arena.bottom - 12, "battle/ordeal/zoteling_roll")
     self.collider = CircleCollider(self, self.width/2, self.height/2, 4)
     self.health = 45
 
@@ -18,7 +18,7 @@ function Rolling:init(x)
 end
 
 function Rolling:update()
-    super:update(self)
+    super.update(self)
     local arena = Game.battle.arena
     if not self.rolling then
         if self:collidesWith(arena.collider.colliders[3]) then
@@ -47,7 +47,7 @@ function Rolling:update()
 end
 
 function Rolling:hit(source, damage)
-    super:hit(self, source, damage)
+    super.hit(self, source, damage)
     if self.rolling then
         local reflect = Utils.round(Utils.angle(source.x, source.y, self.x, self.y), math.pi/2)
         if  Utils.round(math.cos(reflect)) ~= Utils.round(math.cos(self.physics.direction))

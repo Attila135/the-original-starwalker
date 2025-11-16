@@ -1,7 +1,7 @@
 local ZoteHopper, super = Class("nailbase")
 
 function ZoteHopper:init(x)
-    super:init(self, x, Game.battle.arena.bottom - 26, "battle/p3/greyprince/hopper_idle")
+    super.init(self, x, Game.battle.arena.bottom - 26, "battle/p3/greyprince/hopper_idle")
     self.sprite:play(0.3, true)
 
     self.health = 30
@@ -9,7 +9,7 @@ function ZoteHopper:init(x)
 end
 
 function ZoteHopper:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     local arena = Game.battle.arena
     self.wave.timer:script(function(wait)
         while true do
@@ -35,7 +35,7 @@ function ZoteHopper:onAdd(parent)
 end
 
 function ZoteHopper:update()
-    super:update(self)
+    super.update(self)
     local arena = Game.battle.arena
     if self.x < arena.left or self.x > arena.right then
         self.physics.speed_x = self.physics.speed_x * -1
@@ -50,7 +50,7 @@ function ZoteHopper:onDefeat()
             self.wave.finished = true
         end)
     end
-    super:onDefeat(self)
+    super.onDefeat(self)
 end
 
 return ZoteHopper

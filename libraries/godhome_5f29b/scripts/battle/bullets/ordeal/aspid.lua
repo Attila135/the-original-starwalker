@@ -1,7 +1,7 @@
 local Aspid, super = Class("ordeal/zotebase")
 
 function Aspid:init(x, y)
-    super:init(self, x, y, "battle/ordeal/aspid")
+    super.init(self, x, y, "battle/ordeal/aspid")
     self.sprite:play(0.2, true)
     self.collider = CircleCollider(self, 8,9, 2)
     self.health = 45
@@ -25,7 +25,7 @@ function Aspid:init(x, y)
 end
 
 function Aspid:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     self.timer:after(Utils.random(1, 3), function()
         self.timer:everyInstant(3, function()
             self.sprite:setAnimation{"battle/ordeal/aspid_spit", 0.15, false}
@@ -51,7 +51,7 @@ function Aspid:onAdd(parent)
 end
 
 function Aspid:update()
-    super:update(self)
+    super.update(self)
     local arena = Game.battle.arena
     local soul = Game.battle.soul
 

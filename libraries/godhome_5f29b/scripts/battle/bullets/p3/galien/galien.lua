@@ -1,7 +1,7 @@
 local Galien, super = Class("nailbase")
 
 function Galien:init(x, y)
-    super:init(self, x, y, "battle/p3/galien/galien")
+    super.init(self, x, y, "battle/p3/galien/galien")
     self.sprite:play(0.4, true)
     self.collider = CircleCollider(self, 15, 11, 10)
 
@@ -15,7 +15,7 @@ function Galien:init(x, y)
 end
 
 function Galien:update()
-    super:update(self)
+    super.update(self)
     if self.curr_knockback > 0 then
         self.sx = self.sx + self.curr_knockback*math.cos(self.knockback_dir)*DTMULT
     end
@@ -25,7 +25,7 @@ function Galien:update()
 end
 
 function Galien:onDefeat()
-    super:onDefeat(self)
+    super.onDefeat(self)
     self.wave.finished = true
 end
 

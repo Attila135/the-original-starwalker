@@ -1,7 +1,7 @@
 local Fireball, super = Class(Bullet)
 
 function Fireball:init(x, y, speed, dir, after)
-    super:init(self, x, y, "battle/p3/grimm/fireball")
+    super.init(self, x, y, "battle/p3/grimm/fireball")
     self.sprite:play(0.1, true)
     self.layer = BATTLE_LAYERS["below_bullets"]
     self:setRotationOriginExact(10, 6)
@@ -17,7 +17,7 @@ function Fireball:init(x, y, speed, dir, after)
 end
 
 function Fireball:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     if self.after then
         self.wave.timer:after(self.after, function()
             self.wave.timer:tween(0.2, self.physics, {speed = 6})
@@ -31,7 +31,7 @@ function Fireball:onAdd(parent)
 end
 
 function Fireball:update()
-    super:update(self)
+    super.update(self)
     local arena = Game.battle.arena
     if self.x < arena.left - 10 or self.x > arena.right + 10 or self.y > arena.bottom + 10 then
         self:remove()

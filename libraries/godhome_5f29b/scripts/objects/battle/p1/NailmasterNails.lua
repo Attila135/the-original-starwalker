@@ -1,7 +1,7 @@
 local Nails, super = Class("UIAttachment")
 
 function Nails:init()
-    super:init(self, 100)
+    super.init(self, 100)
     self.tris = {}
     for i=0,5 do
         local tri = {
@@ -15,7 +15,7 @@ function Nails:init()
 end
 
 function Nails:draw()
-    super:draw(self)
+    super.draw(self)
     for _,tri in ipairs(self.tris) do
         self:drawNail(tri.x, 10, 30, tri.h, tri.angle, tri.alpha)
     end

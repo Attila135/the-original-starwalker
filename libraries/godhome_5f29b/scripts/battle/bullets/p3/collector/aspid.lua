@@ -1,7 +1,7 @@
 local Aspid, super = Class("nailbase")
 
 function Aspid:init(x, y, enemy)
-    super:init(self, x, y, "battle/p3/collector/aspid")
+    super.init(self, x, y, "battle/p3/collector/aspid")
     self.sprite:play(0.2, true)
     self.collider = CircleCollider(self, 8,9, 2)
 
@@ -32,7 +32,7 @@ function Aspid:init(x, y, enemy)
 end
 
 function Aspid:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     self.timer:after(Utils.random(1, 3), function()
         self.timer:everyInstant(3, function()
             self.sprite:setAnimation{"battle/p3/collector/aspid_spit", 0.15, false}
@@ -55,7 +55,7 @@ function Aspid:onAdd(parent)
 end
 
 function Aspid:update()
-    super:update(self)
+    super.update(self)
     local arena = Game.battle.arena
     local soul = Game.battle.soul
 
@@ -94,7 +94,7 @@ function Aspid:onDefeat()
     if self.enemy then
         self.enemy:onDefeat()
     end
-    super:onDefeat(self)
+    super.onDefeat(self)
 end
 
 return Aspid

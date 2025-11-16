@@ -2,7 +2,7 @@ local Puppet, super = Class(Bullet)
 
 function Puppet:init(x, y, dir, speed)
     -- Last argument = sprite path
-    super:init(self, x, y, "bullets/asgore")
+    super.init(self, x, y, "bullets/asgore")
     self:setScale(0)
 
     self.old_x = self.x
@@ -19,7 +19,7 @@ function Puppet:update()
     self.y = self.old_y + math.sin(self.siner)*10
     print(math.sin(self.siner)*20)
     self.siner = self.siner + DT
-    super:update(self)
+    super.update(self)
 end
 
 function Puppet:draw()

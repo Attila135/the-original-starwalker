@@ -1,7 +1,7 @@
 local Nail, super = Class("nailbase")
 
 function Nail:init(x, y)
-    super:init(self, x, y, "battle/p1/nailmasters/nail")
+    super.init(self, x, y, "battle/p1/nailmasters/nail")
     self.rotation = math.pi/2
     self.physics = {
         speed = 6,
@@ -83,7 +83,7 @@ function Nail:init(x, y)
 end
 
 function Nail:update()
-    super:update(self)
+    super.update(self)
     if self.spinning then
         self.graphics.spin = self.graphics.spin + 0.2*DTMULT
         self.rotation = self.rotation % (2*math.pi)
@@ -95,7 +95,7 @@ function Nail:onDefeat()
 end
 
 function Nail:draw()
-    super:draw(self)
+    super.draw(self)
     if DEBUG_RENDER and self.spin_hb.collidable then
         self.spin_hb:drawFor(self,1,0,0)
     end

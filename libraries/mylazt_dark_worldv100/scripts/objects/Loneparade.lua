@@ -52,7 +52,7 @@ local addParadeX = 700;
 
 
 function Loneparade:init(x, y)
-    super:init(self, x, y)
+    super.init(self, x, y)
     self.floatSpriteOffsetX = 0;
     self.floatSprite2OffsetX = 0;
     self.floatSprite2Alpha = 1;
@@ -169,7 +169,7 @@ function Loneparade:stopMove()
 end
 
 function Loneparade:update()
-    super:update(self)
+    super.update(self)
 
     self.spriteFloat.alpha = self.alpha;
     --self.spriteFenceBot.alpha = self.alpha;
@@ -320,7 +320,7 @@ function Loneparade:draw()
 
 
 
-    super:draw(self)
+    super.draw(self)
     
     
     -- self.x = self.x + 5

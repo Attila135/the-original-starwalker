@@ -1,7 +1,7 @@
 local Door, super = Class(Event)
 
 function Door:init(data)
-    super:init(self, data)
+    super.init(self, data)
     if not Game:getFlag("lifeblood_door_open") then
         self.sprite = Sprite("tilesets/doors/lifeblood_door", data.width/2, data.height)
         self.sprite:setOrigin(0.5, 1)

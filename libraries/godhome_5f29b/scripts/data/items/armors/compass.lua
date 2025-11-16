@@ -1,7 +1,7 @@
 local Compass, super = Class(Item)
 
 function Compass:init()
-    super:init(self)
+    super.init(self)
     
     self.name = "Compass"
     self.type = "armor"

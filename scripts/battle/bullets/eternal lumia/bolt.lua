@@ -25,7 +25,7 @@ local function appear(self)
 end
 
 function MyBullet:init(x, y, rot, no_effect, no_remove, no_appear)
-    super:init(self, x, y)
+    super.init(self, x, y)
 
 	local soul = Game.battle.soul
 

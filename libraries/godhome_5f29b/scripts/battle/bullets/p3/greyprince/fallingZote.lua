@@ -1,7 +1,7 @@
 local Fall, super = Class("nailbase")
 
 function Fall:init(x, y, amt)
-    super:init(self, x, y, "battle/p3/greyprince/fall")
+    super.init(self, x, y, "battle/p3/greyprince/fall")
     self.sprite:play(0.1, true)
     self:setHitbox(9, 8, 16, 6)
     
@@ -17,7 +17,7 @@ function Fall:init(x, y, amt)
 end
 
 function Fall:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     if not self.started then
         self.started = true
         local arena = Game.battle.arena

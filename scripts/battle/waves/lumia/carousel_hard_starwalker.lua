@@ -29,7 +29,7 @@ function MyWave:onGameOver()
 end
 
 function MyWave:init()
-	super:init(self)
+	super.init(self)
 	
 	self.rolls = {
 		makeRoll(),

@@ -1,7 +1,7 @@
 local Chain, super = Class(Object)
 
 function Chain:init(x, y, angle, color)
-    super:init(self, x, y)
+    super.init(self, x, y)
     self.rotation = angle
 
     for i=0,math.ceil(SCREEN_WIDTH/32) do
@@ -17,7 +17,7 @@ end
 local Chains, BG_super = Class(Object)
 
 function Chains:init(colors, amount)
-    BG_super:init(self)
+    BG_super.init(self)
     self.layer = BATTLE_LAYERS["bottom"] + 100
     amount = amount or 8
     for _=1,math.floor(amount/4) do

@@ -12,7 +12,7 @@
 local Baldur, super = Class(Actor)
 
 function Baldur:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 22
     self.height = 18

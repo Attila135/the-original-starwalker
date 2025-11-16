@@ -1,7 +1,7 @@
 local Menu, super = Class(Object)
 
 function Menu:init(statue)
-    super:init(self, 0,0, SCREEN_WIDTH,SCREEN_HEIGHT)
+    super.init(self, 0,0, SCREEN_WIDTH,SCREEN_HEIGHT)
 
     self.parallax_x = 0
     self.parallax_y = 0
@@ -58,7 +58,7 @@ function Menu:update()
             child.alpha = self.alpha
         end
     end
-    super:update(self)
+    super.update(self)
     if Input.pressed("cancel") then
         self.open = false
         self.quit = true

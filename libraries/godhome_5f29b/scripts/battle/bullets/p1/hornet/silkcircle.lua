@@ -1,7 +1,7 @@
 local Silk, super = Class(Bullet)
 
 function Silk:init(x, y)
-    super:init(self, x, y)
+    super.init(self, x, y)
     self:setSize(64, 67)
     self.collider = CircleCollider(self, self.width/2, self.height/2, 28)
     self.collidable = false
@@ -30,7 +30,7 @@ function Silk:draw()
     love.graphics.setColor(1,1,1, self.preview_alpha)
     love.graphics.setLineWidth(0.5)
     love.graphics.circle("line", self.width/2, self.height/2, self.preview)
-    super:draw(self)
+    super.draw(self)
 end
 
 return Silk

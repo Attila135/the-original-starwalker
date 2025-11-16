@@ -1,7 +1,7 @@
 local Spike, super = Class(Bullet)
 
 function Spike:init(x, y, dir)
-    super:init(self, x, y, "battle/p4/whitedefender/spike")
+    super.init(self, x, y, "battle/p4/whitedefender/spike")
     self:setHitbox(5,0,10,70)
     self:setOrigin(0.5, 1)
     self.collidable = false
@@ -11,7 +11,7 @@ function Spike:init(x, y, dir)
 end
 
 function Spike:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     self.wave.timer:tween(0.2, self.sprite, {scale_x = 1, scale_y = 1}, "linear", function()
         self.collidable = true
     end)

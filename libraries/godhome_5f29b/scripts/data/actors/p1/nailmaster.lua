@@ -18,7 +18,7 @@
 local Nailmaster, super = Class(Actor)
 
 function Nailmaster:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 80
     self.height = 70

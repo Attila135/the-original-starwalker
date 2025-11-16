@@ -1,7 +1,7 @@
 local Bee, super = Class(Bullet)
 
 function Bee:init(x, y)
-    super:init(self, x, y, "battle/p3/hiveknight/chase_bee")
+    super.init(self, x, y, "battle/p3/hiveknight/chase_bee")
     self.sprite:play(0.2, true)
     self.collider = CircleCollider(self, 14, 10, 4)
 
@@ -13,7 +13,7 @@ function Bee:init(x, y)
 end
 
 function Bee:update()
-    super:update(self)
+    super.update(self)
     local soul = Game.battle.soul
     if self.y < soul.y then
         local angle_to = Utils.angle(self.x, self.y, soul.x, soul.y)

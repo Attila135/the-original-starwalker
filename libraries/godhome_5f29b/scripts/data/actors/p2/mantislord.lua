@@ -18,7 +18,7 @@
 local MantisLord, super = Class(Actor)
 
 function MantisLord:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 24
     self.height = 74

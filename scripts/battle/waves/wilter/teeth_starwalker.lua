@@ -1,6 +1,6 @@
 local Basic, super = Class(Wave, "teeth")
 function Basic:init()
-    super:init(self)
+    super.init(self)
 
     self.bullet_offsets = {}
 

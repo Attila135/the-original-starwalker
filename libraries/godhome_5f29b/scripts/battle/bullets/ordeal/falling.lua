@@ -2,7 +2,7 @@ local Falling, super = Class("ordeal/zotebase")
 
 function Falling:init(x)
     local arena = Game.battle.arena
-    super:init(self, x, arena.top - 12, "battle/ordeal/zoteling_roll")
+    super.init(self, x, arena.top - 12, "battle/ordeal/zoteling_roll")
     self.collider = CircleCollider(self, self.width/2, self.height/2, 4)
     self.health = 60
 
@@ -14,7 +14,7 @@ function Falling:init(x)
 end
 
 function Falling:update()
-    super:update(self)
+    super.update(self)
     local arena = Game.battle.arena
     self.physics.speed_x = Utils.approach(self.physics.speed_x, 0, 0.2*DTMULT)
     self.physics.speed_y = Utils.approach(self.physics.speed_y, 12, 0.4*DTMULT)
@@ -35,7 +35,7 @@ function Falling:hit(source, damage)
         speed_x = math.cos(angle)*8,
         speed_y = math.sin(angle)*8,
     }
-    super:hit(self, source, damage)
+    super.hit(self, source, damage)
 end
 
 return Falling

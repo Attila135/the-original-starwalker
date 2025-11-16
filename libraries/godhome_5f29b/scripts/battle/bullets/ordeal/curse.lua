@@ -1,7 +1,7 @@
 local Curse, super = Class("ordeal/zotebase")
 
 function Curse:init(x, y)
-    super:init(self, x, y, "battle/ordeal/curse")
+    super.init(self, x, y, "battle/ordeal/curse")
     self.sprite:play(0.3, true)
     self.collider.collidable = false
     self.nail_hb = Hitbox(self, 7,7, 11,16)
@@ -12,7 +12,7 @@ function Curse:init(x, y)
 end
 
 function Curse:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     local mask = ColorMaskFX({1,1,1}, 1)
     self:addFX(mask)
     local timer = Timer()
@@ -41,7 +41,7 @@ function Curse:onAdd(parent)
 end
 
 function Curse:update()
-    super:update(self)
+    super.update(self)
     local arena = Game.battle.arena
     self.sine = self.sine + DT
     self.x = self.ox + math.sin(self.sine)*(arena.width/2 - 20)

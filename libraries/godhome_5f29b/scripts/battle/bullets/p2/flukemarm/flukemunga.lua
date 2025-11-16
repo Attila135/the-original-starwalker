@@ -1,7 +1,7 @@
 local Flukemunga, super = Class(Bullet)
 
 function Flukemunga:init(x, y, dir, side)
-    super:init(self, x, y, "battle/p2/flukemarm/munga")
+    super.init(self, x, y, "battle/p2/flukemarm/munga")
     self:setOrigin(0.5, 1)
     self.sprite:play(0.2, true)
     self.rotation = dir

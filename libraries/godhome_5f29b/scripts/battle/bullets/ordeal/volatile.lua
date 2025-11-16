@@ -1,7 +1,7 @@
 local ZoteBomb, super = Class("ordeal/zotebase")
 
 function ZoteBomb:init(x, y)
-    super:init(self, x, y, "battle/ordeal/volatile_idle")
+    super.init(self, x, y, "battle/ordeal/volatile_idle")
     self.collider = CircleCollider(self, 9, 11, 5)
     self.collidable = false
     self:setScale(0)
@@ -9,7 +9,7 @@ function ZoteBomb:init(x, y)
 end
 
 function ZoteBomb:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     local timer = Timer()
     self:addChild(timer)
     timer:tween(0.1, self, {scale_x = 2, scale_y = 2}, "linear", function()
@@ -44,7 +44,7 @@ function ZoteBomb:explode()
             end
         end
         if love.math.random() < 0.01 then
-            super:explode(self)
+            super.explode(self)
         else
             self:remove()
         end

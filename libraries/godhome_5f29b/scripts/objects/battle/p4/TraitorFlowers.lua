@@ -1,7 +1,7 @@
 local Flowers, super = Class("UIAttachment")
 
 function Flowers:init()
-    super:init(self, 64)
+    super.init(self, 64)
     self.layer = BATTLE_LAYERS["above_ui"]
     local positions = {
         60,

@@ -1,7 +1,7 @@
 local Entrance, super = Class(Interactable)
 
 function Entrance:init(data)
-    super:init(self, data.x, data.y)
+    super.init(self, data.x, data.y)
     self.cutscene = "enter_p5"
 
     self:setSprite("tilesets/doors/p5_entrance")

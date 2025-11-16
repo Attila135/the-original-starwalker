@@ -2,7 +2,7 @@ local Conveyor, super = Class(Object)
 
 function Conveyor:init(speed, dir, height)
     local arena = Game.battle.arena
-    super:init(self, arena.x, arena.y)
+    super.init(self, arena.x, arena.y)
     self.layer = -100
     self.speed = speed
     self.dir = dir
@@ -20,7 +20,7 @@ function Conveyor:init(speed, dir, height)
 end
 
 function Conveyor:update()
-    super:update(self)
+    super.update(self)
     local arena, soul = Game.battle.arena, Game.battle.soul
     soul:move(math.cos(self.dir), math.sin(self.dir), self.speed*DTMULT)
     for _,belt in ipairs(self.belts) do

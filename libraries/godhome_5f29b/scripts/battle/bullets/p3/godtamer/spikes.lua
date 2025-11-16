@@ -1,7 +1,7 @@
 local Spike, super = Class(Bullet)
 
 function Spike:init(x, y, dir)
-    super:init(self, x, y, "battle/p3/godtamer/spikes")
+    super.init(self, x, y, "battle/p3/godtamer/spikes")
     self:setHitbox(0,0,15,20)
     self.rotation = dir
     self.tp = 0

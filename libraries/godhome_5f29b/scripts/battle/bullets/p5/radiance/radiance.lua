@@ -1,7 +1,7 @@
 local Radiance, super = Class("nailbase")
 
 function Radiance:init(x, y)
-    super:init(self, x, y, "battle/p5/radiance/boss")
+    super.init(self, x, y, "battle/p5/radiance/boss")
     self.sprite:play(0.3, true)
     self.layer = BATTLE_LAYERS["above_arena"]
     self.nail_hb = CircleCollider(self, self.width/2, 33, 12)
@@ -19,13 +19,13 @@ function Radiance:init(x, y)
 end
 
 function Radiance:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     self.wave.timer:tween(0.3, self.sprite, {scale_x = 1})
     self.wave.timer:tween(0.3, self.glow, {alpha = 0.2})
 end
 
 function Radiance:setSprite(texture, speed, loop, on_finished)
-    super:setSprite(self, texture, speed, loop, on_finished)
+    super.setSprite(self, texture, speed, loop, on_finished)
     self.sprite:setScaleOrigin(0.5, 0.5)
 end
 

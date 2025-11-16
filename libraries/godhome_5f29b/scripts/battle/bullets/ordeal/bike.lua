@@ -1,7 +1,7 @@
 local Bike, super = Class(Bullet)
 
 function Bike:init(x, y)
-    super:init(self, x, y, "battle/ordeal/bike")
+    super.init(self, x, y, "battle/ordeal/bike")
     self.sprite:play(0.1, true)
     self:setHitbox(16,13, 8,25)
 
@@ -9,7 +9,7 @@ function Bike:init(x, y)
 end
 
 function Bike:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     self.wave.timer:script(function(wait)
         for _=1,2 do
             Assets.playSound("ordeal/bike_honk")
@@ -63,7 +63,7 @@ function Bike:onAdd(parent)
 end
 
 function Bike:update()
-    super:update(self)
+    super.update(self)
     if self.charging then
         for _,zote in ipairs(self.wave.zotes) do
             if zote ~= self and not zote.immune and zote:collidesWith(self) then

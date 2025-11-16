@@ -4,7 +4,7 @@ local QuizBox, super = Class(Object)
 
 
 function QuizBox:init(spawnX, spawnY, qPhase)
-    super:init(self, spawnX, spawnY)
+    super.init(self, spawnX, spawnY)
     self.spawnX = spawnX;
     self.spawnY = spawnY;
     self.qPhase = qPhase;
@@ -63,7 +63,7 @@ function QuizBox:finish()
 end
 
 function QuizBox:update()
-    super:update(self)
+    super.update(self)
     self.lifetime = self.lifetime + 1 * DTMULT;
     self.textSiner = self.textSiner + 1 * DTMULT;
     if (self.answerTime > 0)
@@ -100,7 +100,7 @@ function QuizBox:update()
 end
 
 function QuizBox:draw()
-    super:draw(self)
+    super.draw(self)
     love.graphics.setFont(self.boxFont)
     if (self.qPhase >= 6) then Draw.setColor(0.247, 1.0, 0.235) end
     love.graphics.printf({{1.0, 1.0, 1.0, self.textAlpha}, self.textAsk}, 0 - self.sprite.width / 3.5 + (math.cos(self.textSiner / 30) * 4), self.sprite.height * -1 + 58, 100, "center", 0, 1.0, 1.0, 0.0, 0.0)

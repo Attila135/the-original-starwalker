@@ -1,7 +1,7 @@
 local Flukefey, super = Class("nailbase")
 
 function Flukefey:init(x, y, dir)
-    super:init(self, x, y, "battle/p2/flukemarm/fey")
+    super.init(self, x, y, "battle/p2/flukemarm/fey")
     self.sprite:play(0.2, true)
     self:setHitbox(6,4.5,9,9)
     self.rotation = dir
@@ -13,14 +13,14 @@ function Flukefey:init(x, y, dir)
 end
 
 function Flukefey:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     self.wave.timer:after(0.1, function()
         self.layer = self.layer + 2
     end)
 end
 
 function Flukefey:hit(source, damage)
-    super:hit(self, source, damage)
+    super.hit(self, source, damage)
     local angle_to = Utils.angle(self.x, self.y, source.x, source.y)
     self.rotation = Utils.approachAngle(self.rotation, angle_to, -math.pi/2)
     self.physics = {
@@ -30,7 +30,7 @@ function Flukefey:hit(source, damage)
 end
 
 function Flukefey:update()
-    super:update(self)
+    super.update(self)
     local soul = Game.battle.soul
     local angle_to = Utils.angle(self.x, self.y, soul.x, soul.y)
     self.physics.speed_x = Utils.approach(self.physics.speed_x, 8*math.cos(angle_to), 0.4*DTMULT)

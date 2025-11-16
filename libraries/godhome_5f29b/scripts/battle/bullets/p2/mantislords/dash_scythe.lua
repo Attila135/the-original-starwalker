@@ -1,7 +1,7 @@
 local Scythe, super = Class(Bullet)
 
 function Scythe:init(x, y, dir)
-    super:init(self, x, y)
+    super.init(self, x, y)
     self.rotation = dir - math.pi/2
     self.physics.direction = dir
     self:setSize(60, 20)
@@ -38,7 +38,7 @@ function Scythe:dash(fast)
 end
 
 function Scythe:update()
-    super:update(self)
+    super.update(self)
     self.top:setPosition(self:getPosition())
     self.top:setColor(self:getColor())
     self.bottom:setPosition(self:getPosition())
@@ -46,7 +46,7 @@ function Scythe:update()
 end
 
 function Scythe:onRemove(parent)
-    super:onRemove(self, parent)
+    super.onRemove(self, parent)
 end
 
 return Scythe

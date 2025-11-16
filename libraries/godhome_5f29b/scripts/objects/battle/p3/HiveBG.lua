@@ -1,7 +1,7 @@
 local BG, super = Class("BaseBG")
 
 function BG:init()
-    super:init(self, {0.04, 0.025, 0.01})
+    super.init(self, {0.04, 0.025, 0.01})
     self.color = {0.3, 0.22, 0.1}
     self.back_color = {0.3, 0.15, 0.05}
     self.offset = 0
@@ -10,7 +10,7 @@ function BG:init()
 end
 
 function BG:update()
-    super:update(self)
+    super.update(self)
     self.offset = self.offset + self.speed*DTMULT
 
     if self.offset > self.size*3 then
@@ -19,7 +19,7 @@ function BG:update()
 end
 
 function BG:draw()
-    super:draw(self)
+    super.draw(self)
     love.graphics.setLineStyle("rough")
     love.graphics.setLineWidth(1)
 

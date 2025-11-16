@@ -2,7 +2,7 @@ local Fall, super = Class("ordeal/zotebase")
 
 function Fall:init()
     local arena = Game.battle.arena
-    super:init(self, love.math.random(arena.left + 30, arena.right - 30), -30, "battle/ordeal/gpz_fall")
+    super.init(self, love.math.random(arena.left + 30, arena.right - 30), -30, "battle/ordeal/gpz_fall")
     self.sprite:play(0.1, true)
     self:setHitbox(9,8, 16,6)
     self.health = 100
@@ -18,7 +18,7 @@ function Fall:init()
 end
 
 function Fall:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     if not self.started then
         self.started = true
         local arena = Game.battle.arena

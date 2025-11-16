@@ -20,7 +20,7 @@
 local Focus, super = Class(Spell)
 
 function Focus:init()
-    super:init(self)
+    super.init(self)
 
     self.name = "Quick Focus"
     self.effect = "Heal\nfaster"

@@ -1,7 +1,7 @@
 local Unn, super = Class(Item)
 
 function Unn:init()
-    super:init(self)
+    super.init(self)
     
     self.name = "Shape of Unn"
     self.type = "armor"

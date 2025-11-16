@@ -1,7 +1,7 @@
 local Savepoint, super = Class(Event)
 
 function Savepoint:init(data)
-    super:init(self, data)
+    super.init(self, data)
 
     self.solid = true
 

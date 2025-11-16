@@ -1,7 +1,7 @@
 local Soul, super = Class("ordeal/zotebase")
 
 function Soul:init(x, y)
-    super:init(self, x, y, "battle/ordeal/soul")
+    super.init(self, x, y, "battle/ordeal/soul")
     self.sprite:play(0.2, true)
     self:setHitbox(3,7, 6,18)
     self.health = 60
@@ -12,7 +12,7 @@ function Soul:init(x, y)
 end
 
 function Soul:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     self:teleport(self.x, self.y)
     local timer = Timer()
     self:addChild(timer)
@@ -30,7 +30,7 @@ function Soul:onAdd(parent)
 end
 
 function Soul:update()
-    super:update(self)
+    super.update(self)
     self.sine = self.sine + DT
     self.y = self.oy + math.sin(self.sine*3)*5
     if self.curr_knockback > 0 then

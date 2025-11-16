@@ -2,7 +2,7 @@ local Zoteling, super = Class("ordeal/zotebase")
 
 function Zoteling:init(x)
     local arena = Game.battle.arena
-    super:init(self, x, arena.bottom, "battle/ordeal/spawn_zote")
+    super.init(self, x, arena.bottom, "battle/ordeal/spawn_zote")
     self.layer = BATTLE_LAYERS["below_soul"]
     self.color = {1,1,1}
     self.health = 57
@@ -16,7 +16,7 @@ function Zoteling:init(x)
 end
 
 function Zoteling:update()
-    super:update(self)
+    super.update(self)
     local arena = Game.battle.arena
     if self.spawning then
         if self.wall_hb:collidesWith(arena.collider.colliders[1]) then
@@ -80,7 +80,7 @@ function Zoteling:update()
 end
 
 function Zoteling:hit(source, damage)
-    super:hit(self, source, damage)
+    super.hit(self, source, damage)
     local angle = Utils.angle(source, self)
     if not self.rolling then
         self.physics = {

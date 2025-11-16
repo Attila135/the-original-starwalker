@@ -1,7 +1,7 @@
 local Pickaxe, super = Class("projbase")
 
 function Pickaxe:init(x, y, sx, sy)
-    super:init(self, x, y, "battle/p5/kristalguardian/pickaxe")
+    super.init(self, x, y, "battle/p5/kristalguardian/pickaxe")
     self.layer = self.layer + 10
     self.collider = CircleCollider(self, self.width/2, self.height/2, 6)
     self.graphics.spin = 0.5*Utils.sign(sx)
@@ -15,7 +15,7 @@ function Pickaxe:init(x, y, sx, sy)
 end
 
 function Pickaxe:hit(source, damage)
-    super:hit(self, source, damage)
+    super.hit(self, source, damage)
     self.tp = self.tp*2
     self.physics = {
         speed = 15,
@@ -26,7 +26,7 @@ function Pickaxe:hit(source, damage)
 end
 
 function Pickaxe:launchHit(battler)
-    super:launchHit(self, battler)
+    super.launchHit(self, battler)
     if battler == Game.battle:getEnemyBattler("p5/kristalguardian") and battler.health < 0 then
         self.wave.finished = true
         battler:onDefeat()

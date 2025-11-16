@@ -2,7 +2,7 @@ local Turret, super = Class("ordeal/zotebase")
 
 function Turret:init(x)
     local arena = Game.battle.arena
-    super:init(self, x, arena.top - 100, "battle/ordeal/turret")
+    super.init(self, x, arena.top - 100, "battle/ordeal/turret")
     self:setOrigin(0.5, 0)
     self.collider.collidable = false
     self.nail_hb = Hitbox(self, 0,25, 11,9)
@@ -10,7 +10,7 @@ function Turret:init(x)
 end
 
 function Turret:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     local arena, soul = Game.battle.arena, Game.battle.soul
     local timer = Timer()
     self:addChild(timer)
@@ -41,7 +41,7 @@ function Turret:onAdd(parent)
 end
 
 function Turret:update()
-    super:update(self)
+    super.update(self)
     if self.shaking then
         self.sprite.x = love.math.random(-1,1)
     else

@@ -1,7 +1,7 @@
 local Markoth, super = Class("nailbase")
 
 function Markoth:init(x, y)
-    super:init(self, x, y, "battle/p4/markoth/markoth")
+    super.init(self, x, y, "battle/p4/markoth/markoth")
     self.sprite:play(0.2, true)
     self:setHitbox(1,11,14,20)
 
@@ -14,7 +14,7 @@ function Markoth:init(x, y)
 end
 
 function Markoth:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     local arena = Game.battle.arena
     self.wave.timer:every(3, function()
         local rxl, rxr = Utils.clamp(self.ox - 80, arena.left + 20, arena.right - 20), Utils.clamp(self.ox + 80, arena.left + 20, arena.right - 20)
@@ -25,7 +25,7 @@ function Markoth:onAdd(parent)
 end
 
 function Markoth:update()
-    super:update(self)
+    super.update(self)
     if self.curr_knockback > 0 then
         self.ox = self.ox + self.curr_knockback*math.cos(self.knockback_dir)*DTMULT
         self.oy = self.oy + self.curr_knockback*math.sin(self.knockback_dir)*DTMULT

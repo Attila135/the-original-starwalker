@@ -1,7 +1,7 @@
 local Bomb, super = Class(Bullet)
 
 function Bomb:init(x,y)
-    super:init(self, x, y, "bullets/flower_bomb")
+    super.init(self, x, y, "bullets/flower_bomb")
     self.sprite:play(0.2,false)
     self.tempo = Utils.random(1.2,1.7)
     self.physics.speed_y = -self.tempo*10
@@ -9,7 +9,7 @@ function Bomb:init(x,y)
 end
 
 function Bomb:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     Game.stage.timer:tween(1.5, self.physics, {speed_y = 0})
     self.time = self.tempo
 --[[ 

@@ -2,7 +2,7 @@ local Blooming, super = Class(Bullet)
 
 function Blooming:init(x, y, dir, speed)
     -- Last argument = sprite path
-    super:init(self, x, y, "bullets/bloom")
+    super.init(self, x, y, "bullets/bloom")
     self.alpha = 0
     self.collidable = false
     local timer = Timer()
@@ -28,7 +28,7 @@ end
 function Blooming:update()
     -- For more complicated bullet behaviours, code here gets called every update
 
-    super:update(self)
+    super.update(self)
 end
 
 return Blooming

@@ -1,7 +1,7 @@
 local Fade, super = Class(Object)
 
 function Fade:init(color, from, to, time, after)
-    super:init(self)
+    super.init(self)
     self.layer = BATTLE_LAYERS["top"]
     self.alpha = from
 
@@ -14,7 +14,7 @@ function Fade:init(color, from, to, time, after)
 end
 
 function Fade:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     if self.started then return end
     self.started = true
     if self.time then
@@ -25,7 +25,7 @@ function Fade:onAdd(parent)
 end
 
 function Fade:draw()
-    super:draw(self)
+    super.draw(self)
     local r,g,b = unpack(self.color)
     love.graphics.setColor(r,g,b, self.alpha)
     if self.parent == Game.world then

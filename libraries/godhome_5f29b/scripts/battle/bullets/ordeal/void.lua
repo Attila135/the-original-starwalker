@@ -2,7 +2,7 @@ local Void, super = Class("ordeal/zotebase")
 
 function Void:init(x, y)
     local arena = Game.battle.arena
-    super:init(self, x, arena.bottom, "battle/ordeal/void_teleport")
+    super.init(self, x, arena.bottom, "battle/ordeal/void_teleport")
     self.collidable = false
     self.health = 60
     self.knockback = 4
@@ -29,7 +29,7 @@ function Void:init(x, y)
 end
 
 function Void:update()
-    super:update(self)
+    super.update(self)
     if self.teleporting then return end
     self.physics.speed = Utils.approach(self.physics.speed, 1.5, 0.05*DTMULT)
     local soul = Game.battle.soul
@@ -45,7 +45,7 @@ end
 
 function Void:hit(source, damage)
     self.physics.speed = self.physics.speed / 3
-    super:hit(self, source, damage)
+    super.hit(self, source, damage)
 end
 
 function Void:killAnim()

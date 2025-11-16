@@ -1,7 +1,7 @@
 local Gorb, super = Class("nailbase")
 
 function Gorb:init(x, y)
-    super:init(self, x, y, "battle/p1/gorb/idle")
+    super.init(self, x, y, "battle/p1/gorb/idle")
     self.sprite:play(0.2, true)
     self:setHitbox(15,5, 9,27)
 
@@ -38,7 +38,7 @@ function Gorb:init(x, y)
 end
 
 function Gorb:update()
-    super:update(self)
+    super.update(self)
     if self.curr_knockback > 0 then
         self.sx = self.sx + self.curr_knockback*math.cos(self.knockback_dir)*DTMULT
     end
@@ -48,7 +48,7 @@ function Gorb:update()
 end
 
 function Gorb:onDefeat()
-    super:onDefeat(self)
+    super.onDefeat(self)
     self.wave.finished = true
 end
 

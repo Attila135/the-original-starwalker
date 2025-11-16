@@ -2,7 +2,7 @@ local Head, super = Class("ordeal/zotebase")
 
 function Head:init(x)
     local arena = Game.battle.arena
-    super:init(self, x, arena.top, "battle/ordeal/head_fall")
+    super.init(self, x, arena.top, "battle/ordeal/head_fall")
     self:setOrigin(0.5, 1)
     self:setHitbox(3,30, 33,21)
     self.collidable = false
@@ -19,7 +19,7 @@ function Head:init(x)
 end
 
 function Head:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     local arena = Game.battle.arena
     self.timer = Timer()
     self:addChild(self.timer)
@@ -63,7 +63,7 @@ function Head:onAdd(parent)
 end
 
 function Head:update()
-    super:update(self)
+    super.update(self)
     if self.shaking then
         self.sprite.x = love.math.random(-1,1)
     else

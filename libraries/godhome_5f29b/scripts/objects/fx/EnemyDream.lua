@@ -1,7 +1,7 @@
 local Dream, super = Class(Object)
 
 function Dream:init(x, y)
-    super:init(self, x, y)
+    super.init(self, x, y)
     self.sprite = Sprite("battle/misc/dream/small_"..Utils.pick{"a","b"}, 0, 0)
     self.sprite:setOrigin(0.5,0.5)
     self.sprite.rotation = Utils.random(2*math.pi)

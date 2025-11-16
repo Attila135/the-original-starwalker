@@ -14,7 +14,7 @@
 local VengeflyKing, super = Class(Actor)
 
 function VengeflyKing:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 52
     self.height = 48

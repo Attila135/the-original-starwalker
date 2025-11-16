@@ -2,7 +2,7 @@ local Lanky, super = Class("ordeal/zotebase")
 
 function Lanky:init(x)
     local arena = Game.battle.arena
-    super:init(self, x, arena.bottom, "battle/ordeal/lanky")
+    super.init(self, x, arena.bottom, "battle/ordeal/lanky")
     self.sprite:play(0.2, true)
     self:setOrigin(0.5, 1)
     self.collider = ColliderGroup(self, {
@@ -15,7 +15,7 @@ function Lanky:init(x)
 end
 
 function Lanky:update()
-    super:update(self)
+    super.update(self)
     local arena = Game.battle.arena
     if self.rolling then
         if self:collidesWith(arena.collider.colliders[3]) then
@@ -66,7 +66,7 @@ function Lanky:update()
 end
 
 function Lanky:hit(source, damage)
-    super:hit(self, source, damage)
+    super.hit(self, source, damage)
     local angle = Utils.angle(source, self)
     if not self.rolling then
         self.physics = {

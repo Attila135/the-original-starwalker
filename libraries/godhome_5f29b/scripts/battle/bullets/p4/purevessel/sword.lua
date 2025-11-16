@@ -1,7 +1,7 @@
 local Sword, super = Class(Bullet)
 
 function Sword:init(x, y)
-    super:init(self, x, y, "battle/p4/purevessel/sword")
+    super.init(self, x, y, "battle/p4/purevessel/sword")
     self:setOrigin(0.5, 1)
     self:setHitbox(6.5, 0, 2, 70)
     self.sprite:setScaleOrigin(0.5, 0.5)
@@ -11,7 +11,7 @@ function Sword:init(x, y)
 end
 
 function Sword:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     self.wave.timer:tween(0.1, self.sprite, {scale_x = 1, alpha = 1}, "linear", function() self.collidable = true end)
 end
 

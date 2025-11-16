@@ -4,7 +4,7 @@ local RalseiThread, super = Class(Object)
 
 
 function RalseiThread:init(x, y, rotation)
-    super:init(self, x, y)
+    super.init(self, x, y)
 
     self.lineLifetime = 0;
     self:setLayer(self.layer - 0.01);
@@ -27,7 +27,7 @@ function RalseiThread:init(x, y, rotation)
 end
 
 function RalseiThread:update()
-    super:update(self)
+    super.update(self)
    -- use DTMULT
    self.siner = self.siner + 1 * DTMULT / 20;
 
@@ -52,7 +52,7 @@ function RalseiThread:draw()
     --Draw.setColor(0.63, 0.38, 0.76)
     --love.graphics.setLineWidth(1);
     --love.graphics.line(self.parent.sprite.width / 2, self.parent.sprite.height / 2, self.otherX, self.otherY);
-    super:draw(self)
+    super.draw(self)
    
     
     -- self.x = self.x + 5

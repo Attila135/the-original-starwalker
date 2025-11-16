@@ -1,7 +1,7 @@
 local Bounce, super = Class("nailbase")
 
 function Bounce:init(x, y, dir, sprite)
-    super:init(self, x, y, sprite)
+    super.init(self, x, y, sprite)
     self.rotation = Utils.random(2*math.pi)
     self.graphics.spin = Utils.random(0.1,0.2)*Utils.sign(math.cos(dir))
     self.physics = {
@@ -14,7 +14,7 @@ function Bounce:init(x, y, dir, sprite)
 end
 
 function Bounce:update()
-    super:update(self)
+    super.update(self)
     if self.spawning then
         self.spawning = Game.battle:checkSolidCollision(self)
     else
@@ -36,7 +36,7 @@ function Bounce:update()
 end
 
 function Bounce:hit(source, damage)
-    super:hit(self, source, damage)
+    super.hit(self, source, damage)
     local dx, dy = self.x-source.x, self.y-source.y
     if math.abs(dx) > math.abs(dy) then
         if Utils.sign(dx) ~= Utils.sign(math.cos(self.physics.direction)) then

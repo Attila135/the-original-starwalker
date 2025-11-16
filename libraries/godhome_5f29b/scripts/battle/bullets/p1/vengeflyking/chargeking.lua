@@ -1,7 +1,7 @@
 local Charge, super = Class("nailbase")
 
 function Charge:init(enemy)
-    super:init(self, 0, 0, "battle/p1/vengeflyking/charge")
+    super.init(self, 0, 0, "battle/p1/vengeflyking/charge")
     self.sprite:stop()
     self:setOrigin(0, 0)
     self:setScale(1, 1)
@@ -18,12 +18,12 @@ function Charge:init(enemy)
 end
 
 function Charge:update()
-    super:update(self)
+    super.update(self)
     self.sprite:setFrame(self.parent.frame)
 end
 
 function Charge:onDefeat()
-    super:onDefeat(self)
+    super.onDefeat(self)
     self.wave.finished = true
 end
 

@@ -1,7 +1,7 @@
 local Orb, super = Class(Bullet)
 
 function Orb:init(x, y, time, dir, spawnspeed, speed)
-    super:init(self, x, y, "battle/common/soulorb")
+    super.init(self, x, y, "battle/common/soulorb")
     self.sprite:play(0.15, true)
     self.collider = CircleCollider(self, self.width/2, self.height/2, 4)
     self.destroy_on_hit = true
@@ -57,7 +57,7 @@ function Orb:init(x, y, time, dir, spawnspeed, speed)
 end
 
 function Orb:update()
-    super:update(self)
+    super.update(self)
     if not self.spawning then
         local soul = Game.battle.soul
         local angle = Utils.angle(self.x, self.y, soul.x, soul.y)

@@ -1,7 +1,7 @@
 local snowflakeBullet_shadow, super = Class("snowflakeBullet")
 
 function snowflakeBullet_shadow:init(x, y, dir, speed)
-	super:init(self, x, y, 0, 0, false, 0)
+	super.init(self, x, y, 0, 0, false, 0)
 
 	self.dir = dir
 	self.speed = speed
@@ -43,7 +43,7 @@ function snowflakeBullet_shadow:onRemoveFromStage()
 end
 
 function snowflakeBullet_shadow:update()
-	super:update(self)
+	super.update(self)
 
 	if self.start then
 		if self.y>-20 and self.timer==0 then

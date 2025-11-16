@@ -2,7 +2,7 @@ local Shield, super = Class(Bullet)
 
 function Shield:init(rad, dir)
     local x, y = rad*math.cos(dir), rad*math.sin(dir)
-    super:init(self, x, y, "battle/p4/markoth/shield")
+    super.init(self, x, y, "battle/p4/markoth/shield")
     self.sprite:play(0.2, true)
     self:setHitbox(4,1,7,21)
     self:setScale(1)
@@ -13,7 +13,7 @@ function Shield:init(rad, dir)
 end
 
 function Shield:update()
-    super:update(self)
+    super.update(self)
     self:setPosition(self.radius*math.cos(self.rotation), self.radius*math.sin(self.rotation))
 end
 

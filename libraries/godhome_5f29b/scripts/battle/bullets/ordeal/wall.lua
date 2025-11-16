@@ -2,7 +2,7 @@ local Wall, super = Class("ordeal/zotebase")
 
 function Wall:init(x)
     local arena = Game.battle.arena
-    super:init(self, x, arena.top, "battle/ordeal/wall")
+    super.init(self, x, arena.top, "battle/ordeal/wall")
     self.sprite:play(0.2, true)
     self:setOrigin(0.5, 0)
     self:setHitbox(9,0, 4,90)
@@ -14,7 +14,7 @@ function Wall:init(x)
 end
 
 function Wall:update()
-    super:update(self)
+    super.update(self)
     local arena, soul = Game.battle.arena, Game.battle.soul
     if soul.x < self.x then
         self.physics.speed_x = Utils.approach(self.physics.speed_x, -4, 0.2*DTMULT)

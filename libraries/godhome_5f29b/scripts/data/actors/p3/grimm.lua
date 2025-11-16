@@ -20,7 +20,7 @@
 local Grimm, super = Class(Actor)
 
 function Grimm:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 36
     self.height = 70

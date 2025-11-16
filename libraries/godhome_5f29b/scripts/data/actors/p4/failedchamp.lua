@@ -18,7 +18,7 @@
 local FailedChamp, super = Class(Actor)
 
 function FailedChamp:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 116
     self.height = 74

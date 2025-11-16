@@ -1,7 +1,7 @@
 local Focus, super = Class(Bullet)
 
 function Focus:init(x, y, radius, time)
-    super:init(self, x, y)
+    super.init(self, x, y)
     self.layer = BATTLE_LAYERS["below_soul"]
     self:setScale(1)
     self.collider = CircleCollider(self, 0, 0, radius*0.8)
@@ -15,7 +15,7 @@ function Focus:init(x, y, radius, time)
 end
 
 function Focus:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     self.wave.timer:tween(0.2, self, {alpha = 1})
     self.wave.timer:tween(self.time/2, self, {fill_alpha = 0.3})
     self.wave.timer:after(self.time, function()
@@ -32,7 +32,7 @@ function Focus:onAdd(parent)
 end
 
 function Focus:draw()
-    super:draw(self)
+    super.draw(self)
     love.graphics.setColor(1, 1, 1, self.fill_alpha)
     love.graphics.circle("fill", 0, 0, self.radius)
     love.graphics.setColor(1, 1, 1, self.alpha)

@@ -4,7 +4,7 @@ local Lighting, super = Class(Object)
 -- color is what color the light sources will be (defaults to white)
 -- fade is an optional argument that makes the darkness fade in
 function Lighting:init(alpha, color, fade)
-    super:init(self, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)
+    super.init(self, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)
 
     self.alpha = alpha or 1
     self.timer = Timer()
@@ -28,7 +28,7 @@ function Lighting:init(alpha, color, fade)
 end
 
 function Lighting:draw()
-    super:draw(self)
+    super.draw(self)
     local canvas = Draw.pushCanvas(SCREEN_WIDTH, SCREEN_HEIGHT)
     love.graphics.setColor(1-self.alpha, 1-self.alpha, 1-self.alpha)
     love.graphics.rectangle("fill",0,0,SCREEN_WIDTH,SCREEN_HEIGHT)

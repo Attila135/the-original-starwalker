@@ -1,7 +1,7 @@
 local Zote, super = Class("nailbase")
 
 function Zote:init(x, y, texture)
-    super:init(self, x, y, texture)
+    super.init(self, x, y, texture)
 
     self.health = 1
     self.immune = false

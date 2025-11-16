@@ -12,7 +12,7 @@
 local SoulMaster, super = Class(Actor)
 
 function SoulMaster:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 54
     self.height = 50

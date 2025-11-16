@@ -12,7 +12,7 @@
 local Flukemarm, super = Class(Actor)
 
 function Flukemarm:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 42
     self.height = 70

@@ -2,7 +2,7 @@ local Zoteling, super = Class("ordeal/zotebase")
 
 function Zoteling:init(x)
     local arena = Game.battle.arena
-    super:init(self, x, arena.bottom, "battle/ordeal/zoteling")
+    super.init(self, x, arena.bottom, "battle/ordeal/zoteling")
     self.sprite:play(0.2, true)
     self:setOrigin(0.5, 1)
     self:setHitbox(3,12, 14,7)
@@ -12,7 +12,7 @@ function Zoteling:init(x)
 end
 
 function Zoteling:update()
-    super:update(self)
+    super.update(self)
     local arena = Game.battle.arena
     if self.x < arena.left or self.x > arena.right then
         self.physics.speed_x = self.physics.speed_x*-1
@@ -58,7 +58,7 @@ function Zoteling:update()
 end
 
 function Zoteling:hit(source, damage)
-    super:hit(self, source, damage)
+    super.hit(self, source, damage)
     local angle = Utils.angle(source, self)
     if not self.rolling then
         self.physics = {

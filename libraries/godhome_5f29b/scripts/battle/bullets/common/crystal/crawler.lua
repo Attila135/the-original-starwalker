@@ -1,7 +1,7 @@
 local Crawler, super = Class(Bullet)
 
 function Crawler:init(x, y, dir, facing)
-    super:init(self, x, y, "battle/p2/crystalguardian/crystal_bug")
+    super.init(self, x, y, "battle/p2/crystalguardian/crystal_bug")
     self:setOrigin(0, 0.5)
     self.rotation = dir
     self.scale_y = facing*2

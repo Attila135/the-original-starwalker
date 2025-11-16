@@ -12,7 +12,7 @@
 local NightmareKing, super = Class(Actor)
 
 function NightmareKing:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 36
     self.height = 70

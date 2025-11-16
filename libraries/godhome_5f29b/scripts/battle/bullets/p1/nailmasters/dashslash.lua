@@ -1,7 +1,7 @@
 local Dash, super = Class(Bullet)
 
 function Dash:init(x, y, dir)
-    super:init(self, x, y, "battle/p1/nailmasters/glow")
+    super.init(self, x, y, "battle/p1/nailmasters/glow")
     self:setOrigin(0, 0.5)
     self:setHitbox(0,1,80,38)
     self.collidable = false
@@ -35,7 +35,7 @@ function Dash:init(x, y, dir)
 end
 
 function Dash:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     self.wave.timer:script(function(wait)
         wait(1.2)
         Game.battle:addChild(ScreenFade({1,1,1}, 0.2, 0, 0.1))
@@ -57,7 +57,7 @@ function Dash:draw()
         love.graphics.setColor(1,1,1, self.sprite.alpha/10)
         love.graphics.rectangle("fill", 0,0,80,40)
     end
-    super:draw(self)
+    super.draw(self)
 end
 
 return Dash

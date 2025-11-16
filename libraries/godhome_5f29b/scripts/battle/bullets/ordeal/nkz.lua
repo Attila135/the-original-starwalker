@@ -1,7 +1,7 @@
 local Nightmare, super = Class("ordeal/zotebase")
 
 function Nightmare:init(x, y)
-    super:init(self, x, y, "battle/ordeal/nkz_idle")
+    super.init(self, x, y, "battle/ordeal/nkz_idle")
     self:setHitbox(3,6, 7,27)
     self.health = 300
     self.immune = true
@@ -17,7 +17,7 @@ function Nightmare:init(x, y)
 end
 
 function Nightmare:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     local ps = ParticleAbsorber(self.x, self.y, {
         layer = BATTLE_LAYERS["above_bullets"],
         shape = "triangle",

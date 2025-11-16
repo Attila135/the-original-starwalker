@@ -1,13 +1,13 @@
 local Particle, P_super = Class(Sprite)
 
 function Particle:init(texture, x, y)
-    P_super:init(self, texture, x, y)
+    P_super.init(self, texture, x, y)
     self:setOrigin(0.5, 0.5)
 end
 
 function Particle:update()
     if self.update_func then self:update_func() end
-    P_super:update(self)
+    P_super.update(self)
 end
 
 function Particle:draw()
@@ -20,7 +20,7 @@ function Particle:draw()
     if self.draw_func then
         self:draw_func(P_super)
     else
-        P_super:draw(self)
+        P_super.draw(self)
     end
     love.graphics.setBlendMode("alpha")
     if self.post_draw_func then self:post_draw_func() end
@@ -33,7 +33,7 @@ function Absorber:init(x, y, o)
         o = x
         x, y = 0, 0
     end
-    super:init(self, x, y)
+    super.init(self, x, y)
     if type(o.layer) == "string" then o.layer = BATTLE_LAYERS[o.layer] end
     self.layer = o.layer or BATTLE_LAYERS["below_bullets"]
 
@@ -94,7 +94,7 @@ function Absorber:init(x, y, o)
         -- functions to call for the particle
         update = nil, -- function(particle)
         pre_draw = nil, --    ...(particle)
-        draw = nil, --        ...(particle, super), passing in super for calling super:draw(particle)
+        draw = nil, --        ...(particle, super), passing in super for calling super.draw(particle)
         post_draw = nil, --   ...(particle)
         remove = nil, --      ...(particle)
 
@@ -137,7 +137,7 @@ function Absorber:init(x, y, o)
 end
 
 function Absorber:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     if self:getValue("every") > 0 then
         local total_time = 0
         self.timer:script(function(wait)

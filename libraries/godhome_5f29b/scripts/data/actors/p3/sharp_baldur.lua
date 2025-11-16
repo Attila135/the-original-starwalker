@@ -12,7 +12,7 @@
 local SharpBaldur, super = Class(Actor)
 
 function SharpBaldur:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 24
     self.height = 19

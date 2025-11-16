@@ -12,7 +12,7 @@
 local HiveKnight, super = Class(Actor)
 
 function HiveKnight:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 40
     self.height = 56

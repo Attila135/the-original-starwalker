@@ -1,7 +1,7 @@
 local Cluster, super = Class("nailbase")
 
 function Cluster:init(x, y)
-    super:init(self, x, y, "battle/p5/kristalguardian/shard_cluster")
+    super.init(self, x, y, "battle/p5/kristalguardian/shard_cluster")
     self.layer = BATTLE_LAYERS["below_bullets"]
     self.rotation = Utils.random(math.pi*2)
     self.collider = CircleCollider(self, self.width/2, self.height/2, 12)
@@ -24,7 +24,7 @@ function Cluster:onDefeat()
         shrink_after = 0.1,
         amount = {3,4},
     }))
-    super:onDefeat(self)
+    super.onDefeat(self)
 end
 
 return Cluster

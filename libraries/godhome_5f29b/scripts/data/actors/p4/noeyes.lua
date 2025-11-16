@@ -12,7 +12,7 @@
 local NoEyes, super = Class(Actor)
 
 function NoEyes:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 49
     self.height = 48

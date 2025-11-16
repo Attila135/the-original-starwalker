@@ -1,7 +1,7 @@
 local Cyclone, super = Class(Bullet)
 
 function Cyclone:init(x, y, dir)
-    super:init(self, x, y, "battle/p1/nailmasters/glow")
+    super.init(self, x, y, "battle/p1/nailmasters/glow")
     self:setOrigin(0,0.5)
     self:setHitbox(4,6,12,48)
     self.collidable = false
@@ -35,7 +35,7 @@ function Cyclone:init(x, y, dir)
 end
 
 function Cyclone:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     if self.phase ~= 1 then return end
     self.timer:script(function(wait)
         wait(1.2)
@@ -67,7 +67,7 @@ function Cyclone:draw()
         love.graphics.setColor(1,1,1, self.sprite.alpha/10)
         love.graphics.circle("fill", 0,self.height/2, 30)
     end
-    super:draw(self)
+    super.draw(self)
 end
 
 return Cyclone

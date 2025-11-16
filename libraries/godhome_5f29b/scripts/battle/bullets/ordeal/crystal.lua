@@ -2,13 +2,13 @@ local Crystal, super = Class("ordeal/zotebase")
 
 function Crystal:init(x)
     local arena = Game.battle.arena
-    super:init(self, x, arena.bottom + 32, "battle/ordeal/crystal")
+    super.init(self, x, arena.bottom + 32, "battle/ordeal/crystal")
     self:setOrigin(0.5, 1)
     self.color = {1,1,1}
 end
 
 function Crystal:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     local arena = Game.battle.arena
     local timer = Timer()
     self:addChild(timer)

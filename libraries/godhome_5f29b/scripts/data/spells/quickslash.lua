@@ -20,7 +20,7 @@
 local Slash, super = Class(Spell)
 
 function Slash:init()
-    super:init(self)
+    super.init(self)
 
     self.name = "Quick Slash"
     self.effect = "Attack\nfaster"

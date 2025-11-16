@@ -1,7 +1,7 @@
 local Lance, super = Class("nailbase")
 
 function Lance:init(x, y, dir, fast)
-    super:init(self, x, y, "battle/p2/mantislords/lance")
+    super.init(self, x, y, "battle/p2/mantislords/lance")
     self.rotation = dir
     self.dir = dir
     self:setHitbox(5,2,60,2)
@@ -44,7 +44,7 @@ function Lance:init(x, y, dir, fast)
 end
 
 function Lance:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     if not self.scythe then
         self.scythe = self.wave:spawnBullet("p2/mantislords/dash_scythe", self.x, self.y, self.dir)
     end

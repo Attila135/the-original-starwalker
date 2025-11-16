@@ -12,7 +12,7 @@
 local BrokenVessel, super = Class(Actor)
 
 function BrokenVessel:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 40
     self.height = 28

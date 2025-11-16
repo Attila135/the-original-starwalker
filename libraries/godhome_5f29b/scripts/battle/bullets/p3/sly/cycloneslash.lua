@@ -1,7 +1,7 @@
 local Cyclone, super = Class("nailbase")
 
 function Cyclone:init(x, y)
-    super:init(self, x, y, "battle/p1/nailmasters/cycloneslash")
+    super.init(self, x, y, "battle/p1/nailmasters/cycloneslash")
     self.rotation = math.pi/2
     self.sprite:play(0.1, true)
     self:setHitbox(4,6,12,48)
@@ -9,7 +9,7 @@ function Cyclone:init(x, y)
 end
 
 function Cyclone:update()
-    super:update(self)
+    super.update(self)
     local arena = Game.battle.arena
     self.physics.speed_y = Utils.approach(self.physics.speed_y, 8, 0.3*DTMULT)
     if self:collidesWith(arena.collider.colliders[3]) then
@@ -35,7 +35,7 @@ end
 function Cyclone:hit(source, damage)
     if math.abs(self.x - source.x) < 16 then
         self.physics.speed_y = self.physics.speed_y*-1
-        super:hit(self, source, damage)
+        super.hit(self, source, damage)
     else
         self.curr_knockback = 8
         self.knockback_dir = (self.x < source.x) and math.pi or 0

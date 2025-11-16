@@ -1,7 +1,7 @@
 local Knight, super = Class(Actor)
 
 function Knight:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 16
     self.height = 38

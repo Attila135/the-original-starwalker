@@ -12,7 +12,7 @@
 local KristalGuardian, super = Class(Actor)
 
 function KristalGuardian:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 45
     self.height = 45

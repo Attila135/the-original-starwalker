@@ -1,7 +1,7 @@
 local Bounce, super = Class("nailbase")
 
 function Bounce:init(x, y, enemy)
-    super:init(self, x, y, "battle/p4/watcherknights/bullet")
+    super.init(self, x, y, "battle/p4/watcherknights/bullet")
     self.sprite:stop()
     self.collider = CircleCollider(self, 20, 20, 12)
     self.wall_collider = CircleCollider(self, 20, 20, 15)
@@ -14,7 +14,7 @@ function Bounce:init(x, y, enemy)
 end
 
 function Bounce:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     self.wave.timer:script(function(wait)
         while true do
             wait(Utils.random(0.5,1))
@@ -31,7 +31,7 @@ function Bounce:onAdd(parent)
 end
 
 function Bounce:update()
-    super:update(self)
+    super.update(self)
     if self.bouncing then
         local arena = Game.battle.arena
         if self.wall_collider:collidesWith(arena.collider.colliders[2]) or self.wall_collider:collidesWith(arena.collider.colliders[4]) then
@@ -105,7 +105,7 @@ end
 
 function Bounce:hit(source, damage)
     if self.vulnerable then
-        super:hit(self, source, damage)
+        super.hit(self, source, damage)
     else
         -- special "no damage" animation?
     end

@@ -1,7 +1,7 @@
 local Pufferfish, super = Class(Wave)
 
 function Pufferfish:init()
-    super:init(self)
+    super.init(self)
     self.time = 9
     self:setArenaSize(300, 160)
     self:setSoulOffset(0, 20)

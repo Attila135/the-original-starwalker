@@ -1,7 +1,7 @@
 local Baby, super = Class("nailbase")
 
 function Baby:init(x, y)
-    super:init(self, x, y, "battle/p1/gruzmother/baby")
+    super.init(self, x, y, "battle/p1/gruzmother/baby")
     self.sprite:play(0.2, true)
     self:setHitbox(3,5,6,6)
 
@@ -16,7 +16,7 @@ function Baby:init(x, y)
 end
 
 function Baby:update()
-    super:update(self)
+    super.update(self)
     local arena = Game.battle.arena
     for _,line in ipairs(arena.collider.colliders) do
         if self:collidesWith(line) then
@@ -45,13 +45,13 @@ function Baby:update()
 end
 
 function Baby:hit(source, damage)
-    super:hit(self, source, damage)
+    super.hit(self, source, damage)
     self:turn()
 end
 
 function Baby:onDefeat()
     Utils.removeFromTable(self.wave.gruzzers, self)
-    super:onDefeat(self)
+    super.onDefeat(self)
 end
 
 function Baby:turn()

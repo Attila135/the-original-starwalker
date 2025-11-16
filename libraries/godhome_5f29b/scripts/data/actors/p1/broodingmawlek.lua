@@ -1,7 +1,7 @@
 local BroodingMawlek, super = Class(Actor)
 
 function BroodingMawlek:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 70
     self.height = 60

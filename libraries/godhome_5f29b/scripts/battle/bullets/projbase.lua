@@ -1,7 +1,7 @@
 local Projectile, super = Class("nailbase")
 
 function Projectile:init(x, y, sprite)
-    super:init(self, x, y, sprite)
+    super.init(self, x, y, sprite)
     self.color = {1, 0.6, 0.5}
     self.nail_flash = nil
 
@@ -9,7 +9,7 @@ function Projectile:init(x, y, sprite)
 end
 
 function Projectile:update()
-    super:update(self)
+    super.update(self)
     if self.launched then
         if self:collidesWith(Game.battle.encounter.player_proj_hb) then
             self:launchHit(Game.battle:getPartyBattler("knight"))
@@ -25,7 +25,7 @@ end
 
 function Projectile:hit(source, damage)
     self.launched = true
-    super:hit(self, source, damage)
+    super.hit(self, source, damage)
 end
 
 function Projectile:launchHit(battler)

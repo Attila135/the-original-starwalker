@@ -12,7 +12,7 @@
 local TraitorLord, super = Class(Actor)
 
 function TraitorLord:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 48
     self.height = 56

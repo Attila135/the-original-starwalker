@@ -1,7 +1,7 @@
 local Entrance, super = Class(Event)
 
 function Entrance:init(x, y)
-    super:init(self, x, y, 40, 80)
+    super.init(self, x, y, 40, 80)
     self.sprite = Sprite("tilesets/storm_entrance")
     self.sprite:setScale(2)
     self:addChild(self.sprite)

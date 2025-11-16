@@ -12,7 +12,7 @@
 local LostKin, super = Class(Actor)
 
 function LostKin:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 40
     self.height = 28

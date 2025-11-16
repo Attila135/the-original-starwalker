@@ -1,7 +1,7 @@
 local Jar, super = Class(Bullet)
 
 function Jar:init(x, y)
-    super:init(self, x, y, "battle/p3/collector/jar")
+    super.init(self, x, y, "battle/p3/collector/jar")
     self.rotation = Utils.random(math.pi*2)
     self.graphics.spin = 0.1*Utils.randomSign()
     self.collider = CircleCollider(self, 12,16, 4)
@@ -9,7 +9,7 @@ function Jar:init(x, y)
 end
 
 function Jar:update()
-    super:update(self)
+    super.update(self)
     local arena = Game.battle.arena
     if self:collidesWith(arena.collider.colliders[3]) then
         Game.battle:addChild(ParticleEmitter(self.x, arena.bottom, {
