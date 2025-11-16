@@ -14,7 +14,7 @@ function Starwalker:init()
 
     self.timer = 0
 
-    -- music by nyako! give credit if used!
+    -- music by nyako! give credit if used!  this music isn't by nyako but i'm just lazy to remuve it >:3
     self.music = "battle"
 
     --self.default_xactions = false

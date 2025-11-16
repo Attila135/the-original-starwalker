@@ -285,7 +285,7 @@ end
 
 function MyWave:beforeEnd()
 	for k,roll in ipairs(self.rolls) do
-		roll.sfx:stop()
+		--roll.sfx:stop()
 		roll.sfx:release()
 	end
 end

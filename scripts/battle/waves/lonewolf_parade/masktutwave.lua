@@ -12,7 +12,7 @@ self:setArenaSize(19999, 19999);
 --self:setArenaOffset(300, 300);
 Game.battle.battle_ui:transitionOut() 
 Game.battle.tension_bar:hide()
-self:setSoulPosition(262, 317)
+self:setSoulPosition(320, 258);
 
 
 end
@@ -55,11 +55,14 @@ self.timer:every(1/30, function()
     self.timeVar = self.timeVar + 1;
     if (self.timeVar == 5)
         then
-        self:spawnBullet("fancy_ralsei", ralseiX + 30, ralseiY - 160, math.rad(0), 0);
-        self:spawnBullet("fancy_ralsei", ralseiX - 30, ralseiY - 160, math.rad(0), 0);
+        self:spawnBullet("fancy_ralsei", 220, 258, math.rad(0), 0);
+        self:spawnBullet("fancy_ralsei", 420, 258, math.rad(0), 0);
 
-        self:spawnBullet("fancy_ralsei", ralseiX + 40, ralseiY - 50, math.rad(0), 0);
-        self:spawnBullet("fancy_ralsei", ralseiX - 40, ralseiY - 50, math.rad(0), 0);
+        self:spawnBullet("fancy_ralsei", 270, 158, math.rad(0), 0);
+        self:spawnBullet("fancy_ralsei", 370, 158, math.rad(0), 0);
+
+        self:spawnBullet("fancy_ralsei", 270, 358, math.rad(0), 0);
+        self:spawnBullet("fancy_ralsei", 370, 358, math.rad(0), 0);
 
         --self:spawnBullet("fancy_ralsei", ralseiX, ralseiY, math.rad(0), 0);
         end
@@ -75,12 +78,12 @@ end
 
 function masktutwave:update()
     -- Code here gets called every frame
-    if (self.threadAmount >= 4)
+    if (self.threadAmount >= 6)
         then
         self.waitVar = self.waitVar + 1 * DTMULT;
             if (self.waitVar > 20)
             then
-            Game.battle:setState("ACTIONSELECT");
+            self.time = 1;
             end
         end
     if (Game.battle ~= nil and Game.battle.party[1].chara.health < 40 and self.canBetter == true) then Assets.playSound("wolf_bthan"); self.canBetter = false; end
@@ -88,7 +91,7 @@ function masktutwave:update()
     if (self.canTip == true and Game.battle.wave_timer > 4.00)
         then
         self.canTip = false;
-        self:spawnBullet("tutorialtip", Game.battle.arena.x, Game.battle.arena.y + 220, math.rad(0), 0);
+        self:spawnBullet("tutorialtip", 190, 30, math.rad(0), 0);
         end
 
     super.update(self)
