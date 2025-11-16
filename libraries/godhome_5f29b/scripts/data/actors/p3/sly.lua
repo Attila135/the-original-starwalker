@@ -13,7 +13,7 @@
 local Sly, super = Class(Actor)
 
 function Sly:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 66
     self.height = 28

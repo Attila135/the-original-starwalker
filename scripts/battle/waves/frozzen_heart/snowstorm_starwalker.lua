@@ -1,7 +1,7 @@
 local Snowstorm, super = Class(Wave)
 
 function Snowstorm:init()
-    super:init(self)
+    super.init(self)
     self.time=7
 end
 
@@ -45,7 +45,7 @@ function Snowstorm:update()
 
     Game.battle.arena:setPosition(Game.battle.arena.x-DTMULT, Game.battle.arena.y)
 
-    super:update(self)
+    super.update(self)
 end
 
 return Snowstorm

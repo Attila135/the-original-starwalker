@@ -1,7 +1,7 @@
 local Color, super = Class("movement")
 
 function Color:init(x, y, type)
-    super:init(self, x, y, type)
+    super.init(self, x, y, type)
     local arena = Game.battle.arena
     local w,h = arena.width, arena.height
     self:setHitbox(-w/4, -h/4, w/2, h/2)
@@ -18,7 +18,7 @@ function Color:draw()
     love.graphics.setColor(r,g,b, self.alpha)
     local w,h = self.collider.width, self.collider.height
     love.graphics.rectangle("fill", -w/2, -h/2, w, h)
-    super:draw(self)
+    super.draw(self)
 end
 
 function Color:slash()

@@ -1,7 +1,7 @@
 local SpawnZote, super = Class(Bullet)
 
 function SpawnZote:init(x, y, type)
-    super:init(self, x, y, "battle/ordeal/spawn_zote")
+    super.init(self, x, y, "battle/ordeal/spawn_zote")
     self.layer = BATTLE_LAYERS["below_soul"]
     self.graphics.spin = 0.2
     self.physics.speed_y = 8
@@ -12,7 +12,7 @@ function SpawnZote:init(x, y, type)
 end
 
 function SpawnZote:update()
-    super:update(self)
+    super.update(self)
     if self.wall_hb:collidesWith(Game.battle.arena.collider.colliders[3]) then
         local zote = self.wave:spawnBullet("ordeal/"..self.type, self.x, self.y)
         zote.zote_type = self.type

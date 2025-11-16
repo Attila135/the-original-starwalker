@@ -1,13 +1,13 @@
 local Particle, P_super = Class(Sprite)
 
 function Particle:init(texture, x, y)
-    P_super:init(self, texture, x, y)
+    P_super.init(self, texture, x, y)
     self:setOrigin(0.5, 0.5)
 end
 
 function Particle:update()
     if self.update_func then self:update_func() end
-    P_super:update(self)
+    P_super.update(self)
 end
 
 function Particle:draw()
@@ -20,7 +20,7 @@ function Particle:draw()
     if self.draw_func then
         self:draw_func(P_super)
     else
-        P_super:draw(self)
+        P_super.draw(self)
     end
     love.graphics.setBlendMode("alpha")
     if self.post_draw_func then self:post_draw_func() end
@@ -29,10 +29,10 @@ end
 function Particle:remove()
     if self.remove_func then
         self:remove_func(function()
-            P_super:remove(self)
+            P_super.remove(self)
         end)
     else
-        P_super:remove(self)
+        P_super.remove(self)
     end
 end
 
@@ -40,10 +40,10 @@ local Emitter, super = Class(Object)
 
 function Emitter:init(x, y, w, h, o)
     if type(w) == "table" then
-        super:init(self, x, y, 0, 0)
+        super.init(self, x, y, 0, 0)
         o = w
     else
-        super:init(self, x, y, w, h)
+        super.init(self, x, y, w, h)
     end
     self.layer = (type(o.layer) == "number" and o.layer) or BATTLE_LAYERS[o.layer] or BATTLE_LAYERS["below_bullets"]
 
@@ -176,7 +176,7 @@ function Emitter:init(x, y, w, h, o)
 end
 
 function Emitter:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     local every = self:getValue("every")
     if every > 0 then
         local total_time = 0

@@ -12,7 +12,7 @@
 local GodTamer, super = Class(Actor)
 
 function GodTamer:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 54
     self.height = 56

@@ -2,7 +2,7 @@ local Fluke, super = Class("ordeal/zotebase")
 
 function Fluke:init(x)
     local arena = Game.battle.arena
-    super:init(self, x, arena.bottom + 40, "battle/ordeal/fluke")
+    super.init(self, x, arena.bottom + 40, "battle/ordeal/fluke")
     self.sprite:play(0.2, true)
     self:setHitbox(8,12, 14,20)
     self.health = 60
@@ -31,7 +31,7 @@ function Fluke:init(x)
 end
 
 function Fluke:update()
-    super:update(self)
+    super.update(self)
     self.sine = self.sine + DT
     self.x = self.ox + math.sin(self.sine*5)*10
     if self.y < -30 then

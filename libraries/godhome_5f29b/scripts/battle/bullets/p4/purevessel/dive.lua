@@ -1,14 +1,14 @@
 local Dive, super = Class("nailbase")
 
 function Dive:init(x, y)
-    super:init(self, x, y, "battle/p4/purevessel/shade_teleport")
+    super.init(self, x, y, "battle/p4/purevessel/shade_teleport")
     self.enemy = Game.battle:getEnemyBattler("p4/purevessel")
     self.enemy_tp = 0
     self:ball()
 end
 
 function Dive:update()
-    super:update(self)
+    super.update(self)
     local arena = Game.battle.arena
     if self:collidesWith(arena.collider.colliders[3]) then
         Game.battle:addChild(ParticleEmitter(self.x, arena.bottom, {

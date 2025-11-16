@@ -1,7 +1,7 @@
 local Ring, super = Class(Bullet)
 
 function Ring:init(x, y)
-    super:init(self, x, y, "battle/p3/elderhu/ring")
+    super.init(self, x, y, "battle/p3/elderhu/ring")
     self.physics = {
         speed_y = -6,
         friction = 1,
@@ -9,7 +9,7 @@ function Ring:init(x, y)
 end
 
 function Ring:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     self.mask = ColorMaskFX({1,1,1}, 1)
     self:addFX(self.mask)
     self.wave.timer:tween(0.4, self.mask, {amount = 0})

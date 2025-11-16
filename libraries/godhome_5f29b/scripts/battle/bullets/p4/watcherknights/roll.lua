@@ -1,7 +1,7 @@
 local Roll, super = Class("nailbase")
 
 function Roll:init(x, y, enemy)
-    super:init(self, x, y, "battle/p4/watcherknights/bullet")
+    super.init(self, x, y, "battle/p4/watcherknights/bullet")
     self.sprite:stop()
     self.collider = CircleCollider(self, 20, 20, 12)
     self.wall_collider = CircleCollider(self, 20, 20, 12)
@@ -15,7 +15,7 @@ function Roll:init(x, y, enemy)
 end
 
 function Roll:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     self.wave.timer:script(function(wait)
         while true do
             wait(Utils.random(0.5,1))
@@ -31,7 +31,7 @@ function Roll:onAdd(parent)
 end
 
 function Roll:update()
-    super:update(self)
+    super.update(self)
     local arena = Game.battle.arena
     if self.rolling then
         for _,side in ipairs(arena.collider.colliders) do
@@ -58,7 +58,7 @@ end
 
 function Roll:hit(source, damage)
     if self.vulnerable then
-        super:hit(self, source, damage)
+        super.hit(self, source, damage)
     else
         -- special "no damage" animation?
     end

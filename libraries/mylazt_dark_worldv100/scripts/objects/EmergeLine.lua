@@ -4,7 +4,7 @@ local EmergeLine, super = Class(Object)
 
 
 function EmergeLine:init()
-    super:init(self, 0, 0)
+    super.init(self, 0, 0)
 
     self.lineLifetime = 0;
     self:setLayer(self.layer - 0.01);
@@ -21,7 +21,7 @@ function EmergeLine:init()
 end
 
 function EmergeLine:update()
-    super:update(self)
+    super.update(self)
    -- use DTMULT
    self.siner = self.siner + 1 * DTMULT / 20;
    self.x = math.cos(self.siner) * 5 * self.randomX;
@@ -45,7 +45,7 @@ function EmergeLine:draw()
     Draw.setColor(0.63, 0.38, 0.76)
     love.graphics.setLineWidth(1);
     love.graphics.line(self.parent.sprite.width / 2, self.parent.sprite.height / 2, self.otherX, self.otherY);
-    super:draw(self)
+    super.draw(self)
    
     
     -- self.x = self.x + 5

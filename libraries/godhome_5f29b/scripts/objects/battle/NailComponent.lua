@@ -1,7 +1,7 @@
 local NailComponent, super = Class(Object)
 
 function NailComponent:init()
-    super:init(self, 0,0)
+    super.init(self, 0,0)
 
     self.knockback = true
 end

@@ -1,7 +1,7 @@
 local Blob, super = Class(Object)
 
 function Blob:init(x, y, radius)
-    super:init(self, x, y)
+    super.init(self, x, y)
     self.radius = radius
     self.orig_radius = radius
     Game.battle.timer:every(Utils.random(1,1.2), function()
@@ -13,13 +13,13 @@ end
 function Blob:draw()
     love.graphics.setColor(1,0.55,0.2, 0.4)
     love.graphics.circle("fill", self.x, self.y, self.radius)
-    super:draw(self)
+    super.draw(self)
 end
 
 local Infection, super = Class(Object)
 
 function Infection:init()
-    super:init(self)
+    super.init(self)
     self.layer = BATTLE_LAYERS["bottom"] + 100
     self:addChild(Blob(10,0, 50))
     self:addChild(Blob(40,-5, 20))

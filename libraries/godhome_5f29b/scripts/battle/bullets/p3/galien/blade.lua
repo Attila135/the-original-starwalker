@@ -1,7 +1,7 @@
 local Blade, super = Class(Bullet)
 
 function Blade:init(x, y, dir)
-    super:init(self, x, y, "battle/p3/galien/blade")
+    super.init(self, x, y, "battle/p3/galien/blade")
     self.sprite:play(0.1, true)
     self.collider = CircleCollider(self, 8, 8, 6)
 
@@ -13,7 +13,7 @@ function Blade:init(x, y, dir)
 end
 
 function Blade:update()
-    super:update(self)
+    super.update(self)
     local arena = Game.battle.arena
     local collided = false
     for _,line in ipairs(arena.collider.colliders) do

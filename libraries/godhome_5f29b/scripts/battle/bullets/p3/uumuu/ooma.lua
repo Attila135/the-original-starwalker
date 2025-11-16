@@ -1,7 +1,7 @@
 local Ooma, super = Class("projbase")
 
 function Ooma:init(x, y)
-    super:init(self, x, y, "battle/p3/uumuu/ooma")
+    super.init(self, x, y, "battle/p3/uumuu/ooma")
     self.layer = BATTLE_LAYERS["below_ui"]
     self.sprite:play(0.2, true)
     self:setOriginExact(8, 9)
@@ -12,7 +12,7 @@ function Ooma:init(x, y)
 end
 
 function Ooma:update()
-    super:update(self)
+    super.update(self)
     if self.layer == BATTLE_LAYERS["below_ui"] and self.y < 280 then
         self:setLayer(BATTLE_LAYERS["bullets"])
     end
@@ -37,7 +37,7 @@ function Ooma:onDamage(soul)
     if self.launched then
         self:spawnExplosion()
     else
-        super:onDamage(self, soul)
+        super.onDamage(self, soul)
     end
 end
 
@@ -52,7 +52,7 @@ function Ooma:hit(source, damage)
     }
     self.tp = 1.6
     self.starting = true
-    super:hit(self, source, damage)
+    super.hit(self, source, damage)
 end
 
 function Ooma:launchHit(battler)

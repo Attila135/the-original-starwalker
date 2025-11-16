@@ -1,7 +1,7 @@
 local Spike, super = Class("nailbase")
 
 function Spike:init(x, y, enemy)
-    super:init(self, x, y, "battle/p3/grimm/spike_spawn")
+    super.init(self, x, y, "battle/p3/grimm/spike_spawn")
     self.sprite:play(0.05, false)
     self:setOrigin(0.5, 1)
     self:setHitbox(6, 0, 4, 70)
@@ -17,7 +17,7 @@ function Spike:init(x, y, enemy)
 end
 
 function Spike:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     self.wave.timer:after(0.5, function()
         self:setSprite("battle/p3/grimm/spike_extend", 0.03, false)
         self.wave.timer:after(0.09, function()
@@ -37,12 +37,12 @@ end
 function Spike:hit(source, damage)
     if self.enemy then
         local prev_hp = self.enemy.health
-        super:hit(self, source, damage)
+        super.hit(self, source, damage)
         if prev_hp ~= self.enemy.max_health and (self.enemy.health % (self.enemy.max_health/3) > prev_hp % (self.enemy.max_health/3)) then
             self.enemy.pufferfish = true
         end
     else
-        super:hit(self, source, damage)
+        super.hit(self, source, damage)
     end
 end
 

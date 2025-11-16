@@ -1,7 +1,7 @@
 local Tamer, super = Class("nailbase")
 
 function Tamer:init(x, tx, time)
-    super:init(self, x, 360, "battle/p3/godtamer/tamer_leap")
+    super.init(self, x, 360, "battle/p3/godtamer/tamer_leap")
     self.sprite:stop()
     self.layer = BATTLE_LAYERS["below_ui"]
     self.collider = ColliderGroup(self, {
@@ -22,7 +22,7 @@ function Tamer:init(x, tx, time)
 end
 
 function Tamer:update()
-    super:update(self)
+    super.update(self)
     if self.y < 300 then
         self:setLayer(BATTLE_LAYERS["bullets"])
     else

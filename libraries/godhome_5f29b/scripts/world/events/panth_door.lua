@@ -1,7 +1,7 @@
 local Door, super = Class(Interactable)
 
 function Door:init(data)
-    super:init(self, data.x, data.y, data.width, data.height)
+    super.init(self, data.x, data.y, data.width, data.height)
 
     self.cutscene = "enter_pantheon"
     self:setSprite("tilesets/doors/door")

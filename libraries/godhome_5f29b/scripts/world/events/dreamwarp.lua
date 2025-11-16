@@ -1,7 +1,7 @@
 local Warp, super = Class(Event)
 
 function Warp:init(data)
-    super:init(self, data)
+    super.init(self, data)
     self:setSprite("tilesets/dream_warp")
     self.sprite.color = {1,0.7,0.3}
     self.collider = CircleCollider(self, data.width/2, data.height/2, data.width/2)
@@ -14,7 +14,7 @@ end
 function Warp:draw()
     local prev_blend = love.graphics.getBlendMode()
     love.graphics.setBlendMode("add", "premultiplied")
-    super:draw(self)
+    super.draw(self)
     love.graphics.setBlendMode(prev_blend)
 end
 

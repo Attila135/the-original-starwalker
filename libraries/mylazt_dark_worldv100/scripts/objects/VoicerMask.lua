@@ -4,7 +4,7 @@ local Voicermask, super = Class(Object)
 
 
 function Voicermask:init()
-    super:init(self, 0, 0)
+    super.init(self, 0, 0)
 
     -- Kristal.Console:log("voicer spawned")
     
@@ -13,7 +13,7 @@ function Voicermask:init()
 end
 
 function Voicermask:update()
-    super:update(self)
+    super.update(self)
     if (self.focusActor ~= nil)
         then
         self.focusActor.bg.x = self.focusActor.bg.x + 1
@@ -35,7 +35,7 @@ function Voicermask:update()
 end
 
 function Voicermask:draw()
-    super:draw(self)
+    super.draw(self)
    
     
     -- self.x = self.x + 5

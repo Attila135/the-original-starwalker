@@ -4,7 +4,7 @@ local Mfflash, super = Class(Object)
 
 
 function Mfflash:init(x, y)
-    super:init(self, x, y)
+    super.init(self, x, y)
 
     self.lineLifetime = 0;
     self.sprite = Sprite("spr_mff")
@@ -29,13 +29,13 @@ end
 
 function Mfflash:update()
     self.sprite.alpha = self.alpha;
-    super:update(self)
+    super.update(self)
   
 end
 
 function Mfflash:draw()
 
-    super:draw(self)
+    super.draw(self)
    
     
     -- self.x = self.x + 5

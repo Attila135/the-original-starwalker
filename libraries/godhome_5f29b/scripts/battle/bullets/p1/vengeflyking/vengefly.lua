@@ -1,7 +1,7 @@
 local Vengefly, super = Class("nailbase")
 
 function Vengefly:init(x, y)
-    super:init(self, x, y, "battle/p1/vengeflyking/vengefly")
+    super.init(self, x, y, "battle/p1/vengeflyking/vengefly")
     self.sprite:play(0.2, true)
 
     self.health = 30
@@ -19,7 +19,7 @@ function Vengefly:init(x, y)
 end
 
 function Vengefly:update()
-    super:update(self)
+    super.update(self)
     self.physics.speed = Utils.approach(self.physics.speed, 3, 0.1*DTMULT)
     local soul = Game.battle.soul
     local angle_to = Utils.angle(self.x, self.y, soul.x, soul.y)
@@ -33,7 +33,7 @@ function Vengefly:update()
 end
 
 function Vengefly:hit(source, damage)
-    super:hit(self, source, damage)
+    super.hit(self, source, damage)
     self.physics.speed = self.physics.speed / 3
 end
 
@@ -44,7 +44,7 @@ function Vengefly:onDefeat()
             self.wave.finished = true
         end)
     end
-    super:onDefeat(self)
+    super.onDefeat(self)
 end
 
 return Vengefly

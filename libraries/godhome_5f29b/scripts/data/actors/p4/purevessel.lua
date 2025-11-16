@@ -12,7 +12,7 @@
 local PureVessel, super = Class(Actor)
 
 function PureVessel:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 50
     self.height = 72

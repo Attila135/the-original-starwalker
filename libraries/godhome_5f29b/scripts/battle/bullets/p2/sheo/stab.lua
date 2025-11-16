@@ -1,7 +1,7 @@
 local Stab, super = Class(Bullet)
 
 function Stab:init(x, y, dir)
-    super:init(self, x, y, "battle/p2/sheo/stab_start")
+    super.init(self, x, y, "battle/p2/sheo/stab_start")
     self.sprite:play(0.1, false, function()
         self:setSprite("battle/p2/sheo/stab", 0.1, true)
     end)
@@ -11,7 +11,7 @@ function Stab:init(x, y, dir)
 end
 
 function Stab:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     local hx,hy,hw,hh = self:getHitbox()
     local x,y = self:getRelativePos(hx,hy, Game.battle)
     local x2,y2 = self:getRelativePos(hw,hh, Game.battle)

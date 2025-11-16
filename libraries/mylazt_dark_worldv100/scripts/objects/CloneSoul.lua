@@ -1,7 +1,7 @@
 local CloneSoul, super = Class(Soul)
 
 function CloneSoul:init(x, y, aBattle)
-    super:init(self, x, y)
+    super.init(self, x, y)
 
 	-- Do not modify these variables
     self.mainColor = {0.89, 0.64, 0.36}; -- original {0.37, 0.04, 0.55};
@@ -278,7 +278,7 @@ function CloneSoul:onCollide(bullet)
         end
 end
 function CloneSoul:update()
-    super:update(self)
+    super.update(self)
     local colorMult = 0.8;
     self.color = {self.mainColor[1] + self.addColor, self.mainColor[2] - self.addColor * colorMult, self.mainColor[3] - self.addColor * colorMult};
     if (self.addColor > 0) then self.addColor = self.addColor - 0.02 * DTMULT; else end
@@ -400,7 +400,7 @@ function CloneSoul:startTarget()
 end
 
 function CloneSoul:draw()
-super:draw(self);
+super.draw(self);
 --love.graphics.rectangle("fill", self.breakCollider.x, self.breakCollider.y, self.breakCollider.width, self.breakCollider.height);
 --self.breakCollider = Hitbox(self, self.breakCollider.x, self.breakCollider.y, self.breakCollider.width, self.breakCollider.height);
 end

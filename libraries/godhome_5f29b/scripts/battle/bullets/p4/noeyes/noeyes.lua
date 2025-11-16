@@ -1,7 +1,7 @@
 local NoEyes, super = Class("nailbase")
 
 function NoEyes:init()
-    super:init(self, 0, 0, "battle/p4/noeyes/noeyes")
+    super.init(self, 0, 0, "battle/p4/noeyes/noeyes")
     self.sprite:play(0.4, true)
     self:setHitbox(11, 11, 9, 11)
 
@@ -19,7 +19,7 @@ function NoEyes:init()
 end
 
 function NoEyes:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     self.timer:script(function(wait)
         while true do
             local time = Utils.clampMap(self.enemy.health, 0,self.enemy.max_health, 0.8,2)
@@ -33,7 +33,7 @@ function NoEyes:onAdd(parent)
 end
 
 function NoEyes:update()
-    super:update(self)
+    super.update(self)
     self.tele_cooldown = Utils.approach(self.tele_cooldown, 0, DT)
     self.sine = self.sine + DT
     self:setPosition(
@@ -48,7 +48,7 @@ function NoEyes:hit(source, damage)
     else
         self.knockback = 6
     end
-    super:hit(self, source, damage)
+    super.hit(self, source, damage)
     self.knockback = 0
 end
 

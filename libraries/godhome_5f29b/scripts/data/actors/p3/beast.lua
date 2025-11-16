@@ -12,7 +12,7 @@
 local Beast, super = Class(Actor)
 
 function Beast:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 54
     self.height = 56

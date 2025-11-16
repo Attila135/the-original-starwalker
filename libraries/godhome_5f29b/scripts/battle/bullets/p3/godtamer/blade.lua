@@ -1,7 +1,7 @@
 local Blade, super = Class("projbase")
 
 function Blade:init(x, y)
-    super:init(self, x, y, "battle/p3/godtamer/blade")
+    super.init(self, x, y, "battle/p3/godtamer/blade")
     self.collider = CircleCollider(self, self.width/2, self.height/2, 4)
     self.physics = {
         speed_x = Utils.random(-3,3),
@@ -15,7 +15,7 @@ function Blade:init(x, y)
 end
 
 function Blade:hit(source, damage)
-    super:hit(self, source, damage)
+    super.hit(self, source, damage)
     self.tp = self.tp*2
     self.physics = {
         speed = 15,
@@ -26,7 +26,7 @@ function Blade:hit(source, damage)
 end
 
 function Blade:launchHit(battler)
-    super:launchHit(self, battler)
+    super.launchHit(self, battler)
     if battler == Game.battle:getEnemyBattler("p3/beast") and battler.health < 0 then
         self.wave.finished = true
         battler:onDefeat()

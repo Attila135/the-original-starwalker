@@ -1,7 +1,7 @@
 local blocktree, super = Class(Event)
 
 function blocktree:init(data)
-	super:init(self, data.x, data.y, data.width, data.height)
+	super.init(self, data.x, data.y, data.width, data.height)
 
 	--self:setOrigin(0.5, 0.5)
 	self.sprites=Assets.getFramesOrTexture("world/events/blocktree/part")
@@ -63,7 +63,7 @@ function blocktree:update()
 	    self.block:remove()
 	end
 
-	super:update(self)
+	super.update(self)
 end
 
 function blocktree:draw()
@@ -72,7 +72,7 @@ function blocktree:draw()
     love.graphics.draw(self.sprites[3], (math.sin((self.siner / 12)) * 2), (math.cos((self.siner / 20)) * 2), 0)
     love.graphics.draw(self.sprites[4], (math.sin((self.siner / 14)) * 1), (math.cos((self.siner / 24)) * 1), 0)
 
-    super:draw(self)
+    super.draw(self)
 end
 
 return blocktree

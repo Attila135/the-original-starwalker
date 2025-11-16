@@ -2,7 +2,7 @@ local MaskaughtCombatActor, super = Class(ActorSprite)
 
 
 function MaskaughtCombatActor:init(actor)
-    super:init(self, actor)
+    super.init(self, actor)
     -- self.x = actor.x;
 
     self.addMainX = 20;

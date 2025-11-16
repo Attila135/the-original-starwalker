@@ -1,7 +1,7 @@
 local Dung, super = Class(Bullet)
 
 function Dung:init(x, y, sx)
-    super:init(self, x, y, "battle/p1/dungdefender/dungball")
+    super.init(self, x, y, "battle/p1/dungdefender/dungball")
     self.rotation = Utils.random(2*math.pi)
     self.graphics.spin = sx/20
     self.collider = CircleCollider(self, self.width/2, self.height/2, 6)
@@ -17,7 +17,7 @@ function Dung:init(x, y, sx)
 end
 
 function Dung:update()
-    super:update(self)
+    super.update(self)
     if self.spawning then
         self.spawning = Game.battle:checkSolidCollision(self)
     else

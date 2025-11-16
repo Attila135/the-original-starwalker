@@ -1,7 +1,7 @@
 local Overlay, super = Class(Object)
 
 function Overlay:init(color, texture)
-    super:init(self, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)
+    super.init(self, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)
     self.layer = BATTLE_LAYERS["top"] + 100
     self.color = color
     self.alpha = color[4] or 1
@@ -25,7 +25,7 @@ end
 function Overlay:draw()
     local prev = love.graphics.getBlendMode()
     love.graphics.setBlendMode("add")
-    super:draw(self)
+    super.draw(self)
     if not self.sprite then
         local pr,pg,pb,pa = love.graphics.getColor()
         local r,g,b,a = unpack(self.color)

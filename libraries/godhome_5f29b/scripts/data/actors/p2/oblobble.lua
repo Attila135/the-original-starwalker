@@ -12,7 +12,7 @@
 local Oblobble, super = Class(Actor)
 
 function Oblobble:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 50
     self.height = 50

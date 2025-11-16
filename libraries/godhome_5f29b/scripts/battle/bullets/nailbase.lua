@@ -1,7 +1,7 @@
 local NailBullet, super = Class(Bullet)
 
 function NailBullet:init(x, y, texture)
-    super:init(self, x, y, texture)
+    super.init(self, x, y, texture)
     self.color = {1, 0.8, 0.5}
     self.tp = 0 -- grazing is off by default, because hitting with a nail grants tp
 
@@ -34,12 +34,12 @@ function NailBullet:init(x, y, texture)
 end
 
 function NailBullet:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     self.base_color = Utils.copy(self.color)
 end
 
 function NailBullet:update()
-    super:update(self)
+    super.update(self)
 
     if self.curr_knockback > 0 then
         self:move(math.cos(self.knockback_dir), math.sin(self.knockback_dir), self.curr_knockback*DTMULT)
@@ -48,7 +48,7 @@ function NailBullet:update()
 end
 
 function NailBullet:draw()
-    super:draw(self)
+    super.draw(self)
     if DEBUG_RENDER and self.nail_hb then
         self.nail_hb:draw(0,1,1)
     end

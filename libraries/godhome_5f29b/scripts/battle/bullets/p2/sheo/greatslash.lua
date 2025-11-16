@@ -1,7 +1,7 @@
 local Slash, super = Class(Bullet)
 
 function Slash:init(x, y, corner)
-    super:init(self, x, y)
+    super.init(self, x, y)
     local points = {{0, 0}, {70, 0}, {0, 70}}
     self.collider = PolygonCollider(self, points)
     self.collidable = false
@@ -34,7 +34,7 @@ function Slash:init(x, y, corner)
 end
 
 function Slash:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     self.wave.timer:script(function(wait)
         wait(1.2)
         if not self.stage then return end
@@ -62,7 +62,7 @@ function Slash:draw()
         end
         love.graphics.polygon("fill", points)
     end
-    super:draw(self)
+    super.draw(self)
 end
 
 return Slash

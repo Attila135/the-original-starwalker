@@ -1,7 +1,7 @@
 local ZoteHopper, super = Class("ordeal/zotebase")
 
 function ZoteHopper:init(x)
-    super:init(self, x, Game.battle.arena.bottom, "battle/ordeal/hopper_idle")
+    super.init(self, x, Game.battle.arena.bottom, "battle/ordeal/hopper_idle")
     self.sprite:play(0.3, true)
     self:setOrigin(0.5, 1)
     self:setHitbox(5,6, 6,11)
@@ -11,7 +11,7 @@ function ZoteHopper:init(x)
 end
 
 function ZoteHopper:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     local arena = Game.battle.arena
     self.wave.timer:script(function(wait)
         while true do
@@ -34,7 +34,7 @@ function ZoteHopper:onAdd(parent)
 end
 
 function ZoteHopper:update()
-    super:update(self)
+    super.update(self)
     local arena = Game.battle.arena
     if self.x < arena.left or self.x > arena.right then
         if self.physics.speed_x then
@@ -46,7 +46,7 @@ function ZoteHopper:update()
 end
 
 function ZoteHopper:hit(source, damage)
-    super:hit(self, source, damage)
+    super.hit(self, source, damage)
     if not self.physics.speed_x then return end
     local angle = Utils.angle(source, self)
     if source.y > self.y or math.abs(math.cos(angle)) > math.abs(math.sin(angle)) then

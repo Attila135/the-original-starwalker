@@ -1,7 +1,7 @@
 local Spear, super = Class(Bullet)
 
 function Spear:init(x, y, dir)
-    super:init(self, x, y, "battle/p1/gorb/spear")
+    super.init(self, x, y, "battle/p1/gorb/spear")
     self:setHitbox(3,2,15,1)
     self.rotation = dir
     self.alpha = 0

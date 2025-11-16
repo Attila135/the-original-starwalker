@@ -16,7 +16,7 @@
 local GruzMother, super = Class(Actor)
 
 function GruzMother:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 38
     self.height = 50

@@ -1,7 +1,7 @@
 local Lightseed, super = Class("nailbase")
 
 function Lightseed:init(x, y, dir, exp)
-    super:init(self, x, y, "battle/p2/brokenvessel/lightseed")
+    super.init(self, x, y, "battle/p2/brokenvessel/lightseed")
     self.sprite:play(0.2, true)
     self.layer = BATTLE_LAYERS["below_arena"]
     self.physics = {

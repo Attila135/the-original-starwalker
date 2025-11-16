@@ -2,7 +2,7 @@ local IceShock, super = Class(Bullet)
 
 function IceShock:init(x, y)
     -- Last argument = sprite path
-    super:init(self, x, y)
+    super.init(self, x, y)
 
     self.x = x
     self.y = y
@@ -57,7 +57,7 @@ end
 function IceShock:update()
     -- For more complicated bullet behaviours, code here gets called every update
 
-    super:update(self)
+    super.update(self)
 end
 
 return IceShock

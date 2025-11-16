@@ -1,7 +1,7 @@
 local Iceshocks_EX, super = Class(Wave)
 
 function Iceshocks_EX:init()
-    super:init(self)
+    super.init(self)
     self.time=5
 end
 
@@ -33,7 +33,7 @@ end
 function Iceshocks_EX:update()
     -- Code here gets called every frame
 
-    super:update(self)
+    super.update(self)
 end
 
 return Iceshocks_EX

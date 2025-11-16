@@ -1,7 +1,7 @@
 local Blob, super = Class(Bullet)
 
 function Blob:init(x, y)
-    super:init(self, x, y, "battle/misc/shapes/circle")
+    super.init(self, x, y, "battle/misc/shapes/circle")
 
     self:setScale(1, 1)
 
@@ -14,7 +14,7 @@ function Blob:init(x, y)
 end
 
 function Blob:update()
-    super:update(self)
+    super.update(self)
 
     local clamp_min, clamp_max = 2, 10
     if self.physics.speed and self.physics.direction then

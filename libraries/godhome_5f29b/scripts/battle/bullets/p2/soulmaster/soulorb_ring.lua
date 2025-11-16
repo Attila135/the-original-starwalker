@@ -1,7 +1,7 @@
 local Ring, super = Class(Bullet)
 
 function Ring:init(radius, angle, spin)
-    super:init(self, radius*math.cos(angle), radius*math.sin(angle), "battle/common/soulorb_spawn")
+    super.init(self, radius*math.cos(angle), radius*math.sin(angle), "battle/common/soulorb_spawn")
     self.remove_offscreen = false
     self.collidable = false
     self.sprite:play(0.05, false, function()
@@ -36,7 +36,7 @@ function Ring:init(radius, angle, spin)
 end
 
 function Ring:update()
-    super:update(self)
+    super.update(self)
     self.angle = self.angle + self.spin*DTMULT
     self:setPosition(self.radius*math.cos(self.angle), self.radius*math.sin(self.angle))
 end

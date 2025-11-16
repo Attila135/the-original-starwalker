@@ -1,7 +1,7 @@
 local Button, super = Class(Object)
 
 function Button:init(x, y, text)
-    super:init(self, x, y)
+    super.init(self, x, y)
 
     self.name = text
     self.text = Text(self.name, 0, 0, 200, 200, {style = "menu"})
@@ -18,7 +18,7 @@ function Button:init(x, y, text)
 end
 
 function Button:update()
-    super:update(self)
+    super.update(self)
     for _,child in ipairs(self.children) do
         child.alpha = self.alpha
     end

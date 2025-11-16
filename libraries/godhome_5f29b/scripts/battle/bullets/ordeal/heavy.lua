@@ -2,7 +2,7 @@ local Heavy, super = Class("ordeal/zotebase")
 
 function Heavy:init(x)
     local arena = Game.battle.arena
-    super:init(self, x, arena.bottom, "battle/ordeal/heavy")
+    super.init(self, x, arena.bottom, "battle/ordeal/heavy")
     self.sprite:play(0.3, true)
     self:setOrigin(0.5, 1)
     self.collider = CircleCollider(self, 16,20, 10)
@@ -10,7 +10,7 @@ function Heavy:init(x)
 end
 
 function Heavy:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     local arena = Game.battle.arena
     local timer = Timer()
     self:addChild(timer)
@@ -37,7 +37,7 @@ function Heavy:onAdd(parent)
 end
 
 function Heavy:update()
-    super:update(self)
+    super.update(self)
     local arena = Game.battle.arena
     if self.x < arena.left + 20 or self.x > arena.right - 20 then
         if self.physics.speed_x then

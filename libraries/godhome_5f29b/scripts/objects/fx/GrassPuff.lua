@@ -1,7 +1,7 @@
 local GrassPuff, super = Class(Object)
 
 function GrassPuff:init(x, y, size, dir, angle)
-    super:init(self, x, y, size, 2)
+    super.init(self, x, y, size, 2)
     self:setOrigin(0.5,0.5)
     self.rotation = dir + math.pi/2
     for i=1,math.ceil(size/8) do

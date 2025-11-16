@@ -12,7 +12,7 @@
 local Hornet, super = Class(Actor)
 
 function Hornet:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 52
     self.height = 50

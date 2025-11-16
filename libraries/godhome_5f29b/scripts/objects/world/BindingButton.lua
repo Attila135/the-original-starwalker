@@ -1,7 +1,7 @@
 local Button, super = Class(Object)
 
 function Button:init(x, y, name)
-    super:init(self, x, y)
+    super.init(self, x, y)
     self.name = name
 
     self.icon = Sprite("tilesets/doors/binding_"..name.."_inactive", 20, 0)
@@ -43,7 +43,7 @@ function Button:init(x, y, name)
 end
 
 function Button:update()
-    super:update(self)
+    super.update(self)
     for _,child in ipairs(self.children) do
         child.alpha = self.alpha
     end

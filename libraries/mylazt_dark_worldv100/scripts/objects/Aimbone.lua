@@ -3,7 +3,7 @@ local Aimbone, super = Class(Object)
 local boneReady = Assets.getTexture("npcs/bonethrow_aim_1")
 
 function Aimbone:init(x, y, mainBone)
-    --super:init(self, spawnX, spawnY)
+    --super.init(self, spawnX, spawnY)
     super.init(self, x, y)
     self.spawnX = spawnX;
     self.spawnY = spawnY;
@@ -57,7 +57,7 @@ end
 
 
 function Aimbone:update()
-    super:update(self)
+    super.update(self)
     self.textSiner = self.textSiner + 1 * DTMULT;
     if (self.mainBone.fetchPerson ~= nil)
         then
@@ -69,7 +69,7 @@ function Aimbone:update()
 end
 
 function Aimbone:draw()
-    super:draw(self)
+    super.draw(self)
     --love.graphics.draw(boneSprite, 0, 0, 0, 1, 1)
     --love.graphics.draw(boneReady, -10, -10, 0, 2, 2)
     --self.collider:draw()

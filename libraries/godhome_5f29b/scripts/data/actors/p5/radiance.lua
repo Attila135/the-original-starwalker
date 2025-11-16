@@ -21,7 +21,7 @@
 local Radiance, super = Class(Actor)
 
 function Radiance:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 69
     self.height = 78

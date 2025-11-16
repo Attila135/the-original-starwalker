@@ -12,7 +12,7 @@
 local Marmu, super = Class(Actor)
 
 function Marmu:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 40
     self.height = 36

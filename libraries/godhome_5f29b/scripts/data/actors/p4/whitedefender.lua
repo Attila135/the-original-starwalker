@@ -13,7 +13,7 @@
 local WhiteDefender, super = Class(Actor)
 
 function WhiteDefender:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 50
     self.height = 60

@@ -1,7 +1,7 @@
 local Trail, super = Class(Bullet)
 
 function Trail:init(x, y, rot)
-    super:init(self, x, y, "battle/p3/grimm/fireball")
+    super.init(self, x, y, "battle/p3/grimm/fireball")
     self.layer = self.layer - 10
     self.sprite:play(0.1, true)
     self.collider = CircleCollider(self, 10, 6, 4)
@@ -32,7 +32,7 @@ function Trail:init(x, y, rot)
 end
 
 function Trail:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     self.wave.timer:after(1, function()
         self.collidable = false
         self.ps:remove()
@@ -45,7 +45,7 @@ function Trail:draw()
     local a = self.alpha
     love.graphics.setColor(r*a, g*a, b*a)
     love.graphics.setBlendMode("screen")
-    super:draw(self)
+    super.draw(self)
     love.graphics.setBlendMode("alpha")
 end
 

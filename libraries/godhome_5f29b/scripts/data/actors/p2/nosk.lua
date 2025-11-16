@@ -12,7 +12,7 @@
 local Nosk, super = Class(Actor)
 
 function Nosk:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 55
     self.height = 61

@@ -1,7 +1,7 @@
 local Axe, super = Class(Bullet)
 
 function Axe:init(x, y, angle, dist)
-    super:init(self, x + math.cos(angle)*dist, y + math.sin(angle)*dist, "battle/p5/kristalguardian/devilsaxe")
+    super.init(self, x + math.cos(angle)*dist, y + math.sin(angle)*dist, "battle/p5/kristalguardian/devilsaxe")
     self:setScale(1)
     self.collider = CircleCollider(self, self.width/2, self.height/2, 16)
     self.double_damage = true
@@ -14,7 +14,7 @@ function Axe:init(x, y, angle, dist)
 end
 
 function Axe:update()
-    super:update(self)
+    super.update(self)
     if self.spinning > 0 then
         self.sine = self.sine + 0.08*DTMULT*self.spinning
         self.angle = self.angle + 0.04*DTMULT*self.spinning

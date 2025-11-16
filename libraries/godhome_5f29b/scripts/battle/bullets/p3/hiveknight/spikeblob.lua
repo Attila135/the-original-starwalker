@@ -1,7 +1,7 @@
 local Blob, super = Class(Bullet)
 
 function Blob:init(x, y, count)
-    super:init(self, x, y)
+    super.init(self, x, y)
     self.layer = BATTLE_LAYERS["bullets"] + 1
     self.collider = CircleCollider(self, 0,0, 5)
     self.collidable = false
@@ -12,7 +12,7 @@ function Blob:init(x, y, count)
 end
 
 function Blob:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     self.wave.timer:tween(0.2, self, {radius = 7.5})
 
     self.wave.timer:after(0.5, function()
@@ -38,7 +38,7 @@ function Blob:onAdd(parent)
 end
 
 function Blob:draw()
-    super:draw(self)
+    super.draw(self)
     love.graphics.setColor(1,1,1)
     local x, y = 0, 0
     if self.shaking then

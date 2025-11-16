@@ -1,7 +1,7 @@
 local Transition, super = Class(Event)
 
 function Transition:init(data)
-    super:init(self, data)
+    super.init(self, data)
     self.used = false
 end
 

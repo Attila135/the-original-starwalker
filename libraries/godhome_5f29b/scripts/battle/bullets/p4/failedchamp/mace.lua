@@ -1,7 +1,7 @@
 local Mace, super = Class("nailbase")
 
 function Mace:init(x, y, dir, length)
-    super:init(self, x, y)
+    super.init(self, x, y)
     self.enemy = Game.battle:getEnemyBattler("p4/failedchamp")
     self.double_damage = true
     self.hit_sfx = "bosses/false_knight_damage"
@@ -28,7 +28,7 @@ function Mace:draw()
     love.graphics.setLineStyle("rough")
     love.graphics.setLineWidth(2)
     love.graphics.line(0, 0, self.length*math.cos(self.dir), self.length*math.sin(self.dir))
-    super:draw(self)
+    super.draw(self)
 end
 
 function Mace:hurt(amount, player)

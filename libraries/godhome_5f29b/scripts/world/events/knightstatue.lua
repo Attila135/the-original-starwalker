@@ -1,7 +1,7 @@
 local Statue, super = Class(Interactable)
 
 function Statue:init(data)
-    super:init(self, data.x, data.y, data.width, data.height)
+    super.init(self, data.x, data.y, data.width, data.height)
     --local highest_clear = Mod:getBossClears()
     local knight = Game:getPartyMember("knight")
     local text

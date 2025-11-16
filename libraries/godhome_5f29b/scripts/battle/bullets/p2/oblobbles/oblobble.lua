@@ -1,7 +1,7 @@
 local Oblobble, super = Class("nailbase")
 
 function Oblobble:init(x, y, angy)
-    super:init(self, x, y, "battle/p2/oblobbles/idle")
+    super.init(self, x, y, "battle/p2/oblobbles/idle")
     self.sprite:play(0.2, true)
     self.sprite:setScaleOrigin(0.5, 0.5)
 
@@ -24,7 +24,7 @@ function Oblobble:init(x, y, angy)
 end
 
 function Oblobble:update()
-    super:update(self)
+    super.update(self)
     if not self.firing then
         local arena = Game.battle.arena
         for _,line in ipairs(arena.collider.colliders) do
@@ -130,7 +130,7 @@ function Oblobble:fire()
 end
 
 function Oblobble:onDefeat()
-    super:onDefeat(self)
+    super.onDefeat(self)
     local body = self.wave:spawnSprite("battle/p2/oblobbles/spit", self.x, self.y)
     body.scale_y = -2
     body.physics = {

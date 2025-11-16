@@ -1,7 +1,7 @@
 local Orb, super = Class(Event)
 
 function Orb:init(data)
-    super:init(self, data)
+    super.init(self, data)
     self:setSprite("tilesets/dream_warp")
     self.sprite.color = {0.5,1,1}
     self.solid = true
@@ -11,7 +11,7 @@ function Orb:init(data)
 end
 
 function Orb:update()
-    super:update(self)
+    super.update(self)
     if self.pulse then
         local prev_value = self.sine
         self.sine = self.sine + DT
@@ -26,7 +26,7 @@ end
 function Orb:draw()
     local prev_blend = love.graphics.getBlendMode()
     love.graphics.setBlendMode("add", "premultiplied")
-    super:draw(self)
+    super.draw(self)
     love.graphics.setBlendMode(prev_blend)
 end
 

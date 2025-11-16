@@ -40,7 +40,7 @@ function laserwarning:draw()
         end
     love.graphics.line(math.cos(self.lineRotation) * laserWidth * -1, math.sin(self.lineRotation) * laserWidth * -1, math.cos(self.lineRotation) * laserWidth * 1, math.sin(self.lineRotation) * laserWidth * 1);
 
-    --super:draw(self)
+    --super.draw(self)
 end
 function laserwarning:update()
     -- For more complicated bullet behaviours, code here gets called every update

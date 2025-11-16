@@ -1,7 +1,7 @@
 local Gem, super = Class(Object)
 
 function Gem:init(pantheon, x, y, notches)
-    super:init(self, x, y)
+    super.init(self, x, y)
     self:setScale(2)
 
     local gem_path = "gem"
@@ -51,7 +51,7 @@ function Gem:init(pantheon, x, y, notches)
 end
 
 function Gem:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     if self.hitless then
         self:addChild(ParticleEmitter(0, 0, {
             layer = parent.layer + 10,

@@ -2,7 +2,7 @@ local snowflakeBullet, super = Class(Bullet)
 
 function snowflakeBullet:init(x, y, dir, speed, rotate, scale, dirRot, afterimg)
     -- Last argument = sprite path
-    super:init(self, x, y, "bullets/snowflakeBullet")
+    super.init(self, x, y, "bullets/snowflakeBullet")
     self.dir=dirRot or "left"
 
     self.afterimg = afterimg or false
@@ -41,7 +41,7 @@ function snowflakeBullet:update()
         end
     end
 
-    super:update(self)
+    super.update(self)
 end
 
 return snowflakeBullet

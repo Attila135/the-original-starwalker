@@ -12,7 +12,7 @@
 local PrimalAspid, super = Class(Actor)
 
 function PrimalAspid:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 22
     self.height = 20

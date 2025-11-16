@@ -2,7 +2,7 @@ local Pillar, super = Class(Bullet)
 
 function Pillar:init(x)
     local arena = Game.battle.arena
-    super:init(self, x, arena.bottom, "battle/p5/nkg/fire_pillar")
+    super.init(self, x, arena.bottom, "battle/p5/nkg/fire_pillar")
     self.sprite:play(0.1, true)
     self:setOrigin(0.5, 1)
     self:setHitbox(7, 0, 10, 70)
@@ -10,7 +10,7 @@ function Pillar:init(x)
 end
 
 function Pillar:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     self.wave.timer:tween(0.1, self, {scale_x = 2})
     self.wave:addChild(ParticleEmitter(self.x, self.y - 140, 0, 140, {
         shape = "triangle",

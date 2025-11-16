@@ -1,7 +1,7 @@
 local ShadeLord, super = Class(Object)
 
 function ShadeLord:init()
-    super:init(self, 0,0)
+    super.init(self, 0,0)
     self.layer = BATTLE_LAYERS["battlers"] - 5
     self:setScale(2)
 
@@ -72,7 +72,7 @@ function ShadeLord:init()
 end
 
 function ShadeLord:update()
-    super:update(self)
+    super.update(self)
     self.sine = self.sine + DT
     self.s1.x = math.sin(self.sine*5)*1
     self.s2.x = math.sin(self.sine*4)*-1

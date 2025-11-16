@@ -2,7 +2,7 @@ local Stallactic, super = Class(Bullet)
 
 function Stallactic:init(x, y, dir, speed)
     -- Last argument = sprite path
-    super:init(self, x, y, "bullets/stallactic")
+    super.init(self, x, y, "bullets/stallactic")
     print("yes_C")
 
     -- Move the bullet in dir radians (0 = right, pi = left, clockwise rotation)
@@ -17,7 +17,7 @@ end
 function Stallactic:update()
     -- For more complicated bullet behaviours, code here gets called every update
 
-    super:update(self)
+    super.update(self)
 end
 
 return Stallactic

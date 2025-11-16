@@ -12,7 +12,7 @@
 local CrystalGuardian, super = Class(Actor)
 
 function CrystalGuardian:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 45
     self.height = 45

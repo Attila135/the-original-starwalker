@@ -1,14 +1,14 @@
 local Credits, super = Class(Object)
 
 function Credits:init()
-    super:init(self, 0, 0, 640, 360)
+    super.init(self, 0, 0, 640, 360)
     self.layer = 2000
     self.alpha = 0
     self.fake_alpha = 0
 end
 
 function Credits:update()
-    super:update(self)
+    super.update(self)
     self.alpha = Utils.round(self.fake_alpha, 0.2)
 end
 

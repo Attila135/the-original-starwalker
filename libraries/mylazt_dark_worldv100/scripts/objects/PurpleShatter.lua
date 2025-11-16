@@ -4,7 +4,7 @@ local PurpleShatter, super = Class(Object)
 
 
 function PurpleShatter:init(x, y, shatterCount, shatterDirection, getOwner)
-    super:init(self, x, y)
+    super.init(self, x, y)
 
     self.theOwner = getOwner;
     self.theOwner:addChild(self);
@@ -37,7 +37,7 @@ function PurpleShatter:init(x, y, shatterCount, shatterDirection, getOwner)
 end
 
 function PurpleShatter:update()
-    super:update(self)
+    super.update(self)
     self.sprite.alpha = self.sprite.alpha - (0.01 * DTMULT);
     self.rotation = self.rotation + (self.addRotation * DTMULT);
     if (self.sprite.alpha <= 0) then self:remove(); end

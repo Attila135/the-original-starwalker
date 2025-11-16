@@ -6,7 +6,7 @@ Carousel.COLORS = {
 }
 
 function Carousel:init()
-    C_super:init(self, SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
+    C_super.init(self, SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
     self.layer = BATTLE_LAYERS["bottom"] + 10
 
     self.points = {}
@@ -20,7 +20,7 @@ function Carousel:init()
 end
 
 function Carousel:update()
-    C_super:update(self)
+    C_super.update(self)
 
     for _,point in ipairs(self.points) do
         point.angle = (point.angle-0.03*DTMULT)%(2*math.pi)
@@ -28,7 +28,7 @@ function Carousel:update()
 end
 
 function Carousel:draw()
-    C_super:draw(self)
+    C_super.draw(self)
 
     for i,point in ipairs(self.points) do
         local x, y = math.cos(point.angle)*360, math.sin(point.angle)*120

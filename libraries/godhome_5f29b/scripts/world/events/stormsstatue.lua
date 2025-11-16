@@ -1,7 +1,7 @@
 local Statue, super = Class(Event)
 
 function Statue:init(data)
-    super:init(self, data.x, data.y, data.width, data.height)
+    super.init(self, data.x, data.y, data.width, data.height)
     self.sprite = Sprite("tilesets/statues/storms_radiance", data.width/2, data.height)
     self.sprite:setOrigin(0.5, 1)
     self.sprite:setScale(2)

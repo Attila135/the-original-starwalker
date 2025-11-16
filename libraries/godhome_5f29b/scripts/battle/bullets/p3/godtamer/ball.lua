@@ -1,7 +1,7 @@
 local Ball, super = Class("nailbase")
 
 function Ball:init(x, y, dir, grav_dir)
-    super:init(self, x, y, "battle/p3/godtamer/ballin")
+    super.init(self, x, y, "battle/p3/godtamer/ballin")
     self.color = {1,1,1}
     self.collider = CircleCollider(self, self.width/2, self.height/2, 15)
     self.wall_collider = CircleCollider(self, self.width/2, self.height/2, 17)
@@ -26,7 +26,7 @@ function Ball:init(x, y, dir, grav_dir)
 end
 
 function Ball:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     if self.done then return end
     self.done = true
     local arena = Game.battle.arena
@@ -69,7 +69,7 @@ end
 
 function Ball:hit(source, damage)
     if self.vulnerable then
-        super:hit(self, source, damage)
+        super.hit(self, source, damage)
     else
         -- special "no damage" animation?
     end

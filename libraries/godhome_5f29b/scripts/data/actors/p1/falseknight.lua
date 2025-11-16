@@ -18,7 +18,7 @@
 local FalseKnight, super = Class(Actor)
 
 function FalseKnight:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 116
     self.height = 74

@@ -1,7 +1,7 @@
 local Dive, super = Class("nailbase")
 
 function Dive:init(x, y)
-    super:init(self, x, y, "battle/p1/soulwarrior/dive")
+    super.init(self, x, y, "battle/p1/soulwarrior/dive")
     self.sprite:play(0.1, true)
     self.enemy = Game.battle:getEnemyBattler("p4/soultyrant")
     self.physics = {
@@ -11,7 +11,7 @@ function Dive:init(x, y)
 end
 
 function Dive:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     local mask = ColorMaskFX({1,1,1}, 1)
     self:addFX(mask)
     self.wave.timer:tween(0.3, mask, {amount = 0})
@@ -19,7 +19,7 @@ function Dive:onAdd(parent)
 end
 
 function Dive:update()
-    super:update(self)
+    super.update(self)
     local arena = Game.battle.arena
     local soul = Game.battle.soul
     if self.physics.speed_y <= 0 then
@@ -76,7 +76,7 @@ end
 
 function Dive:onDefeat()
     self.wave.finished = true
-    super:onDefeat(self)
+    super.onDefeat(self)
 end
 
 return Dive

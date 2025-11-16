@@ -1,7 +1,7 @@
 local Lightning, super = Class(Bullet)
 
 function Lightning:init(x, y, radius, time, delay)
-    super:init(self, x, y)
+    super.init(self, x, y)
     self.collider = CircleCollider(self, 0, 0, radius*2/3)
     self.collidable = false
     self.color = {1,1,1}
@@ -16,7 +16,7 @@ function Lightning:init(x, y, radius, time, delay)
 end
 
 function Lightning:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     self.wave.timer:script(function(wait)
         self.wave.timer:tween(0.5, self, {radius = self.max_radius, alpha = 0.1}, "out-cubic")
         wait(self.delay)
@@ -36,7 +36,7 @@ function Lightning:onAdd(parent)
 end
 
 function Lightning:draw()
-    super:draw(self)
+    super.draw(self)
     local r,g,b = unpack(self.color)
     local a = self.alpha
     love.graphics.setColor(r,g,b,a)

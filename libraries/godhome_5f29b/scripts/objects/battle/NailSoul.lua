@@ -1,7 +1,7 @@
 local Nail, super = Class(Soul)
 
 function Nail:init(x, y)
-    super:init(self, x, y)
+    super.init(self, x, y)
 
     self.sprite:setSprite("player/nail_soul")
     self.color = {1,1,1}
@@ -59,7 +59,7 @@ function Nail:init(x, y)
 end
 
 function Nail:update()
-    super:update(self)
+    super.update(self)
 
     self.cooldown = Utils.approach(self.cooldown, 0, DT)
     if not self.transitioning and Input.pressed("confirm") and self.cooldown == 0 then
@@ -154,11 +154,11 @@ function Nail:doMovement()
     else
         self.speed = 4
     end
-    super:doMovement(self)
+    super.doMovement(self)
 end
 
 function Nail:onDamage(bullet, amount)
-    super:onDamage(self, bullet, amount)
+    super.onDamage(self, bullet, amount)
     local last = self.can_focus
     self.can_focus = false
     Game.battle.timer:after(self.inv_timer/2, function()
@@ -170,11 +170,11 @@ function Nail:onRemove(parent)
     if self.focus_used > 0 then
         Game.battle.tension_bar:setTensionPreview(0)
     end
-    super:onRemove(self, parent)
+    super.onRemove(self, parent)
 end
 
 function Nail:draw()
-    super:draw(self)
+    super.draw(self)
     if DEBUG_RENDER then
         self.nail:draw(0,0,1, self.nail.collidable and 1 or 0.5)
     end

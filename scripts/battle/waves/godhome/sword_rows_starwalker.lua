@@ -1,7 +1,7 @@
 local Swords, super = Class(Wave)
 
 function Swords:init()
-    super:init(self)
+    super.init(self)
     self.time = 9
     self:setArenaSize(288,240)
 end

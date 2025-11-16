@@ -2,7 +2,7 @@ local Ring, R_super = Class(Sprite)
 
 function Ring:init(x, y, color, alpha, time, instant)
     self.type = "big_"..Utils.pick{"a","b"}
-    R_super:init(self, "battle/misc/dream/"..self.type, x, y)
+    R_super.init(self, "battle/misc/dream/"..self.type, x, y)
     self:setOrigin(0.5, 0.5)
     self.color = color
     self.graphics = {
@@ -58,7 +58,7 @@ function Ring:init(x, y, color, alpha, time, instant)
 end
 
 function Ring:update()
-    R_super:update(self)
+    R_super.update(self)
     if self.x < 0-self.width/2 then
         self.x = self.x + SCREEN_WIDTH + self.width
     elseif self.x > SCREEN_WIDTH+self.width/2 then
@@ -72,7 +72,7 @@ end
 
 function Ring:draw()
     local canvas = Draw.pushCanvas(SCREEN_WIDTH, SCREEN_HEIGHT)
-    R_super:draw(self)
+    R_super.draw(self)
     Draw.popCanvas()
     love.graphics.setColor(1,1,1, self.canvas_alpha)
     love.graphics.setBlendMode("add")
@@ -82,13 +82,13 @@ end
 
 function Ring:onRemove(parent)
     Utils.removeFromTable(self.spawner.rings, self)
-    R_super:onRemove(self, parent)
+    R_super.onRemove(self, parent)
 end
 
 local DreamRings, D_super = Class(Object)
 
 function DreamRings:init(colors, alpha, amount, time)
-    D_super:init(self)
+    D_super.init(self)
     self.layer = BATTLE_LAYERS["bottom"] + 20
     if type(colors[1]) == "number" then colors = {colors} end
     self.colors = colors

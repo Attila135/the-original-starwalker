@@ -1,7 +1,7 @@
 local Jump, super = Class("nailbase")
 
 function Jump:init(x, y, dir_x, dir_y)
-    super:init(self, x, y, "battle/p1/mosscharger/mossy")
+    super.init(self, x, y, "battle/p1/mosscharger/mossy")
     self:setOrigin(0.5, 1)
     self:setScale(dir_x*2, dir_y*2)
     self:setHitbox(17,12,47,30)
@@ -15,7 +15,7 @@ function Jump:init(x, y, dir_x, dir_y)
 end
 
 function Jump:update()
-    super:update(self)
+    super.update(self)
     local arena = Game.battle.arena
     local x, y, w, h = arena.x, arena.y, arena.width/2, arena.height/2
     if Utils.sign(self.x - arena.x) == -self.dir_x then

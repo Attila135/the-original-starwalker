@@ -2,7 +2,7 @@ local XeroSword, super = Class(Bullet)
 
 function XeroSword:init(xero, ox, oy, buff)
     self.xero = xero
-    super:init(self, xero.x+ox, xero.y+oy, "battle/p2/xero/sword")
+    super.init(self, xero.x+ox, xero.y+oy, "battle/p2/xero/sword")
     self.rotation = math.pi/2
     self.physics.match_rotation = true
     self:setHitbox(12,2.5,6,1.5)
@@ -15,7 +15,7 @@ function XeroSword:init(xero, ox, oy, buff)
 end
 
 function XeroSword:update()
-    super:update(self)
+    super.update(self)
     if self.state == "idle" or self.state == "preparing" then
         self:setPosition(self.xero.x + self.ox, self.xero.y + self.oy)
     elseif self.state == "attacking" then

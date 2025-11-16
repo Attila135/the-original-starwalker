@@ -16,7 +16,7 @@
 local WatcherKnight, super = Class(Actor)
 
 function WatcherKnight:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 40
     self.height = 44

@@ -1,7 +1,7 @@
 local Lantern, L_super = Class(Sprite)
 
 function Lantern:init(x, y)
-    L_super:init(self, "battle/p3/grimm/bg_lantern", x, y)
+    L_super.init(self, "battle/p3/grimm/bg_lantern", x, y)
     self:setScale(2)
     self:setOrigin(0.5, 0.5)
 
@@ -53,7 +53,7 @@ function Lantern:init(x, y)
 end
 
 function Lantern:draw()
-    L_super:draw(self)
+    L_super.draw(self)
     love.graphics.setColor(0.25, 0.08, 0.09)
     for i=0,10 do
         local y = -18 - i*4
@@ -64,7 +64,7 @@ end
 local BG, B_super = Class(Object)
 
 function BG:init()
-    B_super:init(self)
+    B_super.init(self)
     self.layer = BATTLE_LAYERS["bottom"] + 100
     self:addChild(Lantern(180, 80))
     self:addChild(Lantern(460, 60))

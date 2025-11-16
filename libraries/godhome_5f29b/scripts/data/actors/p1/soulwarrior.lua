@@ -12,7 +12,7 @@
 local SoulWarrior, super = Class(Actor)
 
 function SoulWarrior:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 40
     self.height = 38

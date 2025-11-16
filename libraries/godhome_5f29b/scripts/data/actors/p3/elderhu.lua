@@ -12,7 +12,7 @@
 local ElderHu, super = Class(Actor)
 
 function ElderHu:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 40
     self.height = 35

@@ -1,7 +1,7 @@
 local Fury, super = Class(Item)
 
 function Fury:init()
-    super:init(self)
+    super.init(self)
     
     self.name = "Fallen Fury"
     self.type = "armor"

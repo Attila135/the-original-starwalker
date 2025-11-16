@@ -1,7 +1,7 @@
 local Charge, super = Class("nailbase")
 
 function Charge:init(x, y)
-    super:init(self, x, y, "battle/p1/gruzmother/fly")
+    super.init(self, x, y, "battle/p1/gruzmother/fly")
     self.sprite:play(0.2, true)
     self.nail_hb = Hitbox(self, 1,5, 22,20)
     self.enemy = Game.battle:getEnemyBattler("p1/gruzmother")
@@ -59,7 +59,7 @@ function Charge:init(x, y)
 end
 
 function Charge:update()
-    super:update(self)
+    super.update(self)
     local arena = Game.battle.arena
     if self.charging then
         if Game.battle:checkSolidCollision(self) then
@@ -81,7 +81,7 @@ function Charge:onDefeat()
     if Game.battle.encounter.difficulty > 1 then
         self.enemy.health = 7
     else
-        super:onDefeat(self)
+        super.onDefeat(self)
         self.wave.finished = true
     end
 end

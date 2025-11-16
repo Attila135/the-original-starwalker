@@ -3,7 +3,7 @@ local texture = "eternal lumia/bolt"
 local MyBullet, super = Class(Bullet, id)
 
 function MyBullet:init(x, y, rot, top, bottom)
-    super:init(self, x, y)
+    super.init(self, x, y)
 
 	local soul = Game.battle.soul
 

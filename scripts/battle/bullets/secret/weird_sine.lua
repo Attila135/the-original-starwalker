@@ -2,7 +2,7 @@ local Tornado, super = Class(Bullet)
 
 function Tornado:init(x, y, area, delay)
     -- Last argument = sprite path
-    super:init(self, x, y, "bullets/weird_sine")
+    super.init(self, x, y, "bullets/weird_sine")
     self:setScale(2)
 
     self.goto_x = Utils.random(x, x+27*2)
@@ -41,7 +41,7 @@ function Tornado:update()
         })
     end
 
-    super:update(self)
+    super.update(self)
 end
 
 return Tornado

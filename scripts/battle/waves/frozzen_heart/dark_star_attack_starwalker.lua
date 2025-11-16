@@ -1,7 +1,7 @@
 local dark_star_attack, super = Class(Wave)
 
 function dark_star_attack:init()
-    super:init(self)
+    super.init(self)
     self.time = -1
     --self:setArenaSize(17, 17)
     self.hearts = {}
@@ -170,7 +170,7 @@ function dark_star_attack:update()
         end
     end
 
-    super:update(self)
+    super.update(self)
 end
 
 return dark_star_attack

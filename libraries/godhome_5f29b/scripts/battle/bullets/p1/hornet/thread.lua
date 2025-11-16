@@ -1,7 +1,7 @@
 local Thread, super = Class(Bullet)
 
 function Thread:init(needle)
-    super:init(self, needle.x, needle.y)
+    super.init(self, needle.x, needle.y)
     self:setOrigin(0, 0)
     self:setScale(1, 1)
     self.collider = LineCollider(self, 0,0, 0,0)
@@ -11,7 +11,7 @@ function Thread:init(needle)
 end
 
 function Thread:update()
-    super:update(self)
+    super.update(self)
     if self.needle then
         self.collider.x2 = self.needle.x - self.x
         self.collider.y2 = self.needle.y - self.y
@@ -19,7 +19,7 @@ function Thread:update()
 end
 
 function Thread:draw()
-    super:draw(self)
+    super.draw(self)
     self.collider:draw(1,1,1, self.alpha)
 end
 

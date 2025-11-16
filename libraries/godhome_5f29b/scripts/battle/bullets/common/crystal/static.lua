@@ -1,7 +1,7 @@
 local Crystal, super = Class(Bullet)
 
 function Crystal:init(x, y, dir)
-    super:init(self, x, y, "battle/p2/crystalguardian/crystal_base")
+    super.init(self, x, y, "battle/p2/crystalguardian/crystal_base")
     self.rotation = dir
     self.collider = CircleCollider(self, self.width/2 - 2, self.height/2, 8)
     self.tp = 0

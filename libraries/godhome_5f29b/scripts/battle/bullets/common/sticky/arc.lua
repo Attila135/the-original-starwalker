@@ -1,7 +1,7 @@
 local Arc, super = Class("common/sticky/base")
 
 function Arc:init(x, y, sx, sy, grav, time)
-    super:init(self, x, y)
+    super.init(self, x, y)
     self.physics = {
         speed_x = sx,
         speed_y = sy,
@@ -12,7 +12,7 @@ function Arc:init(x, y, sx, sy, grav, time)
 end
 
 function Arc:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     if self.time then
         self.wave.timer:after(self.time, function()
             self:stickToBG()

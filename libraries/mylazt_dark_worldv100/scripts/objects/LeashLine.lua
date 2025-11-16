@@ -5,7 +5,7 @@ local segmentDamageSprite = Assets.getTexture("leashsegmentdamage")
 
 
 function LeashLine:init(firstX, firstY, secondX, secondY, firstGX, firstGY, secondGX, secondGY, focusThing)
-    super:init(self, 0, 0)
+    super.init(self, 0, 0)
 
     self.lineLifetime = 0;
     self:setLayer(self.layer - 0.01);
@@ -77,7 +77,7 @@ function LeashLine:init(firstX, firstY, secondX, secondY, firstGX, firstGY, seco
 end
 
 function LeashLine:update()
-    super:update(self)
+    super.update(self)
     
    -- use DTMULT
 
@@ -175,7 +175,7 @@ function LeashLine:draw()
         love.graphics.draw(theSprite, offsetX + (segmentsLengthX * segmentNumber) + segmentOffX + leashX, offsetY + (segmentsLengthY * segmentNumber) + segmentOffY, segmentAngle, 1, 1)
     end 
 
-    super:draw(self)
+    super.draw(self)
    
     
     -- self.x = self.x + 5

@@ -1,7 +1,7 @@
 local Xero, super = Class("nailbase")
 
 function Xero:init(x, y)
-    super:init(self, x, y, "battle/p2/xero/idle")
+    super.init(self, x, y, "battle/p2/xero/idle")
     self.sprite:play(0.4, true)
     self:setHitbox(12,5,4,22)
 
@@ -15,7 +15,7 @@ function Xero:init(x, y)
 end
 
 function Xero:update()
-    super:update(self)
+    super.update(self)
     if self.curr_knockback > 0 then
         self.sx = self.sx + self.curr_knockback*math.cos(self.knockback_dir)*DTMULT
     end
@@ -25,7 +25,7 @@ function Xero:update()
 end
 
 function Xero:onDefeat()
-    super:onDefeat(self)
+    super.onDefeat(self)
     self.wave.finished = true
 end
 

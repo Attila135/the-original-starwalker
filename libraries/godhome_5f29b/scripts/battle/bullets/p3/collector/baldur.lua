@@ -1,7 +1,7 @@
 local Baldur, super = Class("nailbase")
 
 function Baldur:init(x, y, enemy)
-    super:init(self, x, y, "battle/p3/collector/baldur")
+    super.init(self, x, y, "battle/p3/collector/baldur")
     self.collider = CircleCollider(self, self.width/2, self.height/2, 4)
 
     if enemy then
@@ -16,7 +16,7 @@ function Baldur:init(x, y, enemy)
 end
 
 function Baldur:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     local soul = Game.battle.soul
     self.wave.timer:script(function(wait)
         wait(Utils.random(0.2, 0.5))
@@ -44,7 +44,7 @@ function Baldur:onAdd(parent)
 end
 
 function Baldur:update()
-    super:update(self)
+    super.update(self)
     local arena = Game.battle.arena
     if self.charging then
         local collided = false
@@ -73,7 +73,7 @@ function Baldur:update()
 end
 
 function Baldur:hit(source, damage)
-    super:hit(self, source, damage)
+    super.hit(self, source, damage)
     self.physics.direction = Utils.angle(source.x, source.y, self.x, self.y)
 end
 
@@ -82,7 +82,7 @@ function Baldur:onDefeat()
     if self.enemy then
         self.enemy:onDefeat()
     end
-    super:onDefeat(self)
+    super.onDefeat(self)
 end
 
 return Baldur

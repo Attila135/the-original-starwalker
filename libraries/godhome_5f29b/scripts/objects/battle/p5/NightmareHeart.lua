@@ -1,7 +1,7 @@
 local Heart, super = Class(Sprite)
 
 function Heart:init()
-    super:init(self, "battle/p5/nkg/bg_heart", 320, 0)
+    super.init(self, "battle/p5/nkg/bg_heart", 320, 0)
     self.layer = BATTLE_LAYERS["bottom"] + 10
     self:setOrigin(0.5, 0)
     self.alpha = 0.4

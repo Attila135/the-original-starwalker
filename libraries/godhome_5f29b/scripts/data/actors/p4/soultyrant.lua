@@ -12,7 +12,7 @@
 local SoulTyrant, super = Class(Actor)
 
 function SoulTyrant:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 54
     self.height = 50

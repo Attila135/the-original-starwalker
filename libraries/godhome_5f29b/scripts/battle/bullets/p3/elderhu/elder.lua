@@ -1,7 +1,7 @@
 local Elder, super = Class("nailbase")
 
 function Elder:init(x, y)
-    super:init(self, x, y, "battle/p3/elderhu/elder")
+    super.init(self, x, y, "battle/p3/elderhu/elder")
     self.sprite:play(0.4, true)
     self:setHitbox(11,4,8,18)
 
@@ -15,7 +15,7 @@ function Elder:init(x, y)
 end
 
 function Elder:update()
-    super:update(self)
+    super.update(self)
     if self.curr_knockback > 0 then
         self.sx = self.sx + self.curr_knockback*math.cos(self.knockback_dir)*DTMULT
     end
@@ -25,7 +25,7 @@ function Elder:update()
 end
 
 function Elder:onDefeat()
-    super:onDefeat(self)
+    super.onDefeat(self)
     self.wave.finished = true
 end
 

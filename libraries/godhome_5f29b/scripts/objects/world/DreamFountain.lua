@@ -1,7 +1,7 @@
 local Fountain, super = Class(Object)
 
 function Fountain:init(x, y)
-    super:init(self, x, y)
+    super.init(self, x, y)
     self.parallax_x = 0.3
     self.parallax_y = 0.3
     self.sprite = Sprite("tilesets/dream_fountain", 0, 0)

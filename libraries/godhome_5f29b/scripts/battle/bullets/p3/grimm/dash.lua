@@ -1,14 +1,14 @@
 local Dash, super = Class("nailbase")
 
 function Dash:init(x, y)
-    super:init(self, x, y, "battle/p3/grimm/dash")
+    super.init(self, x, y, "battle/p3/grimm/dash")
     self:setHitbox(6, 3, 27, 7)
     self.rotation = math.pi/2
     self.enemy = Game.battle:getEnemyBattler("p3/grimm")
 end
 
 function Dash:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     local arena = Game.battle.arena
     local soul = Game.battle.soul
     self.wave.timer:script(function(wait)
@@ -99,7 +99,7 @@ end
 
 function Dash:hit(source, damage)
     local prev_hp = self.enemy.health
-    super:hit(self, source, damage)
+    super.hit(self, source, damage)
     if prev_hp ~= self.enemy.max_health and (self.enemy.health % (self.enemy.max_health/3) > prev_hp % (self.enemy.max_health/3)) then
         self.enemy.pufferfish = true
     end

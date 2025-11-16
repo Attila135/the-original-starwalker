@@ -1,7 +1,7 @@
 local Statue, super = Class(Interactable)
 
 function Statue:init(data)
-    super:init(self, data.x, data.y, data.width, data.height)
+    super.init(self, data.x, data.y, data.width, data.height)
     self.cutscene = "enter_god"
     self.encounter = data.properties.encounter
     self.sprite = Sprite("tilesets/statues/"..self.encounter, data.width/2, -10)
@@ -75,7 +75,7 @@ function Statue:onInteract(chara, facing)
             return
         end
     end
-    super:onInteract(self, chara, facing)
+    super.onInteract(self, chara, facing)
 end
 
 function Statue:toggleAltState(silent)

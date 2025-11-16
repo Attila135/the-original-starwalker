@@ -1,7 +1,7 @@
 local MossGrass, super = Class("UIAttachment")
 
 function MossGrass:init()
-    super:init(self, 0, 0, 640, 540)
+    super.init(self, 0, 0, 640, 540)
     local g1 = Sprite("battle/p1/mosscharger/bg_grass_a", 52,0)
     g1:setOrigin(0.5, 1)
     g1:setScale(2)

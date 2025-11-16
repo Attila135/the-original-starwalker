@@ -1,7 +1,7 @@
 local Dive, super = Class("nailbase")
 
 function Dive:init(x, y)
-    super:init(self, x, y, "battle/p1/soulwarrior/dive")
+    super.init(self, x, y, "battle/p1/soulwarrior/dive")
     self.sprite:play(0.1, true)
     self.enemy = Game.battle:getEnemyBattler("p2/soulmaster")
     self.physics = {
@@ -15,7 +15,7 @@ function Dive:init(x, y)
 end
 
 function Dive:update()
-    super:update(self)
+    super.update(self)
     local arena = Game.battle.arena
     if self:collidesWith(arena.collider.colliders[3]) then
         self.wave:spawnBulletTo(Game.battle.mask, "common/shockwave", self.x, arena.bottom, 70, 80, 4)

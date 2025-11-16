@@ -1,7 +1,7 @@
 local Laser, super = Class(Bullet)
 
 function Laser:init(x, y, offset, time, state)
-    super:init(self, x, y)
+    super.init(self, x, y)
 
     self:setScale(0.5, 0.5)
     self:setHitbox(0, -6, 1000, 12)
@@ -21,7 +21,7 @@ function Laser:init(x, y, offset, time, state)
 end
 
 function Laser:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     if self.added then return end
     self.added = true
     if self.state ~= "firing" then
@@ -37,7 +37,7 @@ function Laser:onAdd(parent)
 end
 
 function Laser:update()
-    super:update(self)
+    super.update(self)
     self.laser_timer = self.laser_timer + DT
     if self.state == "charging" then
         self.laser_width = 2 + math.abs(math.sin(self.laser_timer*15)*2)
@@ -90,7 +90,7 @@ function Laser:draw()
     love.graphics.setBlendMode("alpha")
     love.graphics.pop()
 
-    super:draw(self)
+    super.draw(self)
 end
 
 function Laser:fire()

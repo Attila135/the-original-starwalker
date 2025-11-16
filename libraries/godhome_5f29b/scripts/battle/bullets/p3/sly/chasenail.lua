@@ -1,7 +1,7 @@
 local Nail, super = Class("nailbase")
 
 function Nail:init(x, y)
-    super:init(self, x, y, "battle/p1/nailmasters/nail")
+    super.init(self, x, y, "battle/p1/nailmasters/nail")
     self.graphics.spin = 0.4
     self.enemy = Game.battle:getEnemyBattler("p3/sly")
 
@@ -70,7 +70,7 @@ function Nail:init(x, y)
 end
 
 function Nail:update()
-    super:update(self)
+    super.update(self)
     if self.spinning then
         self.graphics.spin = self.graphics.spin + 0.2*DTMULT
         self.rotation = self.rotation % (2*math.pi)
@@ -78,7 +78,7 @@ function Nail:update()
 end
 
 function Nail:onDefeat()
-    super:onDefeat(self)
+    super.onDefeat(self)
     self.wave.finished = true
 end
 

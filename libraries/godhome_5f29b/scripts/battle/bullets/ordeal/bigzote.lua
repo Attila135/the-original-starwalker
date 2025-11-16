@@ -1,7 +1,7 @@
 local BIGZOTE, super = Class("ordeal/zotebase")
 
 function BIGZOTE:init(x)
-    super:init(self, x, -50, "battle/ordeal/bigzote_head")
+    super.init(self, x, -50, "battle/ordeal/bigzote_head")
     self.layer = BATTLE_LAYERS["below_bullets"]
     self.sprite:play(0.4, true)
     self.sprite:setRotationOrigin(0.5, 1)
@@ -160,7 +160,7 @@ function BIGZOTE:init(x)
 end
 
 function BIGZOTE:update()
-    super:update(self)
+    super.update(self)
     self.sine = self.sine + DT
     for _,part in ipairs(self.parts) do
         if part.swinging then
@@ -418,7 +418,7 @@ function BIGZOTE:attackScript()
 end
 
 function BIGZOTE:onDefeat()
-    super:onDefeat(self)
+    super.onDefeat(self)
     if self.heart then self.heart:remove() end
     if self.chains then
         for _,chain in ipairs(self.chains) do

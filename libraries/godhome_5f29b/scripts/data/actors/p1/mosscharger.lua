@@ -12,7 +12,7 @@
 local MossCharger, super = Class(Actor)
 
 function MossCharger:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 74
     self.height = 44

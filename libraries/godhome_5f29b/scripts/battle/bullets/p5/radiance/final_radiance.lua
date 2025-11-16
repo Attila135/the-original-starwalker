@@ -1,7 +1,7 @@
 local Radiance, super = Class("nailbase")
 
 function Radiance:init(x, y)
-    super:init(self, x, y, "enemies/p5/radiance/idle")
+    super.init(self, x, y, "enemies/p5/radiance/idle")
     self.sprite:play(0.15, true)
     self.color = {1,1,1}
     self.layer = BATTLE_LAYERS["above_arena"] + 50
@@ -24,18 +24,18 @@ function Radiance:init(x, y)
 end
 
 function Radiance:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     self.wave.timer:tween(0.3, self.sprite, {scale_x = 1})
     self.wave.timer:tween(0.3, self.glow, {alpha = 0.2})
 end
 
 function Radiance:setSprite(texture, speed, loop, on_finished)
-    super:setSprite(self, texture, speed, loop, on_finished)
+    super.setSprite(self, texture, speed, loop, on_finished)
     self.sprite:setScaleOrigin(0.5, 0.5)
 end
 
 function Radiance:hit(source, damage)
-    super:hit(self, source, damage)
+    super.hit(self, source, damage)
     local mask = ColorMaskFX({1,0.95,0.7}, 1)
     self.sprite:addFX(mask)
     self.wave.timer:tween(0.5, mask, {amount = 0}, "linear", function()

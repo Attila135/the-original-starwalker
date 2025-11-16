@@ -1,12 +1,12 @@
 local Scythe, super = Class(Bullet)
 
 function Scythe:init(x, y)
-    super:init(self, x, y, "battle/p3/galien/scythe_idle")
+    super.init(self, x, y, "battle/p3/galien/scythe_idle")
     self.collider = CircleCollider(self, 16, 16, 12)
 end
 
 function Scythe:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     self.wave.timer:after(0.5, function()
         self.started = true
         self:setSprite("battle/p3/galien/scythe_spin", 0.1, true)
@@ -14,7 +14,7 @@ function Scythe:onAdd(parent)
 end
 
 function Scythe:update()
-    super:update(self)
+    super.update(self)
     local arena = Game.battle.arena
     local soul = Game.battle.soul
 

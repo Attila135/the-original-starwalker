@@ -1,7 +1,7 @@
 local Explosion, super = Class(Object)
 
 function Explosion:init(x, y)
-    super:init(self, x, y)
+    super.init(self, x, y)
     self.layer = BATTLE_LAYERS["below_soul"]
     self.radius = 32
     self.alpha = 0
@@ -31,14 +31,14 @@ function Explosion:onAdd(parent)
 end
 
 function Explosion:onRemove(parent)
-    super:onRemove(self, parent)
+    super.onRemove(self, parent)
     Game.battle.timer:after(0.01, function()
         self.ps:remove()
     end)
 end
 
 function Explosion:setColor(r, g, b, a)
-    super:setColor(self, r,g,b,a)
+    super.setColor(self, r,g,b,a)
     self.ps.data.color = {r,g,b}
 end
 
@@ -46,7 +46,7 @@ function Explosion:draw()
     local r,g,b = unpack(self.color)
     love.graphics.setColor(r,g,b, self.alpha)
     love.graphics.circle("fill", 0,0, self.radius)
-    super:draw(self)
+    super.draw(self)
 end
 
 function Explosion:add()

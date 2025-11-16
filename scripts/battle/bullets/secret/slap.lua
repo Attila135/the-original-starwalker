@@ -2,7 +2,7 @@ local Slap, super = Class(Bullet)
 
 function Slap:init(x, y, dir, speed)
     -- Last argument = sprite path
-    super:init(self, x, y, "bullets/slap")
+    super.init(self, x, y, "bullets/slap")
     self.sprite:setScale(0.5)
     self:setHitbox(6, 7.5, (self.sprite.width/2)-14, (self.sprite.height/2)-14)
 
@@ -20,7 +20,7 @@ function Slap:update()
 
     self.physics.speed = self.physics.speed-0.2*DTMULT
 
-    super:update(self)
+    super.update(self)
 end
 
 return Slap

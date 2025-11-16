@@ -1,7 +1,7 @@
 local SpawnZote, super = Class(Bullet)
 
 function SpawnZote:init(x, y)
-    super:init(self, x, y, "battle/p3/greyprince/spawn_zote")
+    super.init(self, x, y, "battle/p3/greyprince/spawn_zote")
     self.layer = BATTLE_LAYERS["below_soul"]
     self.graphics.spin = 0.2
     self.physics.speed_y = 8
@@ -10,7 +10,7 @@ function SpawnZote:init(x, y)
 end
 
 function SpawnZote:update()
-    super:update(self)
+    super.update(self)
     if self.wall_hb:collidesWith(Game.battle.arena.collider.colliders[3]) then
         local zote
         if love.math.random() < 0.5 then

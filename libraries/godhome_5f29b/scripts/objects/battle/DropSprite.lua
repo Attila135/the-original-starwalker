@@ -1,7 +1,7 @@
 local Drop, super = Class(Sprite)
 
 function Drop:init(x, y, color)
-    super:init(self, "battle/misc/shapes/circle", x, y)
+    super.init(self, "battle/misc/shapes/circle", x, y)
     self.color = color
     self.alpha = 0.5
     self:setScale(0.5)
@@ -15,7 +15,7 @@ function Drop:init(x, y, color)
 end
 
 function Drop:update()
-    super:update(self)
+    super.update(self)
     self.scale_x = Utils.clampMap(self.physics.speed, 2,12, 0.5,0.3, "in-sine")
     self.scale_y = Utils.clampMap(self.physics.speed, 2,12, 0.5,1, "in-sine")
 end

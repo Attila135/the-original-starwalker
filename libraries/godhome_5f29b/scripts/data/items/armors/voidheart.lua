@@ -1,7 +1,7 @@
 local Voidheart, super = Class(Item)
 
 function Voidheart:init()
-    super:init(self)
+    super.init(self)
     
     self.name = "Void Heart"
     self.type = "armor"

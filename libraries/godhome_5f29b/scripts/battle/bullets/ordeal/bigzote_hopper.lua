@@ -1,7 +1,7 @@
 local Hopper, super = Class("nailbase")
 
 function Hopper:init(x, y, sx, bigone)
-    super:init(self, x, y, "battle/ordeal/hopper_jump")
+    super.init(self, x, y, "battle/ordeal/hopper_jump")
     self:setOrigin(0.5, 1)
     self:setHitbox(5,6, 6,11)
     self.health = 30
@@ -17,7 +17,7 @@ function Hopper:init(x, y, sx, bigone)
 end
 
 function Hopper:onAdd(parent)
-    super:onAdd(self, parent)
+    super.onAdd(self, parent)
     local arena = Game.battle.arena
     self.wave.timer:script(function(wait)
         while true do
@@ -40,7 +40,7 @@ function Hopper:onAdd(parent)
 end
 
 function Hopper:update()
-    super:update(self)
+    super.update(self)
     local arena = Game.battle.arena
     if self.x < arena.left or self.x > arena.right then
         if self.physics.speed_x then
@@ -52,7 +52,7 @@ function Hopper:update()
 end
 
 function Hopper:hit(source, damage)
-    super:hit(self, source, damage)
+    super.hit(self, source, damage)
     if not self.physics.speed_x then return end
     local angle = Utils.angle(source, self)
     if source.y > self.y or math.abs(math.cos(angle)) > math.abs(math.sin(angle)) then
@@ -81,7 +81,7 @@ function Hopper:onDefeat()
     head.graphics.spin = Utils.sign(head.physics.speed_x)*0.3
     Game.battle:addChild(head)
     head:fadeOutAndRemove(0.02)
-    super:onDefeat(self)
+    super.onDefeat(self)
 end
 
 return Hopper

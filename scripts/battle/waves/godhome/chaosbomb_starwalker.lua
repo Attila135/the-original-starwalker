@@ -1,7 +1,7 @@
 local Bombs, super = Class(Wave)
 
 function Bombs:init()
-    super:init(self)
+    super.init(self)
     self.time = 15
 end
 

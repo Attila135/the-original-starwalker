@@ -22,7 +22,7 @@
 local WingedNosk, super = Class(Actor)
 
 function WingedNosk:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 60
     self.height = 71

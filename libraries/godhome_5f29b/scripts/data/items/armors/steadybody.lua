@@ -1,7 +1,7 @@
 local SteadyBody, super = Class(Item)
 
 function SteadyBody:init()
-    super:init(self)
+    super.init(self)
     
     self.name = "Steady Body"
     self.type = "armor"

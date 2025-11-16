@@ -17,7 +17,7 @@
 local Uumuu, super = Class(Actor)
 
 function Uumuu:init()
-    super:init(self)
+    super.init(self)
 
     self.width = 50
     self.height = 64
