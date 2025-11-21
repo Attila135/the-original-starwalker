@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 13,
-  nextobjectid = 214,
+  nextobjectid = 217,
   properties = {
     ["music"] = "M.A.N."
   },
@@ -681,6 +681,26 @@ return {
           visible = true,
           properties = {
             ["flagcheck"] = "!man_room"
+          }
+        },
+        {
+          id = 214,
+          name = "prophecy",
+          type = "",
+          shape = "rectangle",
+          x = 240,
+          y = 800,
+          width = 280,
+          height = 600,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["fade"] = true,
+            ["no_back"] = true,
+            ["text"] = "NABLA WARRIORS OF THE WEAST.",
+            ["texture"] = "NABLARUNE",
+            ["txt_offx"] = -10,
+            ["txt_offy"] = 25
           }
         }
       }
