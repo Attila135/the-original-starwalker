@@ -103,11 +103,6 @@
     <property name="flagcheck" value="!man_room"/>
    </properties>
   </object>
-  <object id="172" name="blocktree" x="-13" y="1297" width="40" height="40">
-   <properties>
-    <property name="flagcheck" value="!man_room"/>
-   </properties>
-  </object>
   <object id="174" name="blocktree" x="726" y="1430" width="40" height="40">
    <properties>
     <property name="flagcheck" value="!man_room"/>
@@ -123,32 +118,22 @@
     <property name="flagcheck" value="!man_room"/>
    </properties>
   </object>
-  <object id="186" name="blocktree" x="-31" y="1066" width="40" height="40">
+  <object id="186" name="blocktree" x="-31" y="1033" width="40" height="40">
    <properties>
     <property name="flagcheck" value="!man_room"/>
    </properties>
   </object>
-  <object id="187" name="blocktree" x="-112" y="891" width="40" height="40">
+  <object id="190" name="blocktree" x="-75" y="822" width="40" height="40">
    <properties>
     <property name="flagcheck" value="!man_room"/>
    </properties>
   </object>
-  <object id="190" name="blocktree" x="-65" y="770" width="40" height="40">
+  <object id="197" name="blocktree" x="861" y="1330" width="40" height="40">
    <properties>
     <property name="flagcheck" value="!man_room"/>
    </properties>
   </object>
-  <object id="196" name="blocktree" x="816" y="1325" width="40" height="40">
-   <properties>
-    <property name="flagcheck" value="!man_room"/>
-   </properties>
-  </object>
-  <object id="197" name="blocktree" x="871" y="1194" width="40" height="40">
-   <properties>
-    <property name="flagcheck" value="!man_room"/>
-   </properties>
-  </object>
-  <object id="200" name="blocktree" x="856" y="953" width="40" height="40">
+  <object id="200" name="blocktree" x="871" y="994" width="40" height="40">
    <properties>
     <property name="flagcheck" value="!man_room"/>
    </properties>
@@ -158,12 +143,7 @@
     <property name="flagcheck" value="!man_room"/>
    </properties>
   </object>
-  <object id="206" name="blocktree" x="401" y="1492" width="40" height="40">
-   <properties>
-    <property name="flagcheck" value="!man_room"/>
-   </properties>
-  </object>
-  <object id="209" name="blocktree" x="179" y="1511" width="40" height="40">
+  <object id="206" name="blocktree" x="292" y="1498" width="40" height="40">
    <properties>
     <property name="flagcheck" value="!man_room"/>
    </properties>

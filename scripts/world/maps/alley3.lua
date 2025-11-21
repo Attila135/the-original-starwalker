@@ -513,21 +513,6 @@ return {
           }
         },
         {
-          id = 172,
-          name = "blocktree",
-          type = "",
-          shape = "rectangle",
-          x = -13,
-          y = 1297,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["flagcheck"] = "!man_room"
-          }
-        },
-        {
           id = 174,
           name = "blocktree",
           type = "",
@@ -578,22 +563,7 @@ return {
           type = "",
           shape = "rectangle",
           x = -31,
-          y = 1066,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["flagcheck"] = "!man_room"
-          }
-        },
-        {
-          id = 187,
-          name = "blocktree",
-          type = "",
-          shape = "rectangle",
-          x = -112,
-          y = 891,
+          y = 1033,
           width = 40,
           height = 40,
           rotation = 0,
@@ -607,23 +577,8 @@ return {
           name = "blocktree",
           type = "",
           shape = "rectangle",
-          x = -65,
-          y = 770,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["flagcheck"] = "!man_room"
-          }
-        },
-        {
-          id = 196,
-          name = "blocktree",
-          type = "",
-          shape = "rectangle",
-          x = 816,
-          y = 1325,
+          x = -75,
+          y = 822,
           width = 40,
           height = 40,
           rotation = 0,
@@ -637,8 +592,8 @@ return {
           name = "blocktree",
           type = "",
           shape = "rectangle",
-          x = 871,
-          y = 1194,
+          x = 861,
+          y = 1330,
           width = 40,
           height = 40,
           rotation = 0,
@@ -652,8 +607,8 @@ return {
           name = "blocktree",
           type = "",
           shape = "rectangle",
-          x = 856,
-          y = 953,
+          x = 871,
+          y = 994,
           width = 40,
           height = 40,
           rotation = 0,
@@ -682,23 +637,8 @@ return {
           name = "blocktree",
           type = "",
           shape = "rectangle",
-          x = 401,
-          y = 1492,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["flagcheck"] = "!man_room"
-          }
-        },
-        {
-          id = 209,
-          name = "blocktree",
-          type = "",
-          shape = "rectangle",
-          x = 179,
-          y = 1511,
+          x = 292,
+          y = 1498,
           width = 40,
           height = 40,
           rotation = 0,
