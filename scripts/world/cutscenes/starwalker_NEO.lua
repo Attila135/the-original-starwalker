@@ -3,7 +3,7 @@ return function(cutscene, event, player, facing)
 
     local kris = cutscene:getCharacter("kris")
     local susie = cutscene:getCharacter("susie")
-    local ralsei = cutscene:getCharacter("ralsei")
+    local vessel = cutscene:getCharacter("vessel")
     local noelle = cutscene:getCharacter("noelle")
 
     if noelle then
@@ -34,15 +34,15 @@ return function(cutscene, event, player, facing)
 
         if done_state == "VIOLENCED" or done_state == "KILLED" or done_state == "FROZEN" then
             cutscene:wait(1)
-            cutscene:text("* Hey,[wait:5] uh.", "neutral", "noelle")
-            cutscene:text("* I know they were in our way,[wait:5] but...", "annoyed_down", "noelle")
+            cutscene:text("* Hey,[wait:5] uh.", "sad", "noelle")
+            cutscene:text("* I know they were in our way,[wait:5] but...", "down", "noelle")
             noelle:setFacing("up")
-            cutscene:text("* What happened to the ACTing thing?", "neutral", "noelle")
-            cutscene:text("* ...", "annoyed_down", "noelle")
+            cutscene:text("* What happened to the ACTing thing?", "sad", "noelle")
+            cutscene:text("* ...", "down", "noelle")
             Assets.playSound("ominous")
             cutscene:wait(1.5)
             Game.world.music:play("cybercity_alt")
-            kris:setFacing("down")
+            vessel:setFacing("down")
         end
 
         event.sprite:resetSprite()
