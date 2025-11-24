@@ -55,8 +55,8 @@ function fancy_ralsei:init(x, y, dir, speed)
 end
 
 function fancy_ralsei:remove()
-    local ralsei = Game.world:getCharacter("ralsei");
-    ralsei:shake(5);
+    --local ralsei = Game.world:getCharacter("ralsei");
+    --ralsei:shake(5);
     self.wave.threadAmount = self.wave.threadAmount + 1;
     super.remove(self)
 end
