@@ -699,7 +699,7 @@ return {
             ["no_back"] = true,
             ["text"] = "NABLA WARRIORS OF THE WEAST.",
             ["texture"] = "NABLARUNE",
-            ["txt_offx"] = -10,
+            ["txt_offx"] = -40,
             ["txt_offy"] = 25
           }
         }

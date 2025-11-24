@@ -175,7 +175,7 @@
     <property name="no_back" type="bool" value="true"/>
     <property name="text" value="NABLA WARRIORS OF THE WEAST."/>
     <property name="texture" value="NABLARUNE"/>
-    <property name="txt_offx" type="float" value="-10"/>
+    <property name="txt_offx" type="float" value="-40"/>
     <property name="txt_offy" type="float" value="25"/>
    </properties>
   </object>

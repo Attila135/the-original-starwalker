@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="8" nextobjectid="18">
+ <editorsettings>
+  <export target="alley2.lua" format="lua"/>
+ </editorsettings>
+ <tileset firstgid="1" source="../tilesets/alley.tsx"/>
+ <layer id="6" name="Tile Layer 1" width="30" height="20">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup color="#f01cff" id="3" name="objects">
+  <object id="7" name="transition" x="0" y="256" width="32" height="96">
+   <properties>
+    <property name="map" value="alley4"/>
+    <property name="marker" value="spawn"/>
+   </properties>
+  </object>
+  <object id="9" name="transition" x="928" y="256" width="32" height="96">
+   <properties>
+    <property name="map" value="alley"/>
+    <property name="marker" value="spawn"/>
+   </properties>
+  </object>
+  <object id="15" name="script" x="928" y="256" width="32" height="96">
+   <properties>
+    <property name="cutscene" value="party.delta"/>
+   </properties>
+  </object>
+  <object id="14" name="script" x="0" y="256" width="32" height="96">
+   <properties>
+    <property name="cutscene" value="party.nabla"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#7a008f" id="7" name="markes">
+  <object id="11" name="entry" x="896" y="320">
+   <point/>
+  </object>
+  <object id="10" name="entry2" x="64" y="320">
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup color="#22fbff" id="5" name="nabla/delta"/>
+ <objectgroup color="#0505ff" id="4" name="collision">
+  <object id="2" x="0" y="224" width="960" height="32"/>
+  <object id="3" x="0" y="352" width="960" height="32"/>
+  <object id="4" x="960" y="256" width="32" height="96"/>
+  <object id="5" x="-32" y="256" width="32" height="96"/>
+ </objectgroup>
+</map>

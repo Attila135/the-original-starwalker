@@ -196,103 +196,10 @@ function Mod:onBattleMenuSelect(state, item, can_select)
                     delay = Utils.approach(delay, 2 / 30, 1 / 30)
                 end
                 Game.battle:pushAction("SKIP")
+                return true
             end)
         end
     end
 end
+        
 
-function Mod:onKeyPressed(key)
-
-    if key == "p" then
-        Game:fadeIntoLegend("legend", { music = "determination" })
-    end
-
-    if Kristal.Config["debug"] and not Input.ctrl() then
-        if Game.battle and Game.battle.state == "ACTIONSELECT" then
-            if key == "5" then
-                -- Game.battle.music:play("mus_xpart_2")
-                self.dog_activated = true
-                for _, box in ipairs(Game.battle.battle_ui.action_boxes) do
-                    box:createButtons()
-                end
-            end
-        end
-        if not Game.lock_movement then
-            if key == "e" and Game.state == "OVERWORLD" then
-                Input.clear(nil, true)
-                Game:encounter("virovirokun", true)
-            elseif key == "r" and Game.state == "OVERWORLD" then
-                Game:encounter("virovirokun", false)
-            elseif key == "t" then
-                if Game.world.player then
-                    Game.world.player:shake(4, 0)
-                end
-            elseif key == "y" then
-                local wrapper = Component(FixedSizing(640,480))
-                wrapper:setLayout(VerticalLayout({ gap = 0, align = "center" }))
-
-                    local menu = BasicMenuComponent(FitSizing())
-                    menu:setLayout(VerticalLayout({ gap = 0, align = "start" }))
-
-                    menu:addChild(TextMenuItemComponent("Option 1", function() print("Option 1 was selected!") end))
-                    menu:addChild(TextMenuItemComponent("Option 2", function() print("Option 2 was selected!") end))
-                    menu:addChild(TextMenuItemComponent("Option 3", function() print("Option 3 was selected!") end))
-                    menu:addChild(TextMenuItemComponent("Option 4", function() print("Option 4 was selected!") end))
-                    menu:addChild(TextMenuItemComponent("Option 5", function() print("Option 5 was selected!") end))
-
-                    wrapper.parallax_x = 0
-                    wrapper.parallax_y = 0
-
-                    menu:setCancelCallback(function()
-                        menu:close()
-                    end)
-
-                    menu:setFocused()
-                wrapper:addChild(menu)
-
-                Game.world:openMenu(wrapper)
-            end
-        end
-        if Game.world.player and not Game.lock_movement then
-            local player = Game.world.player
-            if key == "u" then
-                player:explode()
-                Game.world.player = nil
-                return true
-            elseif key == "i" then
-                local last_flipped = player.flip_x
-                local facing = player.facing
-
-                if facing == "left" or facing == "right" then
-                    Game.lock_movement = true
-
-                    player.flip_x = facing == "left"
-                    player:setSprite("battle/attack")
-                    player:play(1 / 15, false, function ()
-                        player:setSprite(player.actor:getDefault())
-                        player.flip_x = last_flipped
-
-                        Game.lock_movement = false
-                    end)
-
-                    Assets.playSound("laz_c")
-
-                    local attack_box = Hitbox(player, 13, -4, 25, 47)
-
-                    for _, object in ipairs(Game.world.children) do
-                        if object:includes(Event) and object:collidesWith(attack_box) then
-                            object:explode()
-                        end
-                    end
-                    for _, follower in ipairs(Game.world.followers) do
-                        if follower:collidesWith(attack_box) then
-                            follower:explode()
-                        end
-                    end
-
-                    return true
-                end
-            end
-        end
-    end
-end

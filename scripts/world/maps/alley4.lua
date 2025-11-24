@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 16,
-  nextobjectid = 145,
+  nextobjectid = 144,
   properties = {
     ["border"] = "castle",
     ["light"] = false,
@@ -736,10 +736,7 @@ return {
       offsety = 0,
       parallaxx = 1,
       parallaxy = 1,
-      properties = {
-        ["map"] = "alley2",
-        ["marker"] = "1"
-      },
+      properties = {},
       objects = {
         {
           id = 110,
@@ -786,22 +783,6 @@ return {
           visible = true,
           properties = {
             ["flag"] = "alley_enable_forcefield"
-          }
-        },
-        {
-          id = 144,
-          name = "transition",
-          type = "",
-          shape = "rectangle",
-          x = -49.4034,
-          y = 130.523,
-          width = 52,
-          height = 338.667,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["map"] = "alley2",
-            ["marker"] = "entry"
           }
         }
       }

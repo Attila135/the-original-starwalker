@@ -63,7 +63,7 @@
   <object id="104" x="-38.6667" y="444" width="1026.67" height="173.333"/>
   <object id="105" x="-80" y="-16" width="73.3333" height="444"/>
   <object id="112" x="900" y="-5.33333" width="69.3333" height="565.333"/>
-  <object id="113" x="884" y="-18.6667" width="60" height="614.667"/>
+  <object id="113" x="840.891" y="-19.6247" width="60" height="614.667"/>
   <object id="114" x="-57.3333" y="-1.33333" width="1032" height="21.3333"/>
   <object id="115" x="-26.6667" y="-26.6667" width="18.6667" height="636"/>
   <object id="116" x="-60" y="461.333" width="1048" height="53.3333"/>
@@ -111,36 +111,27 @@
  </objectgroup>
  <objectgroup color="#ff0000" id="6" name="paths" opacity="0.5"/>
  <objectgroup color="#7f00ff" id="3" name="markers">
-  <object id="106" name="spawn" x="58.6667" y="289.333">
+  <object id="106" name="spawn" x="783.853" y="296.997">
    <point/>
   </object>
  </objectgroup>
  <objectgroup color="#ff00ff" id="2" name="objects">
-  <properties>
-   <property name="map" value="alley2"/>
-   <property name="marker" value="1"/>
-  </properties>
-  <object id="110" name="npc" x="750.667" y="160" width="54.6667" height="305.333">
+  <object id="110" name="npc" x="37.9339" y="148.504" width="54.6667" height="305.333">
    <properties>
     <property name="actor" value="starwalker"/>
     <property name="cutscene" value="starwalker"/>
    </properties>
   </object>
-  <object id="111" name="transition" x="838.667" y="152" width="52" height="338.667">
+  <object id="111" name="transition" x="-35.0058" y="140.504" width="52" height="338.667">
    <properties>
     <property name="map" value="alley3"/>
     <property name="marker" value="spawn"/>
    </properties>
   </object>
-  <object id="143" name="forcefield" x="816" y="160" width="40" height="284">
-   <properties>
-    <property name="flag" value="alley_enable_forcefield"/>
-   </properties>
-  </object>
-  <object id="144" name="transition" x="-49.4034" y="130.523" width="52" height="338.667">
+  <object id="144" name="transition" x="826.597" y="143.924" width="52" height="347.289">
    <properties>
     <property name="map" value="alley2"/>
-    <property name="marker" value="entry"/>
+    <property name="marker" value="entry2"/>
    </properties>
   </object>
  </objectgroup>
