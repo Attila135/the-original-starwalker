@@ -10,7 +10,7 @@ function character:init()
     self:setActor("watercooler")
 
     -- Display level (saved to the save file)
-    self.love = 1
+    self.love = 2
     self.level = self.love
     -- Default title / class (saved to the save file)
     self.title = "Cooler\nDominates thirst."
@@ -39,25 +39,27 @@ function character:init()
     self:addSpell("vaporizer")
 
     -- Current health (saved to the save file)
-    self.health = 180
+    self.health = 130
 
     -- Base stats (saved to the save file)
     self.stats = {
-        health = 180,
+        health = 130,
         attack = 14,
         defense = 5,
-        magic = 14
+        magic = 12
     }
     -- Max stats from level-ups
-    self.max_stats = {}
+    self.max_stats = {
+            health = 170
+    }
 
     -- Weapon icon in equip menu
     self.weapon_icon = "ui/menu/equip/water"
 
     -- Equipment (saved to the save file)
     self:setWeapon("filled_cup")
-    -- self:setArmor(1, "amber_card")
-    -- self:setArmor(2, "amber_card")
+    self:setArmor(1, "amber_card")
+    self:setArmor(2, "amber_card")
 
     self.color = {0, 0.667, 1} 
     self.dmg_color = {0, 0.8, 1} 
@@ -109,6 +111,13 @@ function character:canEquip(item, slot_type, slot_index)
             return true
         end
         return false
+    end
+end
+
+function character:onLevelUp(level)
+    self:increaseStat("health", 2)
+    if level % 10 == 0 then
+        self:increaseStat("attack", 1)
     end
 end
 
