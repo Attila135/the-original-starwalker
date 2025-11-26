@@ -25,7 +25,7 @@ function Bullet:onDamage(soul)
     if not Game.battle.encounter.use_karma or self.use_karma == false then
         return super.onDamage(self, soul)
     end
-    
+
     local targets = Game.battle:getKarmaTargets()
     local spread = Kristal.getLibConfig("karma", "kr_spread")
     for _,target in ipairs(targets) do
