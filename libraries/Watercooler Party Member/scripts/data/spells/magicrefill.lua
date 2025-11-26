@@ -15,7 +15,7 @@ function spell:init()
     self.description = "Restores huge amount of HP to one party member, \nbut reduces a little from it's user."
 
     -- TP cost
-    self.cost = 32
+    self.cost = 22
 
     -- Target mode (ally, party, enemy, enemies, or none)
     self.target = "ally"

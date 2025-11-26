@@ -10,7 +10,7 @@ function character:init()
     self:setActor("vessel")
 
     -- Display level (saved to the save file)
-    self.level = 1
+    self.level = 2
     -- Default title / class (saved to the save file)
         self.title = "The Player's\nBody."
 
@@ -29,11 +29,11 @@ function character:init()
     self.xact_name = "V-Action"
 
     -- Current health (saved to the save file)
-        self.health = 90
+        self.health = 150
 
     -- Base stats (saved to the save file)
         self.stats = {
-            health = 90,
+            health = 150,
             attack = 12,
             defense = 2,
             magic = 0
@@ -51,8 +51,8 @@ function character:init()
     -- Equipment (saved to the save file)
     self:setWeapon("wood_blade")
     if Game.chapter >= 2 then
-        self:setArmor(1, "amber_card")
-        self:setArmor(2, "amber_card")
+        self:setArmor(1, "chroma_cleats")
+        self:setArmor(2, "chroma_cleats")
     end
 
     -- Default light world equipment item IDs (saves current equipment)

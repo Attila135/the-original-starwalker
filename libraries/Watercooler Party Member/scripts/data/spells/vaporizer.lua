@@ -14,7 +14,7 @@ function spell:init()
     self.check = "Deals large vapor damage to 1 enemy."
 
     -- TP cost
-    self.cost = 65
+    self.cost = 60
 
     -- Target mode (ally, party, enemy, enemies, or none)
     self.target = "enemy"
@@ -28,7 +28,7 @@ function spell:getCastMessage(user, target)
 end
 
 function spell:onCast(user, target)
-	local damage = math.floor((((user.chara:getStat("attack") * 140) / 20) - 3 * (target.defense)) * 1.25)
+	local damage = math.floor((((user.chara:getStat("attack") * 140) / 20) - 3 * (target.defense)) * 1.35)
 
 	---@type XSlashSpell
 	local spellobj = VaporBusterSpell(user,target)

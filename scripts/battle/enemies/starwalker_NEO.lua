@@ -1,6 +1,7 @@
 local Starwalker, super = Class(EnemyBattler)
 
 function Starwalker:init()
+    local kris = Starwalker:getCharacter("kris")
     super.init(self)
 
     self.name = "Starwalker"
@@ -13,7 +14,11 @@ function Starwalker:init()
     self.tired_percentage = 0.0;
     self.max_health = 5500
     self.health = 5500
-    self.attack = 5
+    if kris then
+        self.attack = 5
+    else
+        self.attack = 10
+    end
     self.defense = 15
     self.money = 978453186765
 
@@ -61,7 +66,7 @@ function Starwalker:init()
         "frozzen_heart/iceshocks_starwalker",
         "frozzen_heart/snowstorm_starwalker",
         "lumia/carousel_hard_starwalker",
-        "teeth",             --wilter/teeth_starwalker
+        "teeth", --wilter/teeth_starwalker
         "lonewolf_parade/raven_c_starwalker",
         "vs_kris/fire_slice_starwalker",
         "lonewolf_parade/flowers_3_starwalker",
@@ -92,7 +97,6 @@ function Starwalker:getEncounterText()
 end
 
 function Starwalker:getNextWaves()
-
     --[[if true then
         self.blue = true
         return {"starup"}
@@ -100,47 +104,47 @@ function Starwalker:getNextWaves()
 
 
     if (self.progress == 0) then
-        return {"lonewolf_parade/flowers_1_starwalker"}
+        return { "lonewolf_parade/flowers_1_starwalker" }
     elseif (self.progress == 1) then
-        return {"godhome/pufferfish_starwalker"}
+        return { "godhome/pufferfish_starwalker" }
     elseif (self.progress == 2) then
-        return {"wilter/hand_puppets_starwalker"}
+        return { "wilter/hand_puppets_starwalker" }
     elseif (self.progress == 3) then
-        return {"vs_kris/pre_final_starwalker"}
+        return { "vs_kris/pre_final_starwalker" }
     elseif (self.progress == 4) then
-        return {"frozzen_heart/iceshocks_starwalker"}
+        return { "frozzen_heart/iceshocks_starwalker" }
     elseif (self.progress == 5) then
-        return {"frozzen_heart/snowstorm_starwalker"}
+        return { "frozzen_heart/snowstorm_starwalker" }
     elseif (self.progress == 6) then
-        return {"lumia/carousel_hard_starwalker"}
+        return { "lumia/carousel_hard_starwalker" }
     elseif (self.progress == 7) then
-        return {"teeth"}           --wilter/teeth_starwalker
+        return { "teeth" } --wilter/teeth_starwalker
     elseif (self.progress == 8) then
-        return {"lonewolf_parade/raven_c_starwalker"}
+        return { "lonewolf_parade/raven_c_starwalker" }
     elseif (self.progress == 9) then
-        return {"vs_kris/fire_slice_starwalker"}
+        return { "vs_kris/fire_slice_starwalker" }
     elseif (self.progress == 10) then
-        return {"lonewolf_parade/flowers_3_starwalker"}
+        return { "lonewolf_parade/flowers_3_starwalker" }
     elseif (self.progress == 11) then
-        return {"godhome/chaosbomb_starwalker"}
+        return { "godhome/chaosbomb_starwalker" }
     elseif (self.progress == 12) then
-        return {"starwings_NEO_starwalker"}
+        return { "starwings_NEO_starwalker" }
     elseif (self.progress == 13) then
-        return {"vs_kris/final_starwalker"}
+        return { "vs_kris/final_starwalker" }
     elseif (self.progress == 14) then
-        return {"godhome/sword_rows_starwalker"}
+        return { "godhome/sword_rows_starwalker" }
     elseif (self.progress == 15) then
-        return {"lonewolf_parade/claw_b_starwalker"}
+        return { "lonewolf_parade/claw_b_starwalker" }
     elseif (self.progress == 16) then
-        return {"frozzen_heart/dark_star_attack_starwalker"}
+        return { "frozzen_heart/dark_star_attack_starwalker" }
     elseif (self.progress == 17) then
-        return {"vs_kris/glove_more_starwalker"}
+        return { "vs_kris/glove_more_starwalker" }
     elseif (self.progress == 18) then
-        return {"frozzen_heart/iceshocks_NEO_starwalker"}
+        return { "frozzen_heart/iceshocks_NEO_starwalker" }
     elseif (self.progress == 19) then
-        return {"vs_kris/fire_slice_NEO_starwalker"}
+        return { "vs_kris/fire_slice_NEO_starwalker" }
     elseif (self.progress == 20) then
-        return {"lonewolf_parade/prophecybreaker_starwalker"}
+        return { "lonewolf_parade/prophecybreaker_starwalker" }
     end
 
     return super.getNextWaves(self)
@@ -153,7 +157,6 @@ function Starwalker:setMode(mode)
     self.ease = true
     self.ease_timer = 0
 end
-
 
 function Starwalker:update()
     super.update(self)
@@ -188,7 +191,7 @@ function Starwalker:update()
         end
     end
 
-    for _,enemy in pairs(Game.battle.enemy_world_characters) do
+    for _, enemy in pairs(Game.battle.enemy_world_characters) do
         enemy:remove()
     end
 end
@@ -247,7 +250,6 @@ function Starwalker:onShortAct(battler, name)
     end
     return nil
 end
-
 
 function Starwalker:getEnemyDialogue()
     if self.text_override then

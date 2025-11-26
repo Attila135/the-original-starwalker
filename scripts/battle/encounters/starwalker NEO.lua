@@ -3,7 +3,7 @@ local Starwalker, super = Class(Encounter)
 function Starwalker:init()
     super.init(self)
 
-    self.use_karma = true
+    --self.use_karma = true
 
     self.text = "* Star walker has      changed forms"
 
