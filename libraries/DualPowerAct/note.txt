@@ -1,0 +1,4 @@
+Make sure they are in order of party
+For example: if susie is above noelle he has to go first when writing the
+Game.battle:dualPowerAct("lesbian_wrath", battler, {"susie", "noelle"}, self)
+susie is above noelle in party composition and usually would move before her after all

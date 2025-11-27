@@ -72,7 +72,10 @@ function actor:init()
     }
 
     -- Table of sprite offsets (indexed by sprite name)
-    self.offsets = {}
+    
+    self.offsets = {
+        ["fell"] = {8, 0},
+    }
 end
 
 return actor

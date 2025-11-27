@@ -13,11 +13,7 @@ function Starwalker:init()
     self.tired_percentage = 0.0;
     self.max_health = 5500
     self.health = 5500
-    if kris then
-        self.attack = 5
-    else
-        self.attack = 10
-    end
+    self.attack = 5
     self.defense = 15
     self.money = 978453186765
 
@@ -42,7 +38,8 @@ function Starwalker:init()
     self:registerAct("BegForMercyX", "", "all")
     self:registerAct("Red Buster", "Red\nDamage", "susie", 50)
     self:registerAct("DualHeal", "Heals\neveryone", "ralsei", 50)
-    self:registerAct("SnowGrave", "Fatal", "noelle", 100)
+    self:registerAct("Vapor Slash", "Physical,\nVapor DMG", {"vessel", "watercooler"}, 55)
+    self:registerAct("Dual Heal", "Heals\neveryone", "noelle", 50)
     self.text_override = nil
 
     self.old_x = self.x
@@ -213,10 +210,12 @@ end
 function Starwalker:onAct(battler, name)
     if name == "DualHeal" then
         Game.battle:powerAct("dual_heal", battler, "ralsei")
+    elseif name == "Dual Heal" then
+        Game.battle:powerAct("dual_heal", battler, "noelle")
     elseif name == "Red Buster" then
         Game.battle:powerAct("red_buster", battler, "susie", self)
-    elseif name == "SnowGrave" then
-        Game.battle:powerAct("snowgrave", battler, "noelle", self)
+    elseif name == "Vapor Slash" then
+        Game.battle:powerAct("vapor_slash", battler, {"vessel", "watercooler"}, self)
     elseif name == "BegForMercy" then
         self:addMercy(2)
         return "* You beged for mercy"
@@ -231,6 +230,8 @@ function Starwalker:onAct(battler, name)
             return "* Susie beged for mercy"
         elseif battler.chara.id == "noelle" then
             return "* Noelle beged for mercy"
+        elseif battler.chara.id == "watercooler" then
+            return "* Watercooler showed mercy"
         end
     end
     return super.onAct(self, battler, name)
@@ -245,6 +246,8 @@ function Starwalker:onShortAct(battler, name)
             return "* Susie beged for mercy"
         elseif battler.chara.id == "noelle" then
             return "* Noelle beged for mercy"
+        elseif battler.chara.id == "watercooler" then
+            return "* Watercooler showed mercy"
         end
     end
     return nil

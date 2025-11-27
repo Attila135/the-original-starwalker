@@ -14,7 +14,7 @@ function spell:init()
     self.check = "Deals large vapor damage to 1 enemy."
 
     -- TP cost
-    self.cost = 60
+    self.cost = 40
 
     -- Target mode (ally, party, enemy, enemies, or none)
     self.target = "enemy"

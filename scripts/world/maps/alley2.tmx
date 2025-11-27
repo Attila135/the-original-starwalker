@@ -31,6 +31,7 @@
  <objectgroup color="#f01cff" id="3" name="objects">
   <object id="7" name="transition" x="0" y="256" width="32" height="96">
    <properties>
+    <property name="cutscene" value="party.nabla"/>
     <property name="map" value="alley4"/>
     <property name="marker" value="spawn"/>
    </properties>
@@ -46,7 +47,7 @@
     <property name="cutscene" value="party.delta"/>
    </properties>
   </object>
-  <object id="14" name="script" x="0" y="256" width="32" height="96">
+  <object id="14" name="script" x="159" y="247" width="32" height="96">
    <properties>
     <property name="cutscene" value="party.nabla"/>
    </properties>

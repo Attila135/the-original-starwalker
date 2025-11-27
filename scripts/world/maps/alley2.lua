@@ -86,6 +86,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
+            ["cutscene"] = "party.nabla",
             ["map"] = "alley4",
             ["marker"] = "spawn"
           }
@@ -126,8 +127,8 @@ return {
           name = "script",
           type = "",
           shape = "rectangle",
-          x = 0,
-          y = 256,
+          x = 159,
+          y = 247,
           width = 32,
           height = 96,
           rotation = 0,
