@@ -1,7 +1,6 @@
 local Starwalker, super = Class(EnemyBattler)
 
 function Starwalker:init()
-    local kris = Starwalker:getCharacter("kris")
     super.init(self)
 
     self.name = "Starwalker"
