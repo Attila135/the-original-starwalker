@@ -15,7 +15,13 @@ function Starwalker:init()
     self.timer = 0
 
     -- music by nyako! give credit if used!  this music isn't by nyako but i'm just lazy to remuve it >:3
-    self.music = "battle"
+    local kris = Game.battle:getPartyBattler("kris")
+    if kris then
+        self.music = "battle"
+    else
+        self.music = "battle_vapor"
+    end
+    
 
     --self.default_xactions = false
 
