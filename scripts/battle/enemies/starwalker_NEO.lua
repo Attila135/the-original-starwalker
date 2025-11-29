@@ -38,7 +38,7 @@ function Starwalker:init()
     self:registerAct("BegForMercyX", "", "all")
     self:registerAct("Red Buster", "Red\nDamage", "susie", 50)
     self:registerAct("DualHeal", "Heals\neveryone", "ralsei", 50)
-    self:registerAct("Vapor Slash", "Physical,\nVapor DMG", {"vessel", "watercooler"}, 55)
+    self:registerAct("Vapor Buster", "Vapor\nDamage", "watercooler", 55)
     self:registerAct("Dual Heal", "Heals\neveryone", "noelle", 50)
     self.text_override = nil
 
@@ -217,8 +217,8 @@ function Starwalker:onAct(battler, name)
         Game.battle:powerAct("dual_heal", battler, "noelle")
     elseif name == "Red Buster" then
         Game.battle:powerAct("red_buster", battler, "susie", self)
-    elseif name == "Vapor Slash" then
-        Game.battle:powerAct("vapor_slash", battler, {"vessel", "watercooler"}, self)
+    elseif name == "Vapor Buster" then
+        Game.battle:powerAct("vapor_buster", battler, "watercooler", self)
     elseif name == "BegForMercy" then
         self:addMercy(2)
         return "* You beged for mercy"
