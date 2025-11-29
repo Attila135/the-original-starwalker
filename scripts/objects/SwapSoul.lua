@@ -25,14 +25,17 @@ function SwapSoul:init()
 end
 
 function SwapSoul:onCollide(bullet)
-    if self.inv_timer > 0 then
-        -- We handle this ourselves if inv_timer is 0
-        super.onCollide(bullet)
-    else
-        table.insert(self.touched_bullets, bullet)
+    if not bullet then
+        return
     end
 
-    self.touched_bullet = true
+    if self.inv_timer > 0 then
+        -- We handle this ourselves if inv_timer is 0
+        super.onCollide(self, bullet)
+    else
+        table.insert(self.touched_bullets, bullet)
+        self.touched_bullet = true
+    end
 end
 
 function SwapSoul:update()
@@ -55,7 +58,6 @@ function SwapSoul:update()
     if self.safe_timer > 0 then
         self.safe_timer = Utils.approach(self.safe_timer, 0, DT)
     elseif self.inv_timer == 0 then
-
         if BAD_APPLE then
             local hit, grazed = self:badAppleCollision()
 
@@ -72,22 +74,16 @@ function SwapSoul:update()
                     local chara2 = Game.party[2]
                     local chara3 = Game.party[3]
                     local recover = 30
-                    if chara.karma > 0 then
-                        chara.karma = Utils.approach(chara.karma, 0, recover*DT)
-                        chara2.karma = Utils.approach(chara2.karma, 0, recover*DT)
-                        chara3.karma = Utils.approach(chara3.karma, 0, recover*DT)
-                    else
-                        chara.health = Utils.approach(chara.health, chara:getStat("health"), recover/2*DT)
-                        chara2.health = Utils.approach(chara2.health, chara2:getStat("health"), recover/2*DT)
-                        chara3.health = Utils.approach(chara3.health, chara3:getStat("health"), recover/2*DT)
-                    end
+                    chara.health = Utils.approach(chara.health, chara:getStat("health"), recover / 2 * DT)
+                    chara2.health = Utils.approach(chara2.health, chara2:getStat("health"), recover / 2 * DT)
+                    chara3.health = Utils.approach(chara3.health, chara3:getStat("health"), recover / 2 * DT)
                     if not was_grazing then
                         Assets.playSound("graze")
                         if self.graze_sprite.timer < 0.1 then
                             self.graze_sprite.timer = 0.1
                         end
                     else
-                        self.graze_sprite.timer = 1/3
+                        self.graze_sprite.timer = 1 / 3
                     end
                     self.was_grazing = true
                 end
@@ -100,7 +96,7 @@ function SwapSoul:update()
                 self.hit_grace = HIT_GRACE + DT
             end
 
-            for _,bullet in ipairs(self.touched_bullets) do
+            for _, bullet in ipairs(self.touched_bullets) do
                 if not Utils.containsValue(self.hit_bullets, bullet) then
                     table.insert(self.hit_bullets, bullet)
                 end
@@ -120,18 +116,19 @@ function SwapSoul:update()
         -- Here we actually hurt the player
 
         if #self.hit_bullets > 0 then
-            for _,bullet in ipairs(self.hit_bullets) do
+            for _, bullet in ipairs(self.hit_bullets) do
                 self:onCollide(bullet)
+            end
+            self.hit_bullets = {}
+        end
+
+        if self.inv_timer == 0 then
+            for i = 1, #Game.party do
+                Game.battle:hurt(i, true)
             end
         end
 
-        -- if self.inv_timer == 0 then
-        --     self.inv_timer = 4/3
-        --     Game.battle:hurt(1, true)
-        -- end
-        --Game.battle:applyKarma(Game.battle:getPartyBattler("kris"), DTMULT)
-
-        self.hit_bullets = {}
+        self.touching = false
     end
 end
 
@@ -146,8 +143,8 @@ function SwapSoul:badAppleCollision()
 
     local grazed = false
 
-    for i = 0, data:getWidth()-1 do
-        for j = 0, data:getHeight()-1 do
+    for i = 0, data:getWidth() - 1 do
+        for j = 0, data:getHeight() - 1 do
             local r, g, b, a = data:getPixel(i, j)
 
             if not self.swap then
@@ -184,8 +181,8 @@ function SwapSoul:getBadAppleCanvas()
     x1, y1 = math.floor(x1), math.floor(y1)
     x2, y2 = math.ceil(x2), math.ceil(y2)
 
-    x1, y1 = Utils.clamp(x1, 0, SCREEN_WIDTH-1), Utils.clamp(y1, 0, SCREEN_HEIGHT-1)
-    x2, y2 = Utils.clamp(x2, 0, SCREEN_WIDTH-1), Utils.clamp(y2, 0, SCREEN_HEIGHT-1)
+    x1, y1 = Utils.clamp(x1, 0, SCREEN_WIDTH - 1), Utils.clamp(y1, 0, SCREEN_HEIGHT - 1)
+    x2, y2 = Utils.clamp(x2, 0, SCREEN_WIDTH - 1), Utils.clamp(y2, 0, SCREEN_HEIGHT - 1)
 
     local rx, ry = x1, y1
     local rw, rh = x2 - x1, y2 - y1

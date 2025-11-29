@@ -75,7 +75,8 @@ function Starwalker:init()
         "vs_kris/glove_more_starwalker",
         "frozzen_heart/iceshocks_NEO_starwalker",
         "vs_kris/fire_slice_NEO_starwalker",
-        "lonewolf_parade/prophecybreaker_starwalker"
+        "lonewolf_parade/prophecybreaker_starwalker",
+        "badapple"
     }
 
     self.blue = false
@@ -141,6 +142,8 @@ function Starwalker:getNextWaves()
         return { "vs_kris/fire_slice_NEO_starwalker" }
     elseif (self.progress == 20) then
         return { "lonewolf_parade/prophecybreaker_starwalker" }
+    elseif (self.progress == 21) then
+        return { "badapple" }
     end
 
     return super.getNextWaves(self)

@@ -4,7 +4,6 @@ function attack:init()
     super.init(self)
     self.time = -1
     self:setArenaPosition(320, 240)
-    self.use_karma = true
 end
 
 function attack:onStart()
@@ -12,6 +11,9 @@ function attack:onStart()
     local kris = Game.battle:getPartyBattler("kris")
     local susie = Game.battle:getPartyBattler("susie")
     local ralsei = Game.battle:getPartyBattler("ralsei")
+    local vessel = Game.battle:getPartyBattler("vessel")
+    local noelle = Game.battle:getPartyBattler("noelle")
+    local watercooler = Game.battle:getPartyBattler("watercooler")
     local enemy = Game.battle:getEnemyBattler("starwalker_NEO")
     local arena, soul = Game.battle.arena, Game.battle.soul
     self.timer:script(function(wait)
@@ -39,9 +41,15 @@ function attack:onStart()
                 if beam.width == (SCREEN_WIDTH - (soul.x + 12)) then break end
                 wait()
             end
+            if kris then
             kris.active = false
             susie.active = false
             ralsei.active = false
+            else
+                vessel.active = false
+                noelle.active = false
+                watercooler.active = false
+            end
             enemy.active = false
             beam.active = false
             soul.can_move = false
@@ -78,12 +86,19 @@ function attack:onStart()
                 wait()
             end
             if text then text:remove() end
+            if kris then
             kris.active = true
             susie.active = true
             ralsei.active = true
+            else
+                vessel.active = true
+                noelle.active = true
+                watercooler.active = true
+            end
             enemy.active = true
             beam.active = true
             soul.can_move = true
+            self.inv_timer = 0
             sfx:play()
             while beam.width < SCREEN_WIDTH do
                 beam.width = Utils.approach(beam.width, SCREEN_WIDTH, 60*DTMULT)
@@ -94,9 +109,15 @@ function attack:onStart()
             self.timer:tween(1, beam, {height = 0}, "out-quad", function() beam:remove() end)
             arena.visible = false
             arena:setSize(632, 472)
+            if kris then
             kris.visible = false
             susie.visible = false
             ralsei.visible = false
+            else
+                vessel.visible = false
+                noelle.visible = false
+                watercooler.visible = false
+            end
             enemy.visible = false
             -- wait(0.6)
             -- soul.can_move = true
@@ -112,9 +133,15 @@ function attack:onStart()
         Game.battle:addChild(BadAppleCollisionRender())
 
         while BAD_APPLE.frame < 6508 do wait() end
+        if kris then
         kris.visible = true
         susie.visible = true
         ralsei.visible = true
+        else
+            vessel.visible = true
+            noelle.visible = true
+            watercooler.visible = true
+        end
         enemy.visible = true
         self.time = 3
     end)
