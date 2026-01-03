@@ -32,19 +32,19 @@ function attack:onStart()
             beam:setLayer(BATTLE_LAYERS["below_soul"])
             beam:setOrigin(1, 0.5)
             local siner = 0
-            local siner_func = beam:addChild(Callback{update = function()
-                siner = siner + 24*DT
+            local siner_func = beam:addChild(Callback { update = function()
+                siner = siner + 24 * DT
                 beam.height = Utils.wave(siner, arena.height + 24, arena.height + 32)
-            end})
+            end })
             while true do
-                beam.width = Utils.approach(beam.width, SCREEN_WIDTH - (soul.x + 12), 60*DTMULT)
+                beam.width = Utils.approach(beam.width, SCREEN_WIDTH - (soul.x + 12), 60 * DTMULT)
                 if beam.width == (SCREEN_WIDTH - (soul.x + 12)) then break end
                 wait()
             end
             if kris then
-            kris.active = false
-            susie.active = false
-            ralsei.active = false
+                kris.active = false
+                susie.active = false
+                ralsei.active = false
             else
                 vessel.active = false
                 noelle.active = false
@@ -62,9 +62,9 @@ function attack:onStart()
             Game.battle:swapSoul(SwapSoul())
             soul = Game.battle.soul
             soul.can_move = false
-            soul.color = {1,1,1}
+            soul.color = { 1, 1, 1 }
             self.timer:after(0.25, function()
-                self.timer:tween(0.5, soul.color, {1,0,0})
+                self.timer:tween(0.5, soul.color, { 1, 0, 0 })
             end)
             local text_timer = 0
             local text
@@ -73,9 +73,9 @@ function attack:onStart()
                     text_timer = text_timer + DT
                     if text_timer >= 2 then
                         text = self:spawnObject(Text(
-                            SHOWCASE and ("Press [Z] to SWAP") or ("Press "..Input.getText("confirm").." to SWAP"),
-                            SCREEN_WIDTH/2, arena.bottom + 40, SCREEN_WIDTH, 40,
-                            {font_size = 16, align = "center"}
+                            SHOWCASE and ("Press [Z] to SWAP") or ("Press " .. Input.getText("confirm") .. " to SWAP"),
+                            SCREEN_WIDTH / 2, arena.bottom + 40, SCREEN_WIDTH, 40,
+                            { font_size = 16, align = "center" }
                         ))
                         text:setOrigin(0.5, 0.5)
                         text:setScale(1)
@@ -87,9 +87,9 @@ function attack:onStart()
             end
             if text then text:remove() end
             if kris then
-            kris.active = true
-            susie.active = true
-            ralsei.active = true
+                kris.active = true
+                susie.active = true
+                ralsei.active = true
             else
                 vessel.active = true
                 noelle.active = true
@@ -101,18 +101,18 @@ function attack:onStart()
             self.inv_timer = 0
             sfx:play()
             while beam.width < SCREEN_WIDTH do
-                beam.width = Utils.approach(beam.width, SCREEN_WIDTH, 60*DTMULT)
+                beam.width = Utils.approach(beam.width, SCREEN_WIDTH, 60 * DTMULT)
                 wait()
             end
             wait(1)
             siner_func:remove()
-            self.timer:tween(1, beam, {height = 0}, "out-quad", function() beam:remove() end)
+            self.timer:tween(1, beam, { height = 0 }, "out-quad", function() beam:remove() end)
             arena.visible = false
             arena:setSize(632, 472)
             if kris then
-            kris.visible = false
-            susie.visible = false
-            ralsei.visible = false
+                kris.visible = false
+                susie.visible = false
+                ralsei.visible = false
             else
                 vessel.visible = false
                 noelle.visible = false
@@ -129,14 +129,15 @@ function attack:onStart()
             Game.battle:swapSoul(SwapSoul())
             soul = Game.battle.soul
         end
+        Music:stop()
         BAD_APPLE = self:spawnObject(BadApple())
         Game.battle:addChild(BadAppleCollisionRender())
 
         while BAD_APPLE.frame < 6508 do wait() end
         if kris then
-        kris.visible = true
-        susie.visible = true
-        ralsei.visible = true
+            kris.visible = true
+            susie.visible = true
+            ralsei.visible = true
         else
             vessel.visible = true
             noelle.visible = true
@@ -144,6 +145,8 @@ function attack:onStart()
         end
         enemy.visible = true
         self.time = 3
+        Music:stop()
+        Music("starwalker")
     end)
 end
 

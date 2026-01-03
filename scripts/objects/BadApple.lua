@@ -4,7 +4,7 @@ function BadApple:init()
     super.init(self)
     self.layer = BATTLE_LAYERS["below_battlers"]
 
-    self.load_thread = love.thread.newThread(Mod.info.path.."/animthread.lua")
+    self.load_thread = love.thread.newThread(Mod.info.path .. "/animthread.lua")
     self.out_channel = love.thread.getChannel("BA_out")
 
     self.total_time = 0
@@ -15,7 +15,7 @@ end
 function BadApple:onAdd(parent)
     super.onAdd(self, parent)
     self.load_thread:start(Mod.info.path)
-    self.music = Music("bad_apple")
+    self.music = Music("bad_apple") and Music("apple_bad")
 end
 
 function BadApple:update()

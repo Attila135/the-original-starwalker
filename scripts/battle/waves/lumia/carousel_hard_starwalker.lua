@@ -14,14 +14,14 @@ local function makeRoll(isVertical)
 		absolute_max = 4,
 		absolute_min = min,
 		max = min,
-		t = 0,	
+		t = 0,
 		sfx = sfx,
 		isVertical = isVertical
 	}
 end
 
 function MyWave:onGameOver()
-	for k,v in ipairs(self.rolls) do
+	for k, v in ipairs(self.rolls) do
 		v.sfx:stop()
 		v.sfx:release()
 		v.sfx = nil
@@ -30,10 +30,10 @@ end
 
 function MyWave:init()
 	super.init(self)
-	
+
 	self.rolls = {
 		makeRoll(),
-		makeRoll(true),	
+		makeRoll(true),
 	}
 
 	self.arena_width = 160
@@ -51,7 +51,7 @@ function MyWave:init()
 end
 
 function MyWave:update()
-	for k,roll in ipairs(self.rolls) do
+	for k, roll in ipairs(self.rolls) do
 		local max = roll.max
 
 		roll.accel = roll.accel + ((0.6 * DTMULT) * roll.side)
@@ -110,7 +110,7 @@ local function rollMoves(self, roll)
 				local scale_y = 1
 				local origin_y = 0
 
-				if roll.side == -1 then 
+				if roll.side == -1 then
 					y = (arena.y + self.arena_height * .5) - 25
 					scale_y = -scale_y
 					origin_y = 1
@@ -120,7 +120,7 @@ local function rollMoves(self, roll)
 				bullet.scale_x = 0
 				bullet.scale_y = 0.5
 				bullet.physics.speed = 0
-				bullet.color = {0.5, 0.5, 0.5}
+				bullet.color = { 0.5, 0.5, 0.5 }
 				bullet.rotation = math.rad(90)
 				-- bullet.damage = 0
 				-- if roll.side == -1 then bullet.rotation = bullet.rotation + math.rad(180) else bullet.rotation = bullet.rotation + math.rad(90) end
@@ -130,9 +130,10 @@ local function rollMoves(self, roll)
 				local tm = Timer()
 				local current_max = roll.max
 
-				tm:tween(1 - (roll.max / roll.absolute_max) * .5, bullet, {scale_y = 1, scale_x = scale_y, color = {1, 1, 1}}, 'in-sine', function()
+				tm:tween(1 - (roll.max / roll.absolute_max) * .5, bullet,
+					{ scale_y = 1, scale_x = scale_y, color = { 1, 1, 1 } }, 'in-sine', function()
 					bullet.physics.speed = current_max * scale_y
-					tm:tween(0.65, bullet, {scale_x = scale_y * 1.5})
+					tm:tween(0.65, bullet, { scale_x = scale_y * 1.5 })
 				end)
 
 				bullet:addChild(tm)
@@ -151,7 +152,7 @@ local function rollMoves(self, roll)
 				local scale_x = 1
 				local origin_x = 0
 
-				if roll.side == -1 then 
+				if roll.side == -1 then
 					x = (arena.x + self.arena_width * .5) + 25
 					scale_x = -scale_x
 					origin_x = 1
@@ -161,7 +162,7 @@ local function rollMoves(self, roll)
 				bullet.scale_x = 0
 				bullet.scale_y = 0.5
 				bullet.physics.speed = 0
-				bullet.color = {0.5, 0.5, 0.5}
+				bullet.color = { 0.5, 0.5, 0.5 }
 				-- bullet.damage = 0
 
 				if roll.side == -1 then bullet.rotation = bullet.rotation + math.rad(180) end
@@ -171,9 +172,10 @@ local function rollMoves(self, roll)
 				local tm = Timer()
 				local current_max = roll.max
 
-				tm:tween(1 - (roll.max / roll.absolute_max) * .5, bullet, {scale_x = scale_x, scale_y = 1, color = {1, 1, 1}}, 'in-sine', function()
+				tm:tween(1 - (roll.max / roll.absolute_max) * .5, bullet,
+					{ scale_x = scale_x, scale_y = 1, color = { 1, 1, 1 } }, 'in-sine', function()
 					bullet.physics.speed = current_max * scale_x
-					tm:tween(0.5, bullet, {scale_x = scale_x * 1.5})
+					tm:tween(0.5, bullet, { scale_x = scale_x * 1.5 })
 				end)
 
 				bullet:addChild(tm)
@@ -188,23 +190,23 @@ function MyWave:onStart()
 	-- self.sfx:play()
 	self.shouldDraw = true
 
-	for k,roll in ipairs(self.rolls) do
+	for k, roll in ipairs(self.rolls) do
 		rollMoves(self, roll)
 		roll.sfx:play()
 	end
-	self.double = #Game.battle.waves==2
-    self.timer:every(self.double and 1.75 or 0.75, function()
-        local x, y
-        repeat
-            x = Utils.random(30, SCREEN_WIDTH-30)
-        until (x<Game.battle.arena.left or x>Game.battle.arena.right)
-        repeat
-            y = Utils.random(30, SCREEN_HEIGHT-30)
-        until (y<Game.battle.arena.top or y>Game.battle.arena.bottom)
+	self.double = #Game.battle.waves == 2
+	self.timer:every(self.double and 1.75 or 0.75, function()
+		local x, y
+		repeat
+			x = Utils.random(30, SCREEN_WIDTH - 30)
+		until (x < Game.battle.arena.left or x > Game.battle.arena.right)
+		repeat
+			y = Utils.random(30, SCREEN_HEIGHT - 30)
+		until (y < Game.battle.arena.top or y > Game.battle.arena.bottom)
 
-        -- Spawn smallbullet going left with speed 8 (see scripts/battle/bullets/smallbullet.lua)
-        local bullet = self:spawnBullet("secret/iceshock", x, y)
-    end)
+		-- Spawn smallbullet going left with speed 8 (see scripts/battle/bullets/smallbullet.lua)
+		local bullet = self:spawnBullet("secret/iceshock", x, y)
+	end)
 end
 
 -- function MyWave:onEnd()
@@ -224,7 +226,7 @@ function MyWave:draw()
 
 	local arena = Game.battle.arena
 
-	for k,roll in ipairs(self.rolls) do
+	for k, roll in ipairs(self.rolls) do
 		local t = roll.t
 		local isVertical = roll.isVertical
 
@@ -261,7 +263,7 @@ function MyWave:draw()
 				y = y + (dx * .25)
 				w = w - (dx * .25)
 
-				love.graphics.setLineWidth(2 + ((dx / 20) * 2))	
+				love.graphics.setLineWidth(2 + ((dx / 20) * 2))
 				love.graphics.line(x, y, w, y)
 			else
 				y = y + (dy * .25)
@@ -284,9 +286,9 @@ function MyWave:draw()
 end
 
 function MyWave:beforeEnd()
-	for k,roll in ipairs(self.rolls) do
-		--roll.sfx:stop()
-		roll.sfx:release()
+	for k, roll in ipairs(self.rolls) do
+		roll.sfx:stop()
+		--roll.sfx:release()
 	end
 end
 
